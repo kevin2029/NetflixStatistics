@@ -1,2 +1,4 @@
 Vuur
 Water
+Aarde
+Lucht
