@@ -21,17 +21,23 @@ public class ProgrammaToevoegen {
         BorderPane Borderpane_ProgrammaToevoegen=new BorderPane();
         HBox Hbox_Label=new HBox();
         VBox Vbox_Gegevens=new VBox();
+        HBox Hbox_WelkAccount=new HBox();
+        HBox Hbox_WelkProfiel=new HBox();
         HBox Hbox_WelkProgramma=new HBox();
         HBox Hbox_Percentage=new HBox();
         HBox Hbox_Buttons=new HBox();
 
         //Hier worden de labels aangemaakt.
         Label Label_ProgrammaToevoegen=new Label("Programma toevoegen");
+        Label Label_WelkAccount=new Label("Van welk Account wilt U een profiel selecteren?");
+        Label Label_WelkProfiel=new Label("Op welk profiel wilt U een programma toevoegen?");
         Label Label_WelkProgramma=new Label("Welk programma wilt U toevoegen?");
         Label Label_Percentage=new Label("Hoeveel procent heeft U bekeken?");
 
-        //Hier wordt de combobox aangemaakt.
-        ComboBox Opties=new ComboBox(); //Maak een arraylist of andere lijst bijv observable list om de combobox opties te geven. Hier staan alle programmas
+        //Hier worden de comboboxen aangemaakt.
+        ComboBox Combobox_WelkAccount=new ComboBox();//Hier staan alle accounts.
+        ComboBox Combobox_WelkProfiel=new ComboBox();//Hier staan alle profielen.
+        ComboBox Combobox_WelkProgrammas=new ComboBox(); //Hier staan alle programmas.Maak een arraylist of andere lijst bijv observable list om de combobox opties te geven. Hier staan alle programmas
 
         //Hier wordt het textfield aangemaakt.
         TextField Textfield_Percentage=new TextField();
@@ -52,13 +58,23 @@ public class ProgrammaToevoegen {
         Hbox_Label.getChildren().add(Label_ProgrammaToevoegen);
 
         //Hier wordt alles aan Vbox_Gegevens toegevoegd.
+        Vbox_Gegevens.getChildren().add(Hbox_WelkAccount);
+        Vbox_Gegevens.getChildren().add(Hbox_WelkProfiel);
         Vbox_Gegevens.getChildren().add(Hbox_WelkProgramma);
         Vbox_Gegevens.getChildren().add(Hbox_Percentage);
         Vbox_Gegevens.getChildren().add(Hbox_Buttons);
 
+        //Hier wordt alles aan Hbox_WelkAccount toegevoegd.
+        Hbox_WelkAccount.getChildren().add(Label_WelkAccount);
+        Hbox_WelkAccount.getChildren().add(Combobox_WelkAccount);
+
+        //Hier wordt alles aan Hbox_WelkProfiel toegevoegd.
+        Hbox_WelkProfiel.getChildren().add(Label_WelkProfiel);
+        Hbox_WelkProfiel.getChildren().add(Combobox_WelkProfiel);
+
         //Hier wordt alles aan Hbox_WelkProgramma toegevoegd.
         Hbox_WelkProgramma.getChildren().add(Label_WelkProgramma);
-        Hbox_WelkProgramma.getChildren().add(Opties);
+        Hbox_WelkProgramma.getChildren().add(Combobox_WelkProgrammas);
 
         //Hier wordt alles aan Hbox_Percentage toegevoegd.
         Hbox_Percentage.getChildren().add(Label_Percentage);
@@ -83,13 +99,29 @@ public class ProgrammaToevoegen {
         Vbox_Gegevens.setAlignment(Pos.CENTER);
         Vbox_Gegevens.setSpacing(40);
 
+        //Hier wordt Hbox_WelkAccount netjes gemaakt.
+        Label_WelkAccount.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
+        Combobox_WelkAccount.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
+        Hbox_WelkAccount.setAlignment(Pos.CENTER);
+        Hbox_WelkAccount.setSpacing(100);
+        Label_WelkAccount.setPrefSize(500,50);
+        Combobox_WelkAccount.setPrefSize(500,50);
+
+        //Hier wordt Hbox_WelkProfiel netjes gemaakt.
+        Label_WelkProfiel.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
+        Combobox_WelkProfiel.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
+        Hbox_WelkProfiel.setAlignment(Pos.CENTER);
+        Hbox_WelkProfiel.setSpacing(100);
+        Label_WelkProfiel.setPrefSize(500,50);
+        Combobox_WelkProfiel.setPrefSize(500,50);
+
         //Hier wordt Hbox_WelkProgramma netjes gemaakt.
         Label_WelkProgramma.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
-        Opties.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
+        Combobox_WelkProgrammas.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
         Hbox_WelkProgramma.setAlignment(Pos.CENTER);
         Hbox_WelkProgramma.setSpacing(100);
         Label_WelkProgramma.setPrefSize(500,50);
-        Opties.setPrefSize(500,50);
+        Combobox_WelkProgrammas.setPrefSize(500,50);
 
         //Hier wordt Hbox_Percentage netjes gemaakt.
         Label_Percentage.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");

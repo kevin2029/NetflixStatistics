@@ -2,6 +2,7 @@ package GUI.Profiel;
 
 import GUI.AccountGericht.AccountGerichtAccount;
 import GUI.Programma.ProgrammaToevoegen;
+import GUI.Programma.ProgrammaVerwijderenUitBekeken;
 import GUI.Programma.ProgrammaWijzigen;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -28,21 +29,12 @@ public class AccountProfiel {
 
         //Hier worden de buttons aangemaakt.
         Button Button_ProgrammaToevoegen=new Button("Programma toevoegen");
+        Button Button_ProgrammaWijzigen=new Button("Programma wijzigen");
+        Button Button_ProgrammaVerwijderen=new Button("Programma verwijderen");
         Button Button_Terug=new Button("< Terug");
 
 
-//Dit is een test voor de view zelf en moet zo snel mogelijk verwijderd worden.
-        HBox Hbox=new HBox();
-        VBox Vbox=new VBox();
-        Button Wijzig=new Button("Wijzig");
-        Borderpane_AccountProfiel.setBottom(Hbox);
-        Hbox.getChildren().add(Vbox);
-        Vbox.getChildren().add(Wijzig);
-        Wijzig.setOnAction(actionEvent -> {
-            ProgrammaWijzigen ProgrammaWijzigen=new ProgrammaWijzigen();
-            stage.setScene(ProgrammaWijzigen.ProgrammaWijzigen(stage));
-            stage.setFullScreen(true);
-        });
+
 
 
         //Hier wordt alles aan Borderpane_AccountProfiel toegevoegd.
@@ -58,6 +50,8 @@ public class AccountProfiel {
 
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_Buttons.getChildren().add(Button_ProgrammaToevoegen);
+        Hbox_Buttons.getChildren().add(Button_ProgrammaWijzigen);
+        Hbox_Buttons.getChildren().add(Button_ProgrammaVerwijderen);
         Hbox_Buttons.getChildren().add(Button_Terug);
 
         //Hier wordt alles aan Hbox_Aanrading toegevoegd.
@@ -78,9 +72,11 @@ public class AccountProfiel {
 
         //Hier wordt Hbox_Buttons netjes gemaakt.
         Button_ProgrammaToevoegen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_ProgrammaWijzigen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_ProgrammaVerwijderen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_Terug.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Hbox_Buttons.setAlignment(Pos.TOP_RIGHT);
-        Hbox_Buttons.setSpacing(550);
+        Hbox_Buttons.setAlignment(Pos.CENTER);
+        Hbox_Buttons.setSpacing(200);
 
         //Hier wordt Hbox_Aanrading netjes gemaakt.
         Label_Aanrading.setStyle("-fx-background-color: Black; -fx-text-fill: Red; -fx-font-size: 20");
@@ -94,6 +90,20 @@ public class AccountProfiel {
         Button_ProgrammaToevoegen.setOnAction(actionEvent -> {
             ProgrammaToevoegen ProgrammaToevoegen=new ProgrammaToevoegen();
             stage.setScene(ProgrammaToevoegen.ProgrammaToevoegen(stage));
+            stage.setFullScreen(true);
+        });
+
+        //Hier krijgt Button_ProgrammaWijzigen zijn functionaliteit.
+        Button_ProgrammaWijzigen.setOnAction(actionEvent -> {
+            ProgrammaWijzigen ProgrammaWijzigen=new ProgrammaWijzigen();
+            stage.setScene(ProgrammaWijzigen.ProgrammaWijzigen(stage));
+            stage.setFullScreen(true);
+        });
+
+        //Hier krijgt Button_ProgrammaVerwijderen zijn functionaliteit.
+        Button_ProgrammaVerwijderen.setOnAction(actionEvent -> {
+            ProgrammaVerwijderenUitBekeken ProgrammaVerwijderen=new ProgrammaVerwijderenUitBekeken();
+            stage.setScene(ProgrammaVerwijderen.ProgrammaVerwijderenUitBekeken(stage));
             stage.setFullScreen(true);
         });
 

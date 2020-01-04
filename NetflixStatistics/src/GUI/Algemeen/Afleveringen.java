@@ -23,7 +23,8 @@ public class Afleveringen {
 
         //Hier worden de buttons aangemaakt.
         Button Button_NieuweAfleveringAanmaken=new Button("Nieuwe aflevering aanmaken");
-        Button Button_NieuweAfleveringWijzigen=new Button("Nieuwe aflevering wijzigen");
+        Button Button_NieuweAfleveringWijzigen=new Button("aflevering wijzigen");
+        Button Button_AfleveringVerwijderen=new Button("Aflevering verwijderen");
         Button Button_Terug=new Button("< Terug");
 
 
@@ -40,6 +41,7 @@ public class Afleveringen {
         //Hier wordt alles aan Hbox_Button Toegevoegt
         Hbox_Button.getChildren().add(Button_NieuweAfleveringAanmaken);
         Hbox_Button.getChildren().add(Button_NieuweAfleveringWijzigen);
+        Hbox_Button.getChildren().add(Button_AfleveringVerwijderen);
         Hbox_Button.getChildren().add(Button_Terug);
 
 
@@ -58,8 +60,9 @@ public class Afleveringen {
         Hbox_Button.setAlignment(Pos.TOP_CENTER);
         Button_NieuweAfleveringAanmaken.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_NieuweAfleveringWijzigen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_AfleveringVerwijderen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_Terug.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Hbox_Button.setSpacing(420);
+        Hbox_Button.setSpacing(220);
 
 
 
@@ -79,7 +82,12 @@ public class Afleveringen {
             stage.setFullScreen(true);
         });
 
-        //Hier krijgt aflevering verwijderen zijn functionaliteit
+        //Hier krijgt Button_AfleveringVerwijderen zijn functionaliteit.
+        Button_AfleveringVerwijderen.setOnAction(actionEvent -> {
+            AfleveringVerwijderen AfleveringVerwijderen=new AfleveringVerwijderen();
+            stage.setScene(AfleveringVerwijderen.AfleveringVerwijderen(stage));
+            stage.setFullScreen(true);
+        });
 
         //Hier krijgt Button_Terug zijn functionaliteit.
         Button_Terug.setOnAction(actionEvent -> {

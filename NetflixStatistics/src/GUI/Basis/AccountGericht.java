@@ -2,6 +2,7 @@ package GUI.Basis;
 
 import GUI.AccountGericht.AccountAanmaken;
 import GUI.AccountGericht.AccountGerichtAccount;
+import GUI.AccountGericht.AccountVerwijderen;
 import GUI.AccountGericht.AccountWijzigen;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -19,7 +20,9 @@ public class AccountGericht {
 
         //Hier worden de grids gemaakt.
         BorderPane Borderpane_Accounts=new BorderPane();
+        VBox Vbox_LabelEnButtons=new VBox();
         HBox Hbox_Label=new HBox();
+        HBox Hbox_CRUD=new HBox();
         HBox Hbox_Buttons=new HBox();
 
         //Hier wordt het label aangemaakt.
@@ -27,6 +30,8 @@ public class AccountGericht {
 
         //Hier worden de buttons aangemaakt.
         Button Button_AcccountAanmaken=new Button("Account aanmaken");
+        Button Button_AccountWijzigen=new Button("Account wijzigen");
+        Button Button_AccountVerwijderen=new Button("Account verwijderen");
         Button Button_AlleAccounts=new Button("Alle accounts");
         Button Button_AccountsMet1Profiel=new Button("Accounts met 1 profiel");
         Button Button_AccountsMetMeerDan1Profiel=new Button("Accounts met meer dan 1 profiel");
@@ -37,11 +42,9 @@ public class AccountGericht {
         HBox Hbox=new HBox();
         VBox Vbox=new VBox();
         Button klik=new Button("Naam");
-        Button Wijzig=new Button("Wijzig");
         Borderpane_Accounts.setBottom(Hbox);
         Hbox.getChildren().add(Vbox);
         Vbox.getChildren().add(klik);
-        Vbox.getChildren().add(Wijzig);
         klik.setOnAction(actionEvent -> {
             AccountGerichtAccount Acc=new AccountGerichtAccount();
             stage.setScene(Acc.Account(stage));
@@ -50,14 +53,22 @@ public class AccountGericht {
 
 
         //Hier wordt alles aan Borderpane_Accounts toegevoegd.
-        Borderpane_Accounts.setTop(Hbox_Label);
-        Borderpane_Accounts.setLeft(Hbox_Buttons);
+        Borderpane_Accounts.setTop(Vbox_LabelEnButtons);
+
+        //Hier wordt alles aan Vbox_LabelEnButtons toegevoegd.
+        Vbox_LabelEnButtons.getChildren().add(Hbox_Label);
+        Vbox_LabelEnButtons.getChildren().add(Hbox_CRUD);
+        Vbox_LabelEnButtons.getChildren().add(Hbox_Buttons);
 
         //Hier wordt alles een Hbox_Label toegevoegd.
         Hbox_Label.getChildren().add(Label_Accounts);
 
+        //Hier wordt alles aan Hbox_CRUD toegevoegd.
+        Hbox_CRUD.getChildren().add(Button_AcccountAanmaken);
+        Hbox_CRUD.getChildren().add(Button_AccountWijzigen);
+        Hbox_CRUD.getChildren().add(Button_AccountVerwijderen);
+
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
-        Hbox_Buttons.getChildren().add(Button_AcccountAanmaken);
         Hbox_Buttons.getChildren().add(Button_AlleAccounts);
         Hbox_Buttons.getChildren().add(Button_AccountsMet1Profiel);
         Hbox_Buttons.getChildren().add(Button_AccountsMetMeerDan1Profiel);
@@ -70,17 +81,26 @@ public class AccountGericht {
         //Hier wordt Borderpane_Accounts netjes gemaakt.
         Borderpane_Accounts.setStyle("-fx-background-color: #0A0A0A");
 
+        //Hier wordt Vbox_LabelEnButtons netjes gemaakt.
+
         //Hier wordt Hbox_Label netjes gemaakt.
         Hbox_Label.setAlignment(Pos.CENTER);
         Label_Accounts.setStyle("-fx-background-color: Black; -fx-text-fill: Red; -fx-font-size: 40");
 
-        //Hier wordt Hbox_Buttons netjes gemaakt.
+        //Hier wordt Hbox_CRUD netjes gemaakt.
         Button_AcccountAanmaken.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_AccountWijzigen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_AccountVerwijderen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Hbox_CRUD.setAlignment(Pos.CENTER);
+        Hbox_CRUD.setSpacing(100);
+
+        //Hier wordt Hbox_Buttons netjes gemaakt.
         Button_AlleAccounts.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_AccountsMet1Profiel.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_AccountsMetMeerDan1Profiel.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_Terug.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Hbox_Buttons.setSpacing(120);
+        Hbox_Buttons.setAlignment(Pos.CENTER);
+        Hbox_Buttons.setSpacing(220);
 
 
 
@@ -93,20 +113,25 @@ public class AccountGericht {
             stage.setFullScreen(true);
         });
 
-        //Hier krijgt Button_AlleAccounts zijn functionaliteit.
-
-        //Hier krijgt Button_AccountsMet1Profiel zijn functionaliteit.
-
-        //Hier krijgt Button_AccountsMetMeerDan1Profiel zijn functionaliteit.
-
         //Hier krijgt Button_AccountWijzigen zijn functionaliteit.
-        Wijzig.setOnAction(actionEvent -> {
+        Button_AccountWijzigen.setOnAction(actionEvent -> {
             AccountWijzigen AccountWijzigen=new AccountWijzigen();
             stage.setScene(AccountWijzigen.AccountWijzigen(stage));
             stage.setFullScreen(true);
         });
 
         //Hier krijgt Button_AccountVerwijderen zijn functionaliteit.
+        Button_AccountVerwijderen.setOnAction(actionEvent -> {
+            AccountVerwijderen AccountVerwijderen=new AccountVerwijderen();
+            stage.setScene(AccountVerwijderen.AccountVerwijderen(stage));
+            stage.setFullScreen(true);
+        });
+
+        //Hier krijgt Button_AlleAccounts zijn functionaliteit.
+
+        //Hier krijgt Button_AccountsMet1Profiel zijn functionaliteit.
+
+        //Hier krijgt Button_AccountsMetMeerDan1Profiel zijn functionaliteit.
 
         //Hier krijgt Button_Terug zijn functionaliteit.
         Button_Terug.setOnAction(actionEvent -> {

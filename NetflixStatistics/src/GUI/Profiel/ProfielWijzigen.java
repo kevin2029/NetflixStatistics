@@ -4,6 +4,7 @@ import GUI.AccountGericht.AccountGerichtAccount;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
@@ -18,14 +19,22 @@ public class ProfielWijzigen {
         BorderPane Borderpane_ProfielWijzigen=new BorderPane();
         HBox Hbox_Label=new HBox();
         VBox VBox_Gegevens=new VBox();
+        HBox Hbox_WelkAccount=new HBox();
+        HBox Hbox_WelkProfiel=new HBox();
         HBox Hbox_Naam=new HBox();
         HBox Hbox_Leeftijd=new HBox();
         HBox Hbox_Buttons=new HBox();
 
         //Hier worden de labels aangemaakt.
         Label Label_ProfielWijzigen=new Label("Profiel wijzigen");
+        Label Label_WelkAccount=new Label("Van welk account wilt U een profiel wijzigen?");
+        Label Label_WelkProfiel=new Label("Welk profiel wilt u wijzigen?");
         Label Label_Naam=new Label("Wat is uw voor en achternaam?");
         Label Label_Leeftijd=new Label("Wat is uw leeftijd?");
+
+        //Hier worden de comboboxen aangemaakt.
+        ComboBox Combobox_WelkAccount=new ComboBox();
+        ComboBox Combobox_WelkProfiel=new ComboBox();
 
         //Hier worden de textfields aangemaakt.
         TextField Textfield_Naam=new TextField();
@@ -47,9 +56,19 @@ public class ProfielWijzigen {
         Hbox_Label.getChildren().add(Label_ProfielWijzigen);
 
         //Hier wordt alles aan Vbox_Gegevens toegevoegd.
+        VBox_Gegevens.getChildren().add(Hbox_WelkAccount);
+        VBox_Gegevens.getChildren().add(Hbox_WelkProfiel);
         VBox_Gegevens.getChildren().add(Hbox_Naam);
         VBox_Gegevens.getChildren().add(Hbox_Leeftijd);
         VBox_Gegevens.getChildren().add(Hbox_Buttons);
+
+        //Hier wordt alles aan Hbox_WelkAccount toegevoegd.
+        Hbox_WelkAccount.getChildren().add(Label_WelkAccount);
+        Hbox_WelkAccount.getChildren().add(Combobox_WelkAccount);
+
+        //Hier wordt alles aan Hbox_WelkProfiel toegevoegd.
+        Hbox_WelkProfiel.getChildren().add(Label_WelkProfiel);
+        Hbox_WelkProfiel.getChildren().add(Combobox_WelkProfiel);
 
         //Hier wordt alles aan Hbox_Naam toegevoegd.
         Hbox_Naam.getChildren().add(Label_Naam);
@@ -77,6 +96,22 @@ public class ProfielWijzigen {
         //Hier wordt Vbox_Gegevens netjes gemaakt.
         VBox_Gegevens.setAlignment(Pos.CENTER);
         VBox_Gegevens.setSpacing(40);
+
+        //Hier wordt Hbox_WelkAccount netjes gemaakt.
+        Label_WelkAccount.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
+        Combobox_WelkAccount.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
+        Hbox_WelkAccount.setAlignment(Pos.CENTER);
+        Hbox_WelkAccount.setSpacing(100);
+        Label_WelkAccount.setPrefSize(500,50);
+        Combobox_WelkAccount.setPrefSize(500,50);
+
+        //Hier wordt Hbox_WelkProfiel netjes gemaakt.
+        Label_WelkProfiel.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
+        Combobox_WelkProfiel.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
+        Hbox_WelkProfiel.setAlignment(Pos.CENTER);
+        Hbox_WelkProfiel.setSpacing(100);
+        Label_WelkProfiel.setPrefSize(500,50);
+        Combobox_WelkProfiel.setPrefSize(500,50);
 
         //Hier wordt Hbox_Naam netjes gemaakt.
         Label_Naam.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");

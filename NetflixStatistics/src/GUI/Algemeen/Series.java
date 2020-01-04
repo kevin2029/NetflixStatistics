@@ -27,6 +27,7 @@ public class Series {
         //Hier worden de buttons aangemaakt.
         Button Button_SerieAanmaken=new Button("Serie aanmaken");
         Button Button_SerieWijzigen=new Button("Serie wijzigen");
+        Button Button_SerieVerwijderen=new Button("Serie verwijderen");
         Button Button_Terug=new Button("< Terug");
 
 
@@ -57,6 +58,7 @@ public class Series {
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_Buttons.getChildren().add(Button_SerieAanmaken);
         Hbox_Buttons.getChildren().add(Button_SerieWijzigen);
+        Hbox_Buttons.getChildren().add(Button_SerieVerwijderen);
         Hbox_Buttons.getChildren().add(Button_Terug);
 
 
@@ -76,8 +78,9 @@ public class Series {
         Hbox_Buttons.setAlignment(Pos.TOP_CENTER);
         Button_SerieAanmaken.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_SerieWijzigen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_SerieVerwijderen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_Terug.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Hbox_Buttons.setSpacing(545);
+        Hbox_Buttons.setSpacing(300);
 
 
 
@@ -94,6 +97,13 @@ public class Series {
         Button_SerieWijzigen.setOnAction(actionEvent -> {
             NieuweSerieWijzigen NieuweSerieWijzigen=new NieuweSerieWijzigen();
             stage.setScene(NieuweSerieWijzigen.NieuweSerieWijzigen(stage));
+            stage.setFullScreen(true);
+        });
+
+        //Hier krijgt Button_SerieVerwijderen zijn functionaliteit.
+        Button_SerieVerwijderen.setOnAction(actionEvent -> {
+            SerieVerwijderen SerieVerwijderen=new SerieVerwijderen();
+            stage.setScene(SerieVerwijderen.SerieVerwijderen(stage));
             stage.setFullScreen(true);
         });
 

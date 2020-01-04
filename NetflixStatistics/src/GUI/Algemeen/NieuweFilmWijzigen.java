@@ -3,6 +3,7 @@ package GUI.Algemeen;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
@@ -16,6 +17,7 @@ public class NieuweFilmWijzigen {
         BorderPane Borderpane_NieuweFilmWijzigen=new BorderPane();
         HBox Hbox_Label=new HBox();
         VBox Vbox_Gegevens=new VBox();
+        HBox Hbox_WelkeFilm=new HBox();
         HBox Hbox_Titel=new HBox();
         HBox Hbox_Genre=new HBox();
         HBox Hbox_TijdInMinuten=new HBox();
@@ -25,11 +27,15 @@ public class NieuweFilmWijzigen {
 
         //Hier worden de labels aangemaakt.
         Label Label_FilmWijzigen=new Label("Film wijzigen");
+        Label Label_WelkeFilm=new Label("Welke film wilt u wijzigen?");
         Label Label_Titel=new Label("Wat is de titel van de film?");
         Label Label_Genre=new Label("Wat is het genre van de film?");
         Label Label_TijdInMinuten=new Label("Wat is het tijdsduur in minuten?");
         Label Label_Taal=new Label("Wat is de gesproken taal in de film?");
         Label Label_Leeftijdsindicatie=new Label("Hoe oud moet je minimaal zijn om de film te mogen kijken?");
+
+        //Hier wordt de combobox aangemaakt.
+        ComboBox Combobox_WelkeFilm=new ComboBox();//Hier staan alle films in.
 
         //Hier worden de textfields aangemaakt.
         TextField Textfield_Titel=new TextField();
@@ -54,12 +60,17 @@ public class NieuweFilmWijzigen {
         Hbox_Label.getChildren().add(Label_FilmWijzigen);
 
         //Hier wordt alles aan Vbox_Gegevens toegevoegd.
+        Vbox_Gegevens.getChildren().add(Hbox_WelkeFilm);
         Vbox_Gegevens.getChildren().add(Hbox_Titel);
         Vbox_Gegevens.getChildren().add(Hbox_Genre);
         Vbox_Gegevens.getChildren().add(Hbox_TijdInMinuten);
         Vbox_Gegevens.getChildren().add(Hbox_Taal);
         Vbox_Gegevens.getChildren().add(Hbox_LeeftijdsIndicatie);
         Vbox_Gegevens.getChildren().add(Hbox_Buttons);
+
+        //Hier wordt alles aan Hbox_WelkeFilm toegevoegd.
+        Hbox_WelkeFilm.getChildren().add(Label_WelkeFilm);
+        Hbox_WelkeFilm.getChildren().add(Combobox_WelkeFilm);
 
         //Hier wordt alles aan Hbox_Titel toegevoegd.
         Hbox_Titel.getChildren().add(Label_Titel);
@@ -99,6 +110,14 @@ public class NieuweFilmWijzigen {
         //Hier wordt Vbox_Gegevens netjes gemaakt.
         Vbox_Gegevens.setAlignment(Pos.CENTER);
         Vbox_Gegevens.setSpacing(40);
+
+        //Hier wordt Hbox_WelkeFilm netjes gemaakt.
+        Label_WelkeFilm.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
+        Combobox_WelkeFilm.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
+        Hbox_WelkeFilm.setAlignment(Pos.CENTER);
+        Hbox_WelkeFilm.setSpacing(100);
+        Label_WelkeFilm.setPrefSize(580,50);
+        Combobox_WelkeFilm.setPrefSize(580,50);
 
         //Hier wordt Hbox_Titel netjes gemaakt.
         Label_Titel.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
