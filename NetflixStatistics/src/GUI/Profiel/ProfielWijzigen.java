@@ -29,7 +29,7 @@ public class ProfielWijzigen {
         Label Label_ProfielWijzigen=new Label("Profiel wijzigen");
         Label Label_WelkAccount=new Label("Van welk account wilt U een profiel wijzigen?");
         Label Label_WelkProfiel=new Label("Welk profiel wilt u wijzigen?");
-        Label Label_Naam=new Label("Wat is uw voor en achternaam?");
+        Label Label_Naam=new Label("Wat is uw voor- en achternaam?");
         Label Label_Leeftijd=new Label("Wat is uw leeftijd?");
 
         //Hier worden de comboboxen aangemaakt.

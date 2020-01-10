@@ -25,7 +25,7 @@ public class ProfielAanmaken {
 
         //Hier worden de labels aangemaakt.
         Label Label_ProfielAanmaken=new Label("Profiel aanmaken");
-        Label Label_Naam=new Label("Wat is uw voor en achternaam?");
+        Label Label_Naam=new Label("Wat is uw voor- en achternaam?");
         Label Label_Leeftijd=new Label("Wat is uw leeftijd?");
 
         //Hier worden de textfields aangemaakt.

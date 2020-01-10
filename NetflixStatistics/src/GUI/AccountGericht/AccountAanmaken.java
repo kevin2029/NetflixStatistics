@@ -26,7 +26,7 @@ public class AccountAanmaken {
 
         //Hier worden de Labels aangemaakt.
         Label Label_AccountAanmaken=new Label("Account aanmaken");
-        Label Label_Naam=new Label("Wat is uw voor en achternaam?");
+        Label Label_Naam=new Label("Wat is uw voor- en achternaam?");
         Label Label_Woonplaats=new Label("Wat is uw woonplaats?");
         Label Label_Adres=new Label("Wat is uw adres?");
 

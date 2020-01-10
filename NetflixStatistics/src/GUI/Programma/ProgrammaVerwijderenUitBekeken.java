@@ -27,7 +27,7 @@ public class ProgrammaVerwijderenUitBekeken {
         Label Label_ProgrammaVerwijderen=new Label("Programma verwijderen uit bekeken programma's");
         Label Label_WelkAccount=new Label("Van welk Account wilt U een profiel selecteren?");
         Label Label_WelkProfiel=new Label("Op welk profiel wilt U een programma verwijderen?");
-        Label Label_WelkProgramma=new Label("Welk programma wilt U verwijderen uit de bekeken programma's?");
+        Label Label_WelkProgramma=new Label("Welk programma wilt U verwijderen?");
 
         //Hier wordt de combobox aangemaakt.
         ComboBox Combobox_WelkAccount=new ComboBox();//Hier staan alle accounts.

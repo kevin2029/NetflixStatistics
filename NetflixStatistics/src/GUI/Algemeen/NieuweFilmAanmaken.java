@@ -27,7 +27,7 @@ public class NieuweFilmAanmaken {
         Label Label_FilmAanmaken=new Label("Nieuwe film aanmaken");
         Label Label_Titel=new Label("Wat is de titel van de film?");
         Label Label_Genre=new Label("Wat is het genre van de film?");
-        Label Label_TijdInMinuten=new Label("Wat is het tijdsduur in minuten?");
+        Label Label_TijdInMinuten=new Label("Wat is de tijdsduur in minuten?");
         Label Label_Taal=new Label("Wat is de gesproken taal in de film?");
         Label Label_Leeftijdsindicatie=new Label("Hoe oud moet je minimaal zijn om de film te mogen kijken?");
 
