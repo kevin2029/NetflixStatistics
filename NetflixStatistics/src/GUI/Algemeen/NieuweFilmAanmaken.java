@@ -1,5 +1,8 @@
 package GUI.Algemeen;
 
+import Functionaliteit.Opslaan.Aanmaken.Opslaan_NieuwAccountAanmaken;
+import Functionaliteit.Opslaan.Aanmaken.Opslaan_NieuweFilmAanmaken;
+import GUI.Basis.AccountGericht;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -22,6 +25,8 @@ public class NieuweFilmAanmaken {
         HBox Hbox_Taal=new HBox();
         HBox Hbox_LeeftijdsIndicatie=new HBox();
         HBox Hbox_Buttons=new HBox();
+        HBox Hbox_ErrorVakjes=new HBox();
+        HBox Hbox_ErrorInteger=new HBox();
 
         //Hier worden de labels aangemaakt.
         Label Label_FilmAanmaken=new Label("Nieuwe film aanmaken");
@@ -30,6 +35,8 @@ public class NieuweFilmAanmaken {
         Label Label_TijdInMinuten=new Label("Wat is de tijdsduur in minuten?");
         Label Label_Taal=new Label("Wat is de gesproken taal in de film?");
         Label Label_Leeftijdsindicatie=new Label("Hoe oud moet je minimaal zijn om de film te mogen kijken?");
+        Label Label_ErrorVakjes=new Label("Vul alle vakjes in.");
+        Label Label_ErrorInteger=new Label("Tijdsduur en leeftijdsindicatie moeten getallen zijn");
 
         //Hier worden de textfields aangemaakt.
         TextField Textfield_Titel=new TextField();
@@ -84,6 +91,12 @@ public class NieuweFilmAanmaken {
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_Buttons.getChildren().add(Button_Opslaan);
         Hbox_Buttons.getChildren().add(Button_Annuleren);
+
+        //Hier wordt alles aan Hbox_ErrorVakjes toegevoegd.
+        Hbox_ErrorVakjes.getChildren().add(Label_ErrorVakjes);
+
+        //Hier wordt alles aan Hbox_ErrorInteger toegevoegd.
+        Hbox_ErrorInteger.getChildren().add(Label_ErrorInteger);
 
 
 
@@ -148,11 +161,51 @@ public class NieuweFilmAanmaken {
         Hbox_Buttons.setAlignment(Pos.CENTER);
         Hbox_Buttons.setSpacing(100);
 
+        //Hier wordt Hbox_ErrorVakjes netjes gemaakt.
+        Label_ErrorVakjes.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorVakjes.setPrefSize(500,50);
+        Label_ErrorVakjes.setAlignment(Pos.CENTER);
+        Hbox_ErrorVakjes.setAlignment(Pos.CENTER);
+
+        //Hier wordt Hbox_ErrorInteger netjes gemaakt.
+        Label_ErrorInteger.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorInteger.setPrefSize(1000,50);
+        Label_ErrorInteger.setAlignment(Pos.CENTER);
+        Hbox_ErrorInteger.setAlignment(Pos.CENTER);
+
 
 
 
 
         //Hier krijgt Button_Opslaan zijn functionaliteit.
+        Button_Opslaan.setOnAction(actionEvent -> {
+            //Eerst wordt gekeken of alle vakjes zijn ingevuld. Als dat niet het geval is dan wordt de volgende HBox aan de VBox toegevoegd.
+            if(Textfield_Titel.getText().trim().isEmpty() || Textfield_Genre.getText().trim().isEmpty()||Textfield_TijdInMinuten.getText().trim().isEmpty()||Textfield_Taal.getText().trim().isEmpty()||Textfield_LeeftijdsIndicatie.getText().trim().isEmpty()){
+                Vbox_Gegevens.getChildren().add(Hbox_ErrorVakjes);
+            }else{
+                //Als we hier zijn, zijn alle vakjes ingevuld dus mag de Hbox verwijderd worden
+                Vbox_Gegevens.getChildren().remove(Hbox_ErrorVakjes);
+
+                try{
+                    //Hier wordt gekeken of de tijd in minuten en leeftijdsindicatie ook daadwerkelijk een cijfer is.
+                    int TijdInMinuten= Integer.parseInt(Textfield_TijdInMinuten.getText());
+                    int Leeftijdsindicatie= Integer.parseInt(Textfield_LeeftijdsIndicatie.getText());
+
+                    //Hier wordt de method call gedaan om de film toe te voegen.
+                    Opslaan_NieuweFilmAanmaken.Opslaan(Textfield_Titel.getText(),Textfield_Genre.getText(),TijdInMinuten,Textfield_Taal.getText(),Leeftijdsindicatie);
+
+                    //Hier gaat men terug naar het scherm Films.
+                    Films Films =new Films();
+                    stage.setScene(Films.HomeAlgemeenFilms(stage));
+                    stage.setFullScreen(true);
+
+
+                } catch(NumberFormatException NFE){
+                    //Als het geen nummers waren dan wordt de volgende HBox toegevoegd aan de VBox.
+                    Vbox_Gegevens.getChildren().add(Hbox_ErrorInteger);
+                }
+            }
+        });
 
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {

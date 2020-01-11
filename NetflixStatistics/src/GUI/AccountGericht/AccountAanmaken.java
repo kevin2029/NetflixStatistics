@@ -75,6 +75,9 @@ public class AccountAanmaken {
         Hbox_buttons.getChildren().add(Button_Opslaan);
         Hbox_buttons.getChildren().add(Button_Annuleren);
 
+        //Hier wordt alles aan Hbox_Error toegevoegd.
+        Hbox_Error.getChildren().add(Label_Error);
+
 
 
 
@@ -134,10 +137,14 @@ public class AccountAanmaken {
 
         //Hier krijgt Button_Opslaan zijn functionaliteit.
         Button_Opslaan.setOnAction(actionEvent -> {
-            if(Textfield_Naam.getText().isEmpty() || Textfield_Woonplaats.getText().isEmpty()||Textfield_Adres.getText().isEmpty()){
-                Vbox_Gegevens.getChildren().add(Label_Error);
+            //Hier wordt gekeken of alle vakjes zijn ingevuld. Als dat niet het geval is dan wordt de volgende HBox aan de VBox toegevoegd.
+            if(Textfield_Naam.getText().trim().isEmpty() || Textfield_Woonplaats.getText().trim().isEmpty()||Textfield_Adres.getText().trim().isEmpty()){
+                Vbox_Gegevens.getChildren().add(Hbox_Error);
             }else{
+                //Als de vakjes zijn ingevuld wordt hier de methodcall gedaan om het account toe te voegen in de database.
                 Opslaan_NieuwAccountAanmaken.Opslaan(Textfield_Naam.getText(),Textfield_Woonplaats.getText(),Textfield_Adres.getText());
+
+                //Hier gaat men terug naar het scherm Accounts.
                 AccountGericht AccountGericht=new AccountGericht();
                 stage.setScene(AccountGericht.HomeAccountGericht(stage));
                 stage.setFullScreen(true);
