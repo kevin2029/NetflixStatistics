@@ -22,7 +22,7 @@ public class Seizoenen {
         Label Label_Seizoenen=new Label("Seizoenen");
 
         //Hier worden de buttons aangemaakt.
-        Button Button_SeizoenAanmaken=new Button("Seizoen aanmaken");
+        Button Button_NieuwSeizoenAanmaken=new Button("Nieuw seizoen aanmaken");
         Button Button_SeizoenVerwijderen=new Button("Seizoen verwijderen");
         Button Button_Terug=new Button("< Terug");
 
@@ -52,7 +52,7 @@ public class Seizoenen {
         Hbox_Label.getChildren().add(Label_Seizoenen);
 
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
-        Hbox_Buttons.getChildren().add(Button_SeizoenAanmaken);
+        Hbox_Buttons.getChildren().add(Button_NieuwSeizoenAanmaken);
         Hbox_Buttons.getChildren().add(Button_SeizoenVerwijderen);
         Hbox_Buttons.getChildren().add(Button_Terug);
 
@@ -71,17 +71,17 @@ public class Seizoenen {
 
         //Hier wordt Hbox_Buttons netjes gemaakt.
         Hbox_Buttons.setAlignment(Pos.TOP_CENTER);
-        Button_SeizoenAanmaken.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_NieuwSeizoenAanmaken.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_SeizoenVerwijderen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_Terug.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Hbox_Buttons.setSpacing(500);
+        Hbox_Buttons.setSpacing(470);
 
 
 
 
 
         //Hier krijgt Button_SeizoenAanmaken zijn functionaliteit.
-        Button_SeizoenAanmaken.setOnAction(actionEvent -> {
+        Button_NieuwSeizoenAanmaken.setOnAction(actionEvent -> {
             NieuwSeizoenAanmaken NieuwSeizoenAanmaken=new NieuwSeizoenAanmaken();
             stage.setScene(NieuwSeizoenAanmaken.NieuwSeizoenAanmaken(stage));
             stage.setFullScreen(true);

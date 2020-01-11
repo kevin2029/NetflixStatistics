@@ -24,7 +24,7 @@ public class NieuweSerieAanmaken {
         HBox Hbox_Buttons=new HBox();
 
         //Hier worden de Labels aangemaakt.
-        Label Label_SerieAanmaken=new Label("Serie aanmaken");
+        Label Label_SerieAanmaken=new Label("Nieuwe serie aanmaken");
         Label Label_Naam=new Label("Wat is de naam van de serie?");
         Label Label_Genre=new Label("Wat is het genre van de serie?");
         Label Label_Taal=new Label("Wat is de gesproken taal in de serie?");

@@ -25,7 +25,7 @@ public class Series {
         Label Label_Series=new Label("Series");
 
         //Hier worden de buttons aangemaakt.
-        Button Button_SerieAanmaken=new Button("Serie aanmaken");
+        Button Button_NieuweSerieAanmaken=new Button("Nieuwe serie aanmaken");
         Button Button_SerieWijzigen=new Button("Serie wijzigen");
         Button Button_SerieVerwijderen=new Button("Serie verwijderen");
         Button Button_Terug=new Button("< Terug");
@@ -56,7 +56,7 @@ public class Series {
         Hbox_Label.getChildren().add(Label_Series);
 
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
-        Hbox_Buttons.getChildren().add(Button_SerieAanmaken);
+        Hbox_Buttons.getChildren().add(Button_NieuweSerieAanmaken);
         Hbox_Buttons.getChildren().add(Button_SerieWijzigen);
         Hbox_Buttons.getChildren().add(Button_SerieVerwijderen);
         Hbox_Buttons.getChildren().add(Button_Terug);
@@ -76,18 +76,18 @@ public class Series {
 
         //Hier wordt Hbox_Buttons netjes gemaakt.
         Hbox_Buttons.setAlignment(Pos.TOP_CENTER);
-        Button_SerieAanmaken.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_NieuweSerieAanmaken.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_SerieWijzigen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_SerieVerwijderen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_Terug.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Hbox_Buttons.setSpacing(300);
+        Hbox_Buttons.setSpacing(270);
 
 
 
 
 
         //Hier krijgt Button_SerieAanmaken zijn functionaliteit.
-        Button_SerieAanmaken.setOnAction(actionEvent -> {
+        Button_NieuweSerieAanmaken.setOnAction(actionEvent -> {
             NieuweSerieAanmaken NieuweSerieAanmaken=new NieuweSerieAanmaken();
             stage.setScene(NieuweSerieAanmaken.NieuweSerieAanmaken(stage));
             stage.setFullScreen(true);
