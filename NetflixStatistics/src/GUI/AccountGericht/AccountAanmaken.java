@@ -1,5 +1,6 @@
 package GUI.AccountGericht;
 
+import Functionaliteit.Opslaan.Aanmaken.Opslaan_NieuwAccountAanmaken;
 import GUI.Basis.AccountGericht;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -23,12 +24,14 @@ public class AccountAanmaken {
         HBox Hbox_Woonplaats= new HBox();
         HBox Hbox_Adres=new HBox();
         HBox Hbox_buttons=new HBox();
+        HBox Hbox_Error=new HBox();
 
         //Hier worden de Labels aangemaakt.
         Label Label_AccountAanmaken=new Label("Account aanmaken");
         Label Label_Naam=new Label("Wat is uw voor- en achternaam?");
         Label Label_Woonplaats=new Label("Wat is uw woonplaats?");
         Label Label_Adres=new Label("Wat is uw adres?");
+        Label Label_Error=new Label("Vul alle vakjes in.");
 
         //Hier worden de textfields aangemaakt.
         TextField Textfield_Naam=new TextField();
@@ -119,11 +122,27 @@ public class AccountAanmaken {
         Hbox_buttons.setAlignment(Pos.CENTER);
         Hbox_buttons.setSpacing(100);
 
+        //Hier wordt Hbox_Error netjes gemaakt.
+        Label_Error.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_Error.setPrefSize(500,50);
+        Label_Error.setAlignment(Pos.CENTER);
+        Hbox_Error.setAlignment(Pos.CENTER);
+
 
 
 
 
         //Hier krijgt Button_Opslaan zijn functionaliteit.
+        Button_Opslaan.setOnAction(actionEvent -> {
+            if(Textfield_Naam.getText().isEmpty() || Textfield_Woonplaats.getText().isEmpty()||Textfield_Adres.getText().isEmpty()){
+                Vbox_Gegevens.getChildren().add(Label_Error);
+            }else{
+                Opslaan_NieuwAccountAanmaken.Opslaan(Textfield_Naam.getText(),Textfield_Woonplaats.getText(),Textfield_Adres.getText());
+                AccountGericht AccountGericht=new AccountGericht();
+                stage.setScene(AccountGericht.HomeAccountGericht(stage));
+                stage.setFullScreen(true);
+            }
+        });
 
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {

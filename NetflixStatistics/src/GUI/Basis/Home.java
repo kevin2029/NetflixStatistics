@@ -102,4 +102,3 @@ public class Home extends Application {
         return Home;
     }
 }
-//Deze pagina behoort alleen nog een afbeelding te bevatten.
