@@ -172,7 +172,7 @@ public class NieuweSerieAanmaken {
 
                 try{
                     //Hier wordt gekeken of de tijd in minuten en leeftijdsindicatie ook daadwerkelijk een cijfer is.
-                    int Leeftijdsindicatie= Integer.parseInt(Textfield_LeeftijdsIndicatie.getText());
+                    int Leeftijdsindicatie= Integer.parseInt(Textfield_LeeftijdsIndicatie.getText().trim());
 
                     //Hier wordt de method call gedaan om de film toe te voegen.
                     Opslaan_NieuweSerieAanmaken.Opslaan(Textfield_Naam.getText().trim(),Textfield_Genre.getText().trim(),Textfield_Taal.getText().trim(),Leeftijdsindicatie);

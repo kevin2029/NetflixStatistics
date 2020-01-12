@@ -193,7 +193,7 @@ public class NieuweAfleveringAanmaken {
 
                     try {
                         //Hier wordt gekeken of de tijd in minuten ook daadwerkelijk een cijfer is.
-                        int TijdInMinuten = Integer.parseInt(Textfield_TijdInMinuten.getText());
+                        int TijdInMinuten = Integer.parseInt(Textfield_TijdInMinuten.getText().trim());
 
                         //Hier wordt de method call gedaan om de film toe te voegen.
                         Opslaan_NieuweAfleveringAanmaken.Opslaan(Combobox_WelkeSerie.getSelectionModel(), Combobox_WelkSeizoen.getSelectionModel(), Textfield_Titel.getText().trim(), TijdInMinuten);

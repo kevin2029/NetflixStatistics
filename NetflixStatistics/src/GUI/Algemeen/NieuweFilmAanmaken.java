@@ -188,8 +188,8 @@ public class NieuweFilmAanmaken {
 
                 try{
                     //Hier wordt gekeken of de tijd in minuten en leeftijdsindicatie ook daadwerkelijk cijfers zijn.
-                    int TijdInMinuten= Integer.parseInt(Textfield_TijdInMinuten.getText());
-                    int Leeftijdsindicatie= Integer.parseInt(Textfield_LeeftijdsIndicatie.getText());
+                    int TijdInMinuten= Integer.parseInt(Textfield_TijdInMinuten.getText().trim());
+                    int Leeftijdsindicatie= Integer.parseInt(Textfield_LeeftijdsIndicatie.getText().trim());
 
                     //Hier wordt de method call gedaan om de film toe te voegen.
                     Opslaan_NieuweFilmAanmaken.Opslaan(Textfield_Titel.getText().trim(),Textfield_Genre.getText().trim(),TijdInMinuten,Textfield_Taal.getText().trim(),Leeftijdsindicatie);

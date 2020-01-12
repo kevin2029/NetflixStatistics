@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b877a0c7-3d3c-478d-8098-bc9ec5b724ab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwSeizoenAanmaken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwSeizoenAanmaken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuweAfleveringAanmaken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuweAfleveringAanmaken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AccountGericht/AccountAanmaken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AccountGericht/AccountAanmaken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Algemeen/NieuwSeizoenAanmaken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Algemeen/NieuwSeizoenAanmaken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwProfielAanmaken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwProfielAanmaken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Algemeen/NieuweAfleveringAanmaken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Algemeen/NieuweAfleveringAanmaken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Algemeen/NieuweFilmAanmaken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Algemeen/NieuweFilmAanmaken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Algemeen/NieuweSerieAanmaken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Algemeen/NieuweSerieAanmaken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Profiel/ProfielAanmaken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Profiel/ProfielAanmaken.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +16,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwProfielAanmaken.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Algemeen/NieuweAfleveringAanmaken.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="195" column="101" selection-start-line="195" selection-start-column="101" selection-end-line="195" selection-end-column="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Profiel/ProfielAanmaken.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="172" column="65" selection-start-line="172" selection-start-column="65" selection-end-line="172" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,16 +96,17 @@
         <option value="$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwAccountAanmaken.java" />
         <option value="$PROJECT_DIR$/src/Functionaliteit/Opslaan/Wijzigen/Opslaan_AccountWijzigen.java" />
         <option value="$PROJECT_DIR$/src/GUI/AccountGericht/AccountWijzigen.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Profiel/ProfielAanmaken.java" />
         <option value="$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuweFilmAanmaken.java" />
         <option value="$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuweSerieAanmaken.java" />
         <option value="$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwSeizoenAanmaken.java" />
         <option value="$PROJECT_DIR$/src/GUI/Algemeen/NieuwSeizoenAanmaken.java" />
         <option value="$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuweAfleveringAanmaken.java" />
+        <option value="$PROJECT_DIR$/src/GUI/AccountGericht/AccountAanmaken.java" />
         <option value="$PROJECT_DIR$/src/GUI/Algemeen/NieuweAfleveringAanmaken.java" />
         <option value="$PROJECT_DIR$/src/GUI/Algemeen/NieuweFilmAanmaken.java" />
         <option value="$PROJECT_DIR$/src/GUI/Algemeen/NieuweSerieAanmaken.java" />
-        <option value="$PROJECT_DIR$/src/GUI/AccountGericht/AccountAanmaken.java" />
+        <option value="$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwProfielAanmaken.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Profiel/ProfielAanmaken.java" />
       </list>
     </option>
   </component>
@@ -139,7 +166,7 @@
               <item name="NetflixStatistics" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="AccountGericht" type="462c0819:PsiDirectoryNode" />
+              <item name="Algemeen" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -150,7 +177,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578845690650" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578848543709" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../../../../javafx-sdk-13.0.1/lib" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -193,8 +220,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30738255" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30738255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -203,7 +231,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -472,13 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Profiel/ProfielAanmaken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="98" column="47" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DatabaseConnectie/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
@@ -486,24 +507,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuweFilmAanmaken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_ProgrammaToevoegen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwProfielAanmaken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -518,20 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="79" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwSeizoenAanmaken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuweAfleveringAanmaken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -551,25 +544,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Algemeen/NieuweSerieAanmaken.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="177" column="152" selection-start-line="177" selection-start-column="152" selection-end-line="177" selection-end-column="152" />
+        <state relative-caret-position="188">
+          <caret line="174" column="106" selection-start-line="174" selection-start-column="106" selection-end-line="174" selection-end-column="106" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Algemeen/NieuweAfleveringAanmaken.java">
+    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwSeizoenAanmaken.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="182" column="66" selection-start-line="182" selection-start-column="66" selection-end-line="182" selection-end-column="66" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Algemeen/NieuweFilmAanmaken.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="194" column="166" selection-start-line="194" selection-start-column="166" selection-end-line="194" selection-end-column="166" />
+        <state relative-caret-position="153">
+          <caret line="191" column="106" selection-start-line="191" selection-start-column="106" selection-end-line="191" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuweFilmAanmaken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuweAfleveringAanmaken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="81" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwProfielAanmaken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Algemeen/NieuweAfleveringAanmaken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="195" column="101" selection-start-line="195" selection-start-column="101" selection-end-line="195" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Profiel/ProfielAanmaken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="172" column="65" selection-start-line="172" selection-start-column="65" selection-end-line="172" selection-end-column="65" />
         </state>
       </provider>
     </entry>
