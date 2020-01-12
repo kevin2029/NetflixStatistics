@@ -175,7 +175,7 @@ public class NieuweSerieAanmaken {
                     int Leeftijdsindicatie= Integer.parseInt(Textfield_LeeftijdsIndicatie.getText());
 
                     //Hier wordt de method call gedaan om de film toe te voegen.
-                    Opslaan_NieuweSerieAanmaken.Opslaan(Textfield_Naam.getText(),Textfield_Genre.getText(),Textfield_Taal.getText(),Leeftijdsindicatie);
+                    Opslaan_NieuweSerieAanmaken.Opslaan(Textfield_Naam.getText().trim(),Textfield_Genre.getText().trim(),Textfield_Taal.getText().trim(),Leeftijdsindicatie);
 
                     //Hier gaat men terug naar het scherm Series.
                     Series Series =new Series();

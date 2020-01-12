@@ -187,12 +187,12 @@ public class NieuweFilmAanmaken {
                 Vbox_Gegevens.getChildren().remove(Hbox_ErrorVakjes);
 
                 try{
-                    //Hier wordt gekeken of de tijd in minuten en leeftijdsindicatie ook daadwerkelijk een cijfer is.
+                    //Hier wordt gekeken of de tijd in minuten en leeftijdsindicatie ook daadwerkelijk cijfers zijn.
                     int TijdInMinuten= Integer.parseInt(Textfield_TijdInMinuten.getText());
                     int Leeftijdsindicatie= Integer.parseInt(Textfield_LeeftijdsIndicatie.getText());
 
                     //Hier wordt de method call gedaan om de film toe te voegen.
-                    Opslaan_NieuweFilmAanmaken.Opslaan(Textfield_Titel.getText(),Textfield_Genre.getText(),TijdInMinuten,Textfield_Taal.getText(),Leeftijdsindicatie);
+                    Opslaan_NieuweFilmAanmaken.Opslaan(Textfield_Titel.getText().trim(),Textfield_Genre.getText().trim(),TijdInMinuten,Textfield_Taal.getText().trim(),Leeftijdsindicatie);
 
                     //Hier gaat men terug naar het scherm Films.
                     Films Films =new Films();

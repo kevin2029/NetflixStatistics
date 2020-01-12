@@ -1,5 +1,6 @@
 package GUI.Algemeen;
 
+import Functionaliteit.Opslaan.Aanmaken.Opslaan_NieuwSeizoenAanmaken;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -20,10 +21,12 @@ public class NieuwSeizoenAanmaken {
         HBox Hbox_Label_WelkeSerie=new HBox();
         HBox Hbox_Combobox_WelkeSerie=new HBox();
         HBox Hbox_Buttons=new HBox();
+        HBox Hbox_ErrorKies=new HBox();
 
         //Hier worden de labels aangemaakt.
         Label Label_NieuwSeizoenAanmaken=new Label("Nieuw seizoen aanmaken");
         Label Label_WelkeSerie=new Label("Welke serie moet een extra seizoen krijgen?");
+        Label Label_ErrorKies=new Label("Kies eerst een serie");
 
         //Hier wordt de combobox aangemaakt.
         ComboBox Combobox_WelkeSerie=new ComboBox();//Hier worden alle series weergeven (zelfde querie als bij serie wijzigen)
@@ -57,6 +60,9 @@ public class NieuwSeizoenAanmaken {
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_Buttons.getChildren().add(Button_Opslaan);
         Hbox_Buttons.getChildren().add(Button_Annuleren);
+
+        //Hier wordt alles aan Hbox_ErrorKies toegevoegd.
+        Hbox_ErrorKies.getChildren().add(Label_ErrorKies);
 
 
 
@@ -93,11 +99,31 @@ public class NieuwSeizoenAanmaken {
         Hbox_Buttons.setAlignment(Pos.CENTER);
         Hbox_Buttons.setSpacing(100);
 
+        //Hier wordt Hbox_ErrorKies netjes gemaakt.
+        Label_ErrorKies.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorKies.setPrefSize(1000,50);
+        Label_ErrorKies.setAlignment(Pos.CENTER);
+        Hbox_ErrorKies.setAlignment(Pos.CENTER);
+
 
 
 
 
         //Hier krijgt Button_Opslaan zijn functionaliteit.
+        Button_Opslaan.setOnAction(actionEvent -> {
+            //Hier wordt gekeken of er iets is geselecteerd.
+            if(Combobox_WelkeSerie.getSelectionModel().isEmpty()){
+                Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
+            }else{
+                //Hier wordt de method call gedaan om het seizoen toe te voegen.
+                Opslaan_NieuwSeizoenAanmaken.Opslaan(Combobox_WelkeSerie.getSelectionModel());
+
+                //Hier gaat men terug naar het scherm Seizoenen.
+                Seizoenen Seizoenen=new Seizoenen();
+                stage.setScene(Seizoenen.Seizoenen(stage));
+                stage.setFullScreen(true);
+            }
+        });
 
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {

@@ -142,7 +142,7 @@ public class AccountAanmaken {
                 Vbox_Gegevens.getChildren().add(Hbox_Error);
             }else{
                 //Als de vakjes zijn ingevuld wordt hier de methodcall gedaan om het account toe te voegen in de database.
-                Opslaan_NieuwAccountAanmaken.Opslaan(Textfield_Naam.getText(),Textfield_Woonplaats.getText(),Textfield_Adres.getText());
+                Opslaan_NieuwAccountAanmaken.Opslaan(Textfield_Naam.getText().trim(),Textfield_Woonplaats.getText().trim(),Textfield_Adres.getText().trim());
 
                 //Hier gaat men terug naar het scherm Accounts.
                 AccountGericht AccountGericht=new AccountGericht();
