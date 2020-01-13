@@ -1,5 +1,7 @@
 package GUI.AccountGericht;
 
+import Functionaliteit.Verwijderen.Verwijderen_Account;
+import Functionaliteit.Verwijderen.Verwijderen_Profiel;
 import GUI.Algemeen.Series;
 import GUI.Basis.AccountGericht;
 import javafx.geometry.Pos;
@@ -21,10 +23,12 @@ public class AccountVerwijderen {
         HBox Hbox_Label_WelkAccount=new HBox();
         HBox Hbox_Combobox_WelkAccount=new HBox();
         HBox Hbox_Buttons=new HBox();
+        HBox Hbox_ErrorKies=new HBox();
 
         //Hier worden de labels aangemaakt.
         Label Label_AccountVerwijderen=new Label("Account verwijderen");
         Label Label_WelkAccount=new Label("Welk account wilt U verwijderen?");
+        Label Label_ErrorKies=new Label("Kies eerst een account");
 
         //Hier wordt de combobox aangemaakt.
         ComboBox Combobox_WelkAccount=new ComboBox();//Hier staan alle accounts.
@@ -58,6 +62,9 @@ public class AccountVerwijderen {
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_Buttons.getChildren().add(Button_Verwijderen);
         Hbox_Buttons.getChildren().add(Button_Annuleren);
+
+        //Hier wordt alles aan HBox_ErrorKies toegevoegd.
+        Hbox_ErrorKies.getChildren().add(Label_ErrorKies);
 
 
 
@@ -94,11 +101,31 @@ public class AccountVerwijderen {
         Hbox_Buttons.setAlignment(Pos.CENTER);
         Hbox_Buttons.setSpacing(100);
 
+        //Hier wordt Hbox_ErrorKies netjes gemaakt.
+        Label_ErrorKies.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorKies.setPrefSize(500,50);
+        Label_ErrorKies.setAlignment(Pos.CENTER);
+        Hbox_ErrorKies.setAlignment(Pos.CENTER);
+
 
 
 
 
         //Hier krijgt Button_Verwijderen zijn functionaliteit.
+        Button_Verwijderen.setOnAction(actionEvent -> {
+            //Eerst kijken we of het account geselecteerd is.
+            if(Combobox_WelkAccount.getSelectionModel().isEmpty()){
+                Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
+            }else{
+                //Als we hier zijn is er een account geselecteerd dus maken we een methodcall.
+                Verwijderen_Account.Verwijderen(Combobox_WelkAccount.getSelectionModel());
+
+                //Hier gaan we terug naar het scherm AccountGericht.
+                AccountGericht AccountGericht=new AccountGericht();
+                stage.setScene(AccountGericht.HomeAccountGericht(stage));
+                stage.setFullScreen(true);
+            }
+        });
 
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {

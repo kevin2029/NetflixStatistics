@@ -1,5 +1,7 @@
 package GUI.Algemeen;
 
+import Functionaliteit.Verwijderen.Verwijderen_Aflevering;
+import Functionaliteit.Verwijderen.Verwijderen_Film;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -20,12 +22,14 @@ public class AfleveringVerwijderen {
         HBox Hbox_WelkSeizoen=new HBox();
         HBox Hbox_WelkeAflevering=new HBox();
         HBox Hbox_Buttons=new HBox();
+        HBox Hbox_ErrorKies=new HBox();
 
         //Hier worden de labels aangemaakt.
         Label Label_AfleveringVerwijderen=new Label("Aflevering verwijderen");
         Label Label_WelkeSerie=new Label("Van welke serie wilt U een seizoen selecteren?");
         Label Label_WelkSeizoen=new Label("Van welk seizoen wilt U een aflevering verwijderen?");
         Label Label_WelkeAflevering=new Label("Welke aflevering wilt U verwijderen?");
+        Label Label_ErrorKies=new Label("Kies eerst een serie, seizoen en aflevering");
 
         //Hier worden de comboboxen aangemaakt.
         ComboBox Combobox_WelkeSerie=new ComboBox();//Hier staan alle series.
@@ -68,6 +72,9 @@ public class AfleveringVerwijderen {
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_Buttons.getChildren().add(Button_Verwijderen);
         Hbox_Buttons.getChildren().add(Button_Annuleren);
+
+        //Hier wordt alles aan HBox_ErrorKies toegevoegd.
+        Hbox_ErrorKies.getChildren().add(Label_ErrorKies);
 
 
 
@@ -116,11 +123,31 @@ public class AfleveringVerwijderen {
         Hbox_Buttons.setAlignment(Pos.CENTER);
         Hbox_Buttons.setSpacing(100);
 
+        //Hier wordt Hbox_ErrorKies netjes gemaakt.
+        Label_ErrorKies.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorKies.setPrefSize(1000,50);
+        Label_ErrorKies.setAlignment(Pos.CENTER);
+        Hbox_ErrorKies.setAlignment(Pos.CENTER);
+
 
 
 
 
         //Hier krijgt Button_Verwijderen zijn functionaliteit.
+        Button_Verwijderen.setOnAction(actionEvent -> {
+            //Eerst kijken we of de serie, het seizoen en de aflevering geselecteerd is.
+            if(Combobox_WelkeSerie.getSelectionModel().isEmpty()||Combobox_WelkSeizoen.getSelectionModel().isEmpty()||Combobox_WelkeAflevering.getSelectionModel().isEmpty()){
+                Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
+            }else{
+                //Als we hier zijn is er een serie, seizoen en aflevering geselecteerd dus maken we een methodcall.
+                Verwijderen_Aflevering.Verwijderen(Combobox_WelkeSerie.getSelectionModel(),Combobox_WelkSeizoen.getSelectionModel(),Combobox_WelkeAflevering.getSelectionModel());
+
+                //Hier gaan we terug naar het scherm Afleveringen.
+                Afleveringen Afleveringen=new Afleveringen();
+                stage.setScene(Afleveringen.HomeAlgemeenAfleveringen(stage));
+                stage.setFullScreen(true);
+            }
+        });
 
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {

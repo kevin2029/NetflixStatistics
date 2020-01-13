@@ -1,5 +1,7 @@
 package GUI.Algemeen;
 
+import Functionaliteit.Verwijderen.Verwijderen_Seizoen;
+import Functionaliteit.Verwijderen.Verwijderen_Serie;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -19,10 +21,12 @@ public class SerieVerwijderen {
         HBox Hbox_Label_WelkeSerie=new HBox();
         HBox Hbox_Combobox_WelkeSerie=new HBox();
         HBox Hbox_Buttons=new HBox();
+        HBox Hbox_ErrorKies=new HBox();
 
         //Hier worden de labels aangemaakt.
         Label Label_SerieVerwijderen=new Label("Serie verwijderen");
         Label Label_WelkeSerie=new Label("Welke serie wilt U verwijderen?");
+        Label Label_ErrorKies=new Label("Kies eerst een serie");
 
         //Hier wordt de combobox aangemaakt.
         ComboBox Combobox_WelkeSerie=new ComboBox();//Hier staan alle series.
@@ -56,6 +60,9 @@ public class SerieVerwijderen {
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_Buttons.getChildren().add(Button_Verwijderen);
         Hbox_Buttons.getChildren().add(Button_Annuleren);
+
+        //Hier wordt alles aan HBox_ErrorKies toegevoegd.
+        Hbox_ErrorKies.getChildren().add(Label_ErrorKies);
 
 
 
@@ -92,12 +99,31 @@ public class SerieVerwijderen {
         Hbox_Buttons.setAlignment(Pos.CENTER);
         Hbox_Buttons.setSpacing(100);
 
+        //Hier wordt Hbox_ErrorKies netjes gemaakt.
+        Label_ErrorKies.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorKies.setPrefSize(500,50);
+        Label_ErrorKies.setAlignment(Pos.CENTER);
+        Hbox_ErrorKies.setAlignment(Pos.CENTER);
+
 
 
 
 
         //Hier krijgt Button_Verwijderen zijn functionaliteit.
+        Button_Verwijderen.setOnAction(actionEvent -> {
+            //Eerst kijken we of de serie is geselecteerd.
+            if(Combobox_WelkeSerie.getSelectionModel().isEmpty()){
+                Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
+            }else{
+                //Als we hier zijn is er een serie geselecteerd dus maken we een methodcall.
+                Verwijderen_Serie.Verwijderen(Combobox_WelkeSerie.getSelectionModel());
 
+                //Hier gaan we terug naar het scherm Series.
+                Series Series=new Series();
+                stage.setScene(Series.Series(stage));
+                stage.setFullScreen(true);
+            }
+        });
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {
             Series Series=new Series();

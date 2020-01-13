@@ -1,5 +1,6 @@
 package GUI.Algemeen;
 
+import Functionaliteit.Verwijderen.Verwijderen_Film;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -19,10 +20,12 @@ public class FilmVerwijderen {
         HBox Hbox_Label_WelkeFilm=new HBox();
         HBox Hbox_Combobox_WelkeFilm=new HBox();
         HBox Hbox_Buttons=new HBox();
+        HBox Hbox_ErrorKies=new HBox();
 
         //Hier worden de labels aangemaakt.
         Label Label_FilmVerwijderen=new Label("Film verwijderen");
         Label Label_WelkeFilm=new Label("Welke film wilt U verwijderen?");
+        Label Label_ErrorKies=new Label("Kies eerst een film");
 
         //Hier wordt de combobox aangemaakt.
         ComboBox Combobox_WelkeFilm=new ComboBox();//Hier staan alle films.
@@ -56,6 +59,9 @@ public class FilmVerwijderen {
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_Buttons.getChildren().add(Button_Verwijderen);
         Hbox_Buttons.getChildren().add(Button_Annuleren);
+
+        //Hier wordt alles aan HBox_ErrorKies toegevoegd.
+        Hbox_ErrorKies.getChildren().add(Label_ErrorKies);
 
 
 
@@ -92,11 +98,31 @@ public class FilmVerwijderen {
         Hbox_Buttons.setAlignment(Pos.CENTER);
         Hbox_Buttons.setSpacing(100);
 
+        //Hier wordt Hbox_ErrorKies netjes gemaakt.
+        Label_ErrorKies.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorKies.setPrefSize(500,50);
+        Label_ErrorKies.setAlignment(Pos.CENTER);
+        Hbox_ErrorKies.setAlignment(Pos.CENTER);
+
 
 
 
 
         //Hier krijgt Button_Verwijderen zijn functionaliteit.
+        Button_Verwijderen.setOnAction(actionEvent -> {
+            //Eerst kijken we of de film is geselecteerd.
+            if(Combobox_WelkeFilm.getSelectionModel().isEmpty()){
+                Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
+            }else{
+                //Als we hier zijn is er een film geselecteerd dus maken we een methodcall.
+                Verwijderen_Film.Verwijderen(Combobox_WelkeFilm.getSelectionModel());
+
+                //Hier gaan we terug naar het scherm Films.
+                Films Films=new Films();
+                stage.setScene(Films.HomeAlgemeenFilms(stage));
+                stage.setFullScreen(true);
+            }
+        });
 
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {
