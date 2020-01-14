@@ -1,5 +1,8 @@
 package GUI.Algemeen;
 
+import Functionaliteit.Opslaan.Wijzigen.Opslaan_AfleveringWijzigen;
+import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProfielWijzigen;
+import GUI.AccountGericht.AccountGerichtAccount;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -23,6 +26,9 @@ public class NieuweAfleveringWijzigen {
         HBox Hbox_Titel=new HBox();
         HBox Hbox_TijdInMinuten=new HBox();
         HBox Hbox_Buttons=new HBox();
+        HBox Hbox_ErrorKies=new HBox();
+        HBox Hbox_ErrorVakjes=new HBox();
+        HBox Hbox_ErrorInteger=new HBox();
 
         //Hier worden de labels aangemaakt.
         Label Label_NieuweAfleveringWijzigen=new Label("Nieuwe aflevering wijzigen");
@@ -31,6 +37,9 @@ public class NieuweAfleveringWijzigen {
         Label Label_WelkeAflevering=new Label("Welke aflevering wilt U wijzigen?");
         Label Label_Titel=new Label("Wat is de titel van de aflevering?");
         Label Label_TijdInMinuten=new Label("Wat is het tijdsduur in minuten?");
+        Label Label_ErrorKies=new Label("Kies eerst een serie, seizoen en een aflevering");
+        Label Label_ErrorVakjes=new Label("Vul alle vakjes in");
+        Label Label_ErrorInteger=new Label("Tijdsduur moet een getal zijn");
 
         //Hier worden de comboboxen aangemaakt.
         ComboBox Combobox_WelkeSerie=new ComboBox();//deze bevat alle series. Geef de querie een methode als arraylist en zet die erin.
@@ -87,6 +96,15 @@ public class NieuweAfleveringWijzigen {
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_Buttons.getChildren().add(Button_Opslaan);
         Hbox_Buttons.getChildren().add(Button_Annuleren);
+
+        //Hier wordt alles aan HBox_ErrorKies toegevoegd.
+        Hbox_ErrorKies.getChildren().add(Label_ErrorKies);
+
+        //Hier wordt alles aan Hbox_ErrorVakjes toegevoegd.
+        Hbox_ErrorVakjes.getChildren().add(Label_ErrorVakjes);
+
+        //Hier wordt alles aan Hbox_ErrorInteger toegevoegd.
+        Hbox_ErrorInteger.getChildren().add(Label_ErrorInteger);
 
 
 
@@ -151,11 +169,65 @@ public class NieuweAfleveringWijzigen {
         Hbox_Buttons.setAlignment(Pos.CENTER);
         Hbox_Buttons.setSpacing(100);
 
+        //Hier wordt Hbox_ErrorKies netjes gemaakt.
+        Label_ErrorKies.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorKies.setPrefSize(1000,50);
+        Label_ErrorKies.setAlignment(Pos.CENTER);
+        Hbox_ErrorKies.setAlignment(Pos.CENTER);
+
+        //Hier wordt Hbox_ErrorVakjes netjes gemaakt.
+        Label_ErrorVakjes.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorVakjes.setPrefSize(500,50);
+        Label_ErrorVakjes.setAlignment(Pos.CENTER);
+        Hbox_ErrorVakjes.setAlignment(Pos.CENTER);
+
+        //Hier wordt Hbox_ErrorInteger netjes gemaakt.
+        Label_ErrorInteger.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorInteger.setPrefSize(500,50);
+        Label_ErrorInteger.setAlignment(Pos.CENTER);
+        Hbox_ErrorInteger.setAlignment(Pos.CENTER);
+
+
 
 
 
 
         //Hier krijgt Button_Opslaan zijn functionaliteit.
+        Button_Opslaan.setOnAction(actionEvent -> {
+            //Hier wordt gekeken of een serie, seizoen en een aflevering geselecteerd zijn.
+            if(Combobox_WelkeSerie.getSelectionModel().isEmpty()||Combobox_WelkSeizoen.getSelectionModel().isEmpty()||Combobox_WelkeAflevering.getSelectionModel().isEmpty()){
+                Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
+            }else {
+                //Als we hier zijn is alles geselecteerd dus kan de error weg.
+                Vbox_Gegevens.getChildren().remove(Hbox_ErrorKies);
+
+                //Hier kijken we of de vakjes zijn ingevuld.
+                if (Textfield_Titel.getText().trim().isEmpty() || Textfield_TijdInMinuten.getText().trim().isEmpty()) {
+                    Vbox_Gegevens.getChildren().add(Hbox_ErrorVakjes);
+                } else {
+
+                    //Als we hier zijn, zijn alle vakjes ingevuld dus kan de error weg.
+                    Vbox_Gegevens.getChildren().remove(Hbox_ErrorVakjes);
+
+                    try {
+                        //Hier wordt gekeken of de leeftijd ook daadwerkelijk een cijfer is.
+                        int Tijdsduur = Integer.parseInt(Textfield_TijdInMinuten.getText().trim());
+
+                        //Hier komt de methodcall
+                        Opslaan_AfleveringWijzigen.Opslaan(Combobox_WelkeSerie.getSelectionModel(),Combobox_WelkSeizoen.getSelectionModel(),Combobox_WelkeAflevering.getSelectionModel(),Textfield_Titel.getText(),Tijdsduur);
+
+                        //Hier gaat men terug naar het scherm Afleveringen.
+                        Afleveringen Afleveringen=new Afleveringen();
+                        stage.setScene(Afleveringen.HomeAlgemeenAfleveringen(stage));
+                        stage.setFullScreen(true);
+
+                    } catch (NumberFormatException NFE) {
+                        //Als het geen nummer was dan wordt de volgende HBox toegevoegd aan de VBox.
+                        Vbox_Gegevens.getChildren().add(Hbox_ErrorInteger);
+                    }
+                }
+            }
+        });
 
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {

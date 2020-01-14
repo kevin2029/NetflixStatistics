@@ -1,6 +1,9 @@
 package GUI.Profiel;
 
+import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProfielWijzigen;
+import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProgrammaWijzigen;
 import GUI.AccountGericht.AccountGerichtAccount;
+import GUI.Basis.AccountGericht;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -24,6 +27,9 @@ public class ProfielWijzigen {
         HBox Hbox_Naam=new HBox();
         HBox Hbox_Leeftijd=new HBox();
         HBox Hbox_Buttons=new HBox();
+        HBox Hbox_ErrorKies=new HBox();
+        HBox Hbox_ErrorVakjes=new HBox();
+        HBox Hbox_ErrorInteger=new HBox();
 
         //Hier worden de labels aangemaakt.
         Label Label_ProfielWijzigen=new Label("Profiel wijzigen");
@@ -31,6 +37,9 @@ public class ProfielWijzigen {
         Label Label_WelkProfiel=new Label("Welk profiel wilt u wijzigen?");
         Label Label_Naam=new Label("Wat is uw voor- en achternaam?");
         Label Label_Leeftijd=new Label("Wat is uw leeftijd?");
+        Label Label_ErrorKies=new Label("Kies eerst een account en een profiel");
+        Label Label_ErrorVakjes=new Label("Vul alle vakjes in");
+        Label Label_ErrorInteger=new Label("Leeftijd moet een getal zijn");
 
         //Hier worden de comboboxen aangemaakt.
         ComboBox Combobox_WelkAccount=new ComboBox();
@@ -81,6 +90,15 @@ public class ProfielWijzigen {
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_Buttons.getChildren().add(Button_Opslaan);
         Hbox_Buttons.getChildren().add(Button_Annuleren);
+
+        //Hier wordt alles aan HBox_ErrorKies toegevoegd.
+        Hbox_ErrorKies.getChildren().add(Label_ErrorKies);
+
+        //Hier wordt alles aan Hbox_ErrorVakjes toegevoegd.
+        Hbox_ErrorVakjes.getChildren().add(Label_ErrorVakjes);
+
+        //Hier wordt alles aan Hbox_ErrorInteger toegevoegd.
+        Hbox_ErrorInteger.getChildren().add(Label_ErrorInteger);
 
 
 
@@ -137,11 +155,65 @@ public class ProfielWijzigen {
         Hbox_Buttons.setAlignment(Pos.CENTER);
         Hbox_Buttons.setSpacing(100);
 
+        //Hier wordt Hbox_ErrorKies netjes gemaakt.
+        Label_ErrorKies.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorKies.setPrefSize(1000,50);
+        Label_ErrorKies.setAlignment(Pos.CENTER);
+        Hbox_ErrorKies.setAlignment(Pos.CENTER);
+
+        //Hier wordt Hbox_ErrorVakjes netjes gemaakt.
+        Label_ErrorVakjes.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorVakjes.setPrefSize(500,50);
+        Label_ErrorVakjes.setAlignment(Pos.CENTER);
+        Hbox_ErrorVakjes.setAlignment(Pos.CENTER);
+
+        //Hier wordt Hbox_ErrorInteger netjes gemaakt.
+        Label_ErrorInteger.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorInteger.setPrefSize(500,50);
+        Label_ErrorInteger.setAlignment(Pos.CENTER);
+        Hbox_ErrorInteger.setAlignment(Pos.CENTER);
+
 
 
 
 
         //Hier krijgt Button_Opslaan zijn functionaliteit.
+        Button_Opslaan.setOnAction(actionEvent -> {
+            //Hier wordt gekeken of het account en een profiel geselecteerd zijn.
+            if(Combobox_WelkAccount.getSelectionModel().isEmpty()||Combobox_WelkProfiel.getSelectionModel().isEmpty()){
+                VBox_Gegevens.getChildren().add(Hbox_ErrorKies);
+            }else {
+                //Als we hier zijn is alles geselecteerd dus kan de error weg.
+                VBox_Gegevens.getChildren().remove(Hbox_ErrorKies);
+
+                //Hier kijken we of de vakjes zijn ingevuld.
+                if (Textfield_Naam.getText().trim().isEmpty() || Textfield_Leeftijd.getText().trim().isEmpty()) {
+                    VBox_Gegevens.getChildren().add(Hbox_ErrorVakjes);
+                } else {
+
+                    //Als we hier zijn, zijn alle vakjes ingevuld dus kan de error weg.
+                    VBox_Gegevens.getChildren().remove(Hbox_ErrorVakjes);
+
+                    try {
+                        //Hier wordt gekeken of de leeftijd ook daadwerkelijk een cijfer is.
+                        int Leeftijd = Integer.parseInt(Textfield_Leeftijd.getText().trim());
+
+                        //Hier komt de methodcall
+                        Opslaan_ProfielWijzigen.Opslaan(Combobox_WelkAccount.getSelectionModel(), Combobox_WelkProfiel.getSelectionModel(), Textfield_Naam.getText().trim(), Leeftijd);
+
+                        //Hier gaat men terug naar het scherm AccountGerichtAccount.
+                        AccountGerichtAccount Account=new AccountGerichtAccount();
+                        stage.setScene(Account.Account(stage));
+                        stage.setFullScreen(true);
+
+                    } catch (NumberFormatException NFE) {
+                        //Als het geen nummer was dan wordt de volgende HBox toegevoegd aan de VBox.
+                        VBox_Gegevens.getChildren().add(Hbox_ErrorInteger);
+                    }
+                }
+            }
+        });
+
 
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {

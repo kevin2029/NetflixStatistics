@@ -1,5 +1,7 @@
 package GUI.AccountGericht;
 
+import Functionaliteit.Opslaan.Wijzigen.Opslaan_AccountWijzigen;
+import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProfielWijzigen;
 import GUI.Basis.AccountGericht;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -25,6 +27,8 @@ public class AccountWijzigen {
         HBox Hbox_Woonplaats= new HBox();
         HBox Hbox_Adres=new HBox();
         HBox Hbox_buttons=new HBox();
+        HBox Hbox_ErrorKies=new HBox();
+        HBox Hbox_ErrorVakjes=new HBox();
 
         //Hier worden de Labels aangemaakt.
         Label Label_AccountWijzigen=new Label("Account wijzigen");
@@ -32,6 +36,8 @@ public class AccountWijzigen {
         Label Label_Naam=new Label("Wat is uw voor- en achternaam?");
         Label Label_Woonplaats=new Label("Wat is uw woonplaats?");
         Label Label_Adres=new Label("Wat is uw adres?");
+        Label Label_ErrorKies=new Label("Kies eerst een account");
+        Label Label_ErrorVakjes=new Label("Vul alle vakjes in");
 
         //Hier wordt de combobox aangemaakt.
         ComboBox Combobox_WelkAccount=new ComboBox();//Hierin moeten alle accounts staan.
@@ -82,6 +88,12 @@ public class AccountWijzigen {
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_buttons.getChildren().add(Button_Opslaan);
         Hbox_buttons.getChildren().add(Button_Annuleren);
+
+        //Hier wordt alles aan HBox_ErrorKies toegevoegd.
+        Hbox_ErrorKies.getChildren().add(Label_ErrorKies);
+
+        //Hier wordt alles aan Hbox_ErrorVakjes toegevoegd.
+        Hbox_ErrorVakjes.getChildren().add(Label_ErrorVakjes);
 
 
 
@@ -138,11 +150,45 @@ public class AccountWijzigen {
         Hbox_buttons.setAlignment(Pos.CENTER);
         Hbox_buttons.setSpacing(100);
 
+        //Hier wordt Hbox_ErrorKies netjes gemaakt.
+        Label_ErrorKies.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorKies.setPrefSize(500,50);
+        Label_ErrorKies.setAlignment(Pos.CENTER);
+        Hbox_ErrorKies.setAlignment(Pos.CENTER);
+
+        //Hier wordt Hbox_ErrorVakjes netjes gemaakt.
+        Label_ErrorVakjes.setStyle("-fx-background-color: Red; -fx-text-fill: Black; -fx-font-size: 30; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20");
+        Label_ErrorVakjes.setPrefSize(500,50);
+        Label_ErrorVakjes.setAlignment(Pos.CENTER);
+        Hbox_ErrorVakjes.setAlignment(Pos.CENTER);
+
 
 
 
 
         //Hier krijgt Button_Opslaan zijn functionaliteit.
+        Button_Opslaan.setOnAction(actionEvent -> {
+            //Hier wordt gekeken of het account geselecteerd is.
+            if(Combobox_WelkAccount.getSelectionModel().isEmpty()){
+                Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
+            }else {
+                //Als we hier zijn is alles geselecteerd dus kan de error weg.
+                Vbox_Gegevens.getChildren().remove(Hbox_ErrorKies);
+
+                //Hier kijken we of de vakjes zijn ingevuld.
+                if (Textfield_Naam.getText().trim().isEmpty() || Textfield_Woonplaats.getText().trim().isEmpty() || Textfield_Adres.getText().trim().isEmpty()) {
+                    Vbox_Gegevens.getChildren().add(Hbox_ErrorVakjes);
+                } else {
+                    //Hier komt de methodcall
+                    Opslaan_AccountWijzigen.Opslaan(Combobox_WelkAccount.getSelectionModel(), Textfield_Naam.getText().trim(), Textfield_Woonplaats.getText().trim(),Textfield_Adres.getText().trim());
+
+                    //Hier gaat men terug naar het scherm AccountGericht.
+                    AccountGericht Accounts=new AccountGericht();
+                    stage.setScene(Accounts.HomeAccountGericht(stage));
+                    stage.setFullScreen(true);
+                }
+            }
+        });
 
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {
