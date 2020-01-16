@@ -1,5 +1,7 @@
 package GUI.Basis;
 
+import Functionaliteit.Opslaan.Wijzigen.Opslaan_AccountWijzigen;
+import Functionaliteit.Printen.Accounts.Printen_AlleAccounts;
 import GUI.AccountGericht.AccountAanmaken;
 import GUI.AccountGericht.AccountGerichtAccount;
 import GUI.AccountGericht.AccountVerwijderen;
@@ -54,6 +56,7 @@ public class AccountGericht {
 
         //Hier wordt alles aan Borderpane_Accounts toegevoegd.
         Borderpane_Accounts.setTop(Vbox_LabelEnButtons);
+        Borderpane_Accounts.setCenter(Printen_AlleAccounts.AlleAccounts());
 
         //Hier wordt alles aan Vbox_LabelEnButtons toegevoegd.
         Vbox_LabelEnButtons.getChildren().add(Hbox_Label);

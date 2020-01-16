@@ -1,5 +1,9 @@
 package GUI.Algemeen;
 
+import Functionaliteit.Printen.Films.Printen_AlleFilms;
+import Functionaliteit.Printen.Films.Printen_FilmLangsteTijdsduur;
+import Functionaliteit.Printen.Films.Printen_FilmsOnder16;
+import Functionaliteit.Printen.Films.Printen_LangsteTijdsduurOnder16;
 import GUI.Basis.HomeAlgemeen;
 import GUI.Programma.ProgrammaWijzigen;
 import javafx.geometry.Pos;
@@ -38,6 +42,7 @@ public class Films {
 
         //Hier wordt alles aan Borderpane_Films toegevoegt.
         Borderpane_Films.setTop(Vbox_LabelEnButtons);
+        Borderpane_Films.setCenter(Printen_AlleFilms.AlleFilms());
 
         //Hier wordt alles aan Vbox_LabelEnButtons toegevoegd.
         Vbox_LabelEnButtons.getChildren().add(Hbox_Label);
@@ -78,24 +83,27 @@ public class Films {
 
 
         //Hier krijgt Button_AlleFilms zijn functionaliteit.
+        Button_AlleFilms.setOnAction(actionEvent -> {
+            Borderpane_Films.setCenter(Printen_AlleFilms.AlleFilms());
+        });
 
         //Hier krijgt Button_LangsteTijdsduur zijn functionaliteit.
         Button_LangsteTijdsduur.setOnAction(actionEvent -> {
             if(IsLangsteTijdsduurSelected==true&&IsFilmsMetLeeftijdsindicatieOnder16Selected==true){
                 IsLangsteTijdsduurSelected();
-                //Methodcall
+                Borderpane_Films.setCenter(Printen_FilmsOnder16.FilmsOnder16());
                 Button_LangsteTijdsduur.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
             }else if(IsLangsteTijdsduurSelected==false&&IsFilmsMetLeeftijdsindicatieOnder16Selected==false){
                 IsLangsteTijdsduurSelected();
-                //Methodcall
+                Borderpane_Films.setCenter(Printen_FilmLangsteTijdsduur.Langstetijdsduur());
                 Button_LangsteTijdsduur.setStyle("-fx-background-color: Gray; -fx-font-size:20; -fx-text-fill: Black; -fx-font-weight: bold");
             }else if(IsLangsteTijdsduurSelected==true&&IsFilmsMetLeeftijdsindicatieOnder16Selected==false){
                 IsLangsteTijdsduurSelected();
-                //MethodCall
+                Borderpane_Films.setCenter(Printen_AlleFilms.AlleFilms());
                 Button_LangsteTijdsduur.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
             }else if(IsLangsteTijdsduurSelected==false&&IsFilmsMetLeeftijdsindicatieOnder16Selected==true){
                 IsLangsteTijdsduurSelected();
-                //methodcall
+                Borderpane_Films.setCenter(Printen_LangsteTijdsduurOnder16.LangsteTijdsduurOnder16());
                 Button_LangsteTijdsduur.setStyle("-fx-background-color: Gray; -fx-font-size:20; -fx-text-fill: Black; -fx-font-weight: bold");
             }
         });
@@ -104,19 +112,19 @@ public class Films {
         Button_FilmsMetLeeftijdsindicatieOnder16.setOnAction(actionEvent -> {
             if(IsFilmsMetLeeftijdsindicatieOnder16Selected==true&&IsLangsteTijdsduurSelected==true){
                 IsFilmsMetLeeftijdsindicatieOnder16Selected();
-                //Methodcall
+                Borderpane_Films.setCenter(Printen_FilmLangsteTijdsduur.Langstetijdsduur());
                 Button_FilmsMetLeeftijdsindicatieOnder16.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
             }else if(IsFilmsMetLeeftijdsindicatieOnder16Selected==false&&IsLangsteTijdsduurSelected==false){
                 IsFilmsMetLeeftijdsindicatieOnder16Selected();
-                //methodcall
+                Borderpane_Films.setCenter(Printen_FilmsOnder16.FilmsOnder16());
                 Button_FilmsMetLeeftijdsindicatieOnder16.setStyle("-fx-background-color: Gray; -fx-font-size:20; -fx-text-fill: Black; -fx-font-weight: bold");
             }else if(IsFilmsMetLeeftijdsindicatieOnder16Selected==true&&IsLangsteTijdsduurSelected==false){
                 IsFilmsMetLeeftijdsindicatieOnder16Selected();
-                //MethodCall
+                Borderpane_Films.setCenter(Printen_AlleFilms.AlleFilms());
                 Button_FilmsMetLeeftijdsindicatieOnder16.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
             }else if(IsFilmsMetLeeftijdsindicatieOnder16Selected==false&&IsLangsteTijdsduurSelected==true){
                 IsFilmsMetLeeftijdsindicatieOnder16Selected();
-                //Methodcall
+                Borderpane_Films.setCenter(Printen_LangsteTijdsduurOnder16.LangsteTijdsduurOnder16());
                 Button_FilmsMetLeeftijdsindicatieOnder16.setStyle("-fx-background-color: Gray; -fx-font-size:20; -fx-text-fill: Black; -fx-font-weight: bold");
             }
         });

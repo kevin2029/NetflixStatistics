@@ -25,21 +25,11 @@ public class Series {
         Label Label_Series=new Label("Series");
 
         //Hier wordt de button aangemaakt.
+        Button Button_Seizoenen=new Button("Seizoenen");
         Button Button_Terug=new Button("< Terug");
 
 
-//Dit is een test voor de view zelf en moet zo snel mogelijk verwijderd worden.
-        HBox Hbox=new HBox();
-        VBox Vbox=new VBox();
-        Button klik=new Button("Naam");
-        Borderpane_Series.setBottom(Hbox);
-        Hbox.getChildren().add(Vbox);
-        Vbox.getChildren().add(klik);
-        klik.setOnAction(actionEvent -> {
-            Seizoenen Seizoenen=new Seizoenen();
-            stage.setScene(Seizoenen.Seizoenen(stage));
-            stage.setFullScreen(true);
-        });
+
 
 
         //Hier wordt alles aan Borderpane_Series toegevoegd.
@@ -53,6 +43,7 @@ public class Series {
         Hbox_Label.getChildren().add(Label_Series);
 
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
+        Hbox_Buttons.getChildren().add(Button_Seizoenen);
         Hbox_Buttons.getChildren().add(Button_Terug);
 
 
@@ -70,11 +61,20 @@ public class Series {
 
         //Hier wordt Hbox_Buttons netjes gemaakt.
         Hbox_Buttons.setAlignment(Pos.TOP_RIGHT);
+        Button_Seizoenen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_Terug.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Hbox_Buttons.setSpacing(605);
 
 
 
 
+
+        //Hier krijgt Button_Seizoenen zijn functionaliteit.
+        Button_Seizoenen.setOnAction(actionEvent -> {
+            Seizoenen Seizoenen=new Seizoenen();
+            stage.setScene(Seizoenen.Seizoenen(stage));
+            stage.setFullScreen(true);
+        });
 
         //Hier krijgt Button_Terug zijn functionaliteit
         Button_Terug.setOnAction(actionEvent -> {
