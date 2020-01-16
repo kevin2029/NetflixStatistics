@@ -1,5 +1,6 @@
 package GUI.Basis;
 
+import DatabaseConnectie.Connection;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
@@ -11,12 +12,17 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.FileInputStream;
+import java.util.List;
+import java.util.Map;
 
 public class Home extends Application {
+
+    // verander de knoppen borders naar grijs!
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -43,9 +49,32 @@ public class Home extends Application {
 
 
 
+
         //Hier wordt alles aan Borderpane_home toegevoegd.
+
+        List<Map<String, Object>> result = Connection.executeQuery(
+                "SELECT Account.AccountID,Naam \n" +
+                        "FROM Account \n" +
+                        "JOIN Profiel \n" +
+                        "ON Account.AccountID = Profiel.AccountID \n" +
+                        "GROUP BY Account.AccountID,Naam \n" +
+                        "HAVING COUNT(Account.AccountID) = '1'; " + ";"
+        );
+
+
+        VBox vBox = new VBox();
+
+        for(Map<String, Object>  row : result ){
+            Label test=new Label(row.toString());
+            vBox.getChildren().add(test);
+        }
+
+
+
+        Borderpane_Home.setLeft(vBox);
         Borderpane_Home.setTop(Hbox_Home_Label);
         Borderpane_Home.setCenter(Hbox_Home_Buttons);
+
 
         //Hier wordt alles aan Hbox_Home_Label toegevoegd.
         Hbox_Home_Label.getChildren().add(AlgemeenOfAccount);
@@ -53,6 +82,7 @@ public class Home extends Application {
         //Hier wordt alles aan Hbox_Home_Buttons toegevoegd.
         Hbox_Home_Buttons.getChildren().add(Button_Algemeen);
         Hbox_Home_Buttons.getChildren().add(Button_AccountGericht);
+
 
 
 
