@@ -79,8 +79,8 @@ public class Home extends Application {
         Button_Algemeen.setPrefSize(350,110);
         Button_AccountGericht.setPrefSize(350,110);
         Hbox_Home_Buttons.setAlignment(Pos.CENTER);
-        Button_Algemeen.setStyle("-fx-background-color: Black; -fx-font-size:40; -fx-text-fill: Red; -fx-font-weight: bold");
-        Button_AccountGericht.setStyle("-fx-background-color: Black; -fx-font-size:40; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_Algemeen.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:40; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_AccountGericht.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:40; -fx-text-fill: Red; -fx-font-weight: bold");
 
 
 

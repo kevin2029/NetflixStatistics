@@ -54,7 +54,7 @@ public class Afleveringen {
 
         //Hier wordt Hbox_Button netjes gemaakt.
         Hbox_Button.setAlignment(Pos.TOP_RIGHT);
-        Button_Terug.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_Terug.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
 
 
 

@@ -61,15 +61,15 @@ public class HomeAlgemeen {
 
         //Hier wordt Hbox_Algemeen_Terug netjes gemaakt.
         Hbox_Algemeen_Buttons.setAlignment(Pos.TOP_RIGHT);
-        Button_Terug.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_Terug.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
 
         //Hier wordt Hbox_Algemeen_Buttons netjes gemaakt.
         Hbox_Algemeen_Buttons.setSpacing(145);
         Button_Films.setPrefSize(350,110);
         Button_Series.setPrefSize(350,110);
         Hbox_Algemeen_Buttons.setAlignment(Pos.CENTER);
-        Button_Films.setStyle("-fx-background-color: Black; -fx-font-size:40; -fx-text-fill: Red; -fx-font-weight: bold");
-        Button_Series.setStyle("-fx-background-color: Black; -fx-font-size:40; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_Films.setStyle("-fx-background-color: Black; -fx-font-size:40; -fx-border-color: Red; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_Series.setStyle("-fx-background-color: Black; -fx-font-size:40; -fx-border-color: Red; -fx-text-fill: Red; -fx-font-weight: bold");
 
 
 

@@ -1,9 +1,7 @@
 package GUI.Profiel;
 
 import Functionaliteit.Opslaan.Aanmaken.Opslaan_NieuwProfielAanmaken;
-import Functionaliteit.Opslaan.Aanmaken.Opslaan_NieuweAfleveringAanmaken;
 import GUI.AccountGericht.AccountGerichtAccount;
-import GUI.Algemeen.Afleveringen;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;

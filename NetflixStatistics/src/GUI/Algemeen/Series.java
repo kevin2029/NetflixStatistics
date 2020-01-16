@@ -63,8 +63,8 @@ public class Series {
 
         //Hier wordt Hbox_Buttons netjes gemaakt.
         Hbox_Buttons.setAlignment(Pos.TOP_RIGHT);
-        Button_Seizoenen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Button_Terug.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_Seizoenen.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_Terug.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Hbox_Buttons.setSpacing(605);
 
 
