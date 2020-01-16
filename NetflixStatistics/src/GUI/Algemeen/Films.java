@@ -12,6 +12,9 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Films {
+    //Hier worden de booleans aangemaakt.
+    public boolean IsLangsteTijdsduurSelected;
+    public boolean IsFilmsMetLeeftijdsindicatieOnder16Selected;
 
     public Scene HomeAlgemeenFilms(Stage stage){
         // Hier worden de grids aangemaakt.
@@ -77,8 +80,46 @@ public class Films {
         //Hier krijgt Button_AlleFilms zijn functionaliteit.
 
         //Hier krijgt Button_LangsteTijdsduur zijn functionaliteit.
+        Button_LangsteTijdsduur.setOnAction(actionEvent -> {
+            if(IsLangsteTijdsduurSelected==true&&IsFilmsMetLeeftijdsindicatieOnder16Selected==true){
+                IsLangsteTijdsduurSelected();
+                //Methodcall
+                Button_LangsteTijdsduur.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+            }else if(IsLangsteTijdsduurSelected==false&&IsFilmsMetLeeftijdsindicatieOnder16Selected==false){
+                IsLangsteTijdsduurSelected();
+                //Methodcall
+                Button_LangsteTijdsduur.setStyle("-fx-background-color: Gray; -fx-font-size:20; -fx-text-fill: Black; -fx-font-weight: bold");
+            }else if(IsLangsteTijdsduurSelected==true&&IsFilmsMetLeeftijdsindicatieOnder16Selected==false){
+                IsLangsteTijdsduurSelected();
+                //MethodCall
+                Button_LangsteTijdsduur.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+            }else if(IsLangsteTijdsduurSelected==false&&IsFilmsMetLeeftijdsindicatieOnder16Selected==true){
+                IsLangsteTijdsduurSelected();
+                //methodcall
+                Button_LangsteTijdsduur.setStyle("-fx-background-color: Gray; -fx-font-size:20; -fx-text-fill: Black; -fx-font-weight: bold");
+            }
+        });
 
         //Hier krijgt Button_FilmsMetLeeftijdsindicatieOnder16.
+        Button_FilmsMetLeeftijdsindicatieOnder16.setOnAction(actionEvent -> {
+            if(IsFilmsMetLeeftijdsindicatieOnder16Selected==true&&IsLangsteTijdsduurSelected==true){
+                IsFilmsMetLeeftijdsindicatieOnder16Selected();
+                //Methodcall
+                Button_FilmsMetLeeftijdsindicatieOnder16.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+            }else if(IsFilmsMetLeeftijdsindicatieOnder16Selected==false&&IsLangsteTijdsduurSelected==false){
+                IsFilmsMetLeeftijdsindicatieOnder16Selected();
+                //methodcall
+                Button_FilmsMetLeeftijdsindicatieOnder16.setStyle("-fx-background-color: Gray; -fx-font-size:20; -fx-text-fill: Black; -fx-font-weight: bold");
+            }else if(IsFilmsMetLeeftijdsindicatieOnder16Selected==true&&IsLangsteTijdsduurSelected==false){
+                IsFilmsMetLeeftijdsindicatieOnder16Selected();
+                //MethodCall
+                Button_FilmsMetLeeftijdsindicatieOnder16.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+            }else if(IsFilmsMetLeeftijdsindicatieOnder16Selected==false&&IsLangsteTijdsduurSelected==true){
+                IsFilmsMetLeeftijdsindicatieOnder16Selected();
+                //Methodcall
+                Button_FilmsMetLeeftijdsindicatieOnder16.setStyle("-fx-background-color: Gray; -fx-font-size:20; -fx-text-fill: Black; -fx-font-weight: bold");
+            }
+        });
 
         //Hier krijgt Button_Terug zijn functionaliteit.
         Button_Terug.setOnAction(actionEvent -> {
@@ -97,6 +138,26 @@ public class Films {
 
         //Hier wordt scene Films gereturned.
         return Films;
+    }
+
+    //Deze methode kijkt of IsLangsteTijdsduurSelected true or false is en maakt he vervolgens het tegenovergestelde.
+    public boolean IsLangsteTijdsduurSelected(){
+        if(IsLangsteTijdsduurSelected==true){
+            IsLangsteTijdsduurSelected=false;
+        }else{
+            IsLangsteTijdsduurSelected=true;
+        }
+        return IsLangsteTijdsduurSelected;
+    }
+
+    //Deze methode kijkt of IsFilmsMetLeeftijdsindicatieOnder16Selected true or false is en maakt he vervolgens het tegenovergestelde.
+    public boolean IsFilmsMetLeeftijdsindicatieOnder16Selected(){
+        if(IsFilmsMetLeeftijdsindicatieOnder16Selected==true){
+            IsFilmsMetLeeftijdsindicatieOnder16Selected=false;
+        }else{
+            IsFilmsMetLeeftijdsindicatieOnder16Selected=true;
+        }
+        return IsFilmsMetLeeftijdsindicatieOnder16Selected;
     }
 }
 
