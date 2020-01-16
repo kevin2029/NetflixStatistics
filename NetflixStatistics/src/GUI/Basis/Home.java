@@ -51,27 +51,6 @@ public class Home extends Application {
 
 
         //Hier wordt alles aan Borderpane_home toegevoegd.
-
-        List<Map<String, Object>> result = Connection.executeQuery(
-                "SELECT Account.AccountID,Naam \n" +
-                        "FROM Account \n" +
-                        "JOIN Profiel \n" +
-                        "ON Account.AccountID = Profiel.AccountID \n" +
-                        "GROUP BY Account.AccountID,Naam \n" +
-                        "HAVING COUNT(Account.AccountID) = '1'; " + ";"
-        );
-
-
-        VBox vBox = new VBox();
-
-        for(Map<String, Object>  row : result ){
-            Label test=new Label(row.toString());
-            vBox.getChildren().add(test);
-        }
-
-
-
-        Borderpane_Home.setLeft(vBox);
         Borderpane_Home.setTop(Hbox_Home_Label);
         Borderpane_Home.setCenter(Hbox_Home_Buttons);
 
