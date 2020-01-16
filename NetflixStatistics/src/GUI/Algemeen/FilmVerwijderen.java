@@ -1,3 +1,4 @@
+/*
 package GUI.Algemeen;
 
 import Functionaliteit.Verwijderen.Verwijderen_Film;
@@ -143,3 +144,4 @@ public class FilmVerwijderen {
         return FilmVerwijderen;
     }
 }
+*/

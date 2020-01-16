@@ -1,3 +1,4 @@
+/*
 package GUI.Algemeen;
 
 import Functionaliteit.Opslaan.Aanmaken.Opslaan_NieuwSeizoenAanmaken;
@@ -144,3 +145,4 @@ public class NieuwSeizoenAanmaken {
         return NieuwSeizoenAanmaken;
     }
 }
+*/

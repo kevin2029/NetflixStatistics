@@ -1,3 +1,4 @@
+/*
 package GUI.Algemeen;
 
 import Functionaliteit.Opslaan.Wijzigen.Opslaan_AfleveringWijzigen;
@@ -247,3 +248,4 @@ public class NieuweSerieWijzigen {
         return NieuweSerieWijzigen;
     }
 }
+*/

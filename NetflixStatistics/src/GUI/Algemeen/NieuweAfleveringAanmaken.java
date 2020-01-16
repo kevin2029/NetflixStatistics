@@ -1,3 +1,4 @@
+/*
 package GUI.Algemeen;
 
 import Functionaliteit.Opslaan.Aanmaken.Opslaan_NieuweAfleveringAanmaken;
@@ -230,3 +231,4 @@ public class NieuweAfleveringAanmaken {
         return NieuweAfleveringAanmaken;
     }
 }
+*/

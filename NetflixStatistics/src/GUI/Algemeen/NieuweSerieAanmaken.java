@@ -1,3 +1,4 @@
+/*
 package GUI.Algemeen;
 
 import Functionaliteit.Opslaan.Aanmaken.Opslaan_NieuweFilmAanmaken;
@@ -209,3 +210,4 @@ public class NieuweSerieAanmaken {
         return NieuweSerieAanmaken;
     }
 }
+*/

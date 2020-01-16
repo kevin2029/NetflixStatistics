@@ -1,3 +1,4 @@
+/*
 package Functionaliteit.Verwijderen;
 
 import DatabaseConnectie.Connection;
@@ -21,3 +22,4 @@ public class Verwijderen_Serie {
         //moet weg
     }
 }
+*/

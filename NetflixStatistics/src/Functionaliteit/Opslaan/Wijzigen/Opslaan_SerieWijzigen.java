@@ -1,3 +1,4 @@
+/*
 package Functionaliteit.Opslaan.Wijzigen;
 
 import javafx.scene.control.SingleSelectionModel;
@@ -11,3 +12,4 @@ public class Opslaan_SerieWijzigen {
         //moet weg
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package GUI.Algemeen;
 
 import Functionaliteit.Verwijderen.Verwijderen_Film;
@@ -152,3 +153,4 @@ public class SeizoenVerwijderen {
         return SeizoenVerwijderen;
     }
 }
+*/

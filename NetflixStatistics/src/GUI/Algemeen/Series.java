@@ -24,10 +24,7 @@ public class Series {
         //Hier wordt het label aangemaakt.
         Label Label_Series=new Label("Series");
 
-        //Hier worden de buttons aangemaakt.
-        Button Button_NieuweSerieAanmaken=new Button("Nieuwe serie aanmaken");
-        Button Button_SerieWijzigen=new Button("Serie wijzigen");
-        Button Button_SerieVerwijderen=new Button("Serie verwijderen");
+        //Hier wordt de button aangemaakt.
         Button Button_Terug=new Button("< Terug");
 
 
@@ -56,9 +53,6 @@ public class Series {
         Hbox_Label.getChildren().add(Label_Series);
 
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
-        Hbox_Buttons.getChildren().add(Button_NieuweSerieAanmaken);
-        Hbox_Buttons.getChildren().add(Button_SerieWijzigen);
-        Hbox_Buttons.getChildren().add(Button_SerieVerwijderen);
         Hbox_Buttons.getChildren().add(Button_Terug);
 
 
@@ -75,17 +69,48 @@ public class Series {
         Label_Series.setStyle("-fx-background-color: Black; -fx-text-fill: Red; -fx-font-size: 40");
 
         //Hier wordt Hbox_Buttons netjes gemaakt.
-        Hbox_Buttons.setAlignment(Pos.TOP_CENTER);
-        Button_NieuweSerieAanmaken.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Button_SerieWijzigen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Button_SerieVerwijderen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Hbox_Buttons.setAlignment(Pos.TOP_RIGHT);
         Button_Terug.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Hbox_Buttons.setSpacing(270);
 
 
 
 
 
+        //Hier krijgt Button_Terug zijn functionaliteit
+        Button_Terug.setOnAction(actionEvent -> {
+            HomeAlgemeen HomeAlgemeen=new HomeAlgemeen();
+            stage.setScene(HomeAlgemeen.HomeAlgemeen(stage));
+            stage.setFullScreen(true);
+        });
+
+
+
+
+
+        //Hier wordt scene Series aangemaakt.
+        Scene Series=new Scene(Borderpane_Series,1300,650);
+        stage.setTitle("Series");
+
+        //Hier wordt de scene gereturned.
+        return Series;
+    }
+}
+//code die nu niet meer gebruikt wordt en verwijderd word.
+//Button Button_NieuweSerieAanmaken=new Button("Nieuwe serie aanmaken");
+//Button Button_SerieWijzigen=new Button("Serie wijzigen");
+//Button Button_SerieVerwijderen=new Button("Serie verwijderen");
+//Hbox_Buttons.getChildren().add(Button_NieuweSerieAanmaken);
+//Hbox_Buttons.getChildren().add(Button_SerieWijzigen);
+//Hbox_Buttons.getChildren().add(Button_SerieVerwijderen);
+//Button_NieuweSerieAanmaken.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+//Button_SerieWijzigen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+//Button_SerieVerwijderen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+//Hbox_Buttons.setSpacing(270);
+
+
+
+
+        /*
         //Hier krijgt Button_SerieAanmaken zijn functionaliteit.
         Button_NieuweSerieAanmaken.setOnAction(actionEvent -> {
             NieuweSerieAanmaken NieuweSerieAanmaken=new NieuweSerieAanmaken();
@@ -107,22 +132,4 @@ public class Series {
             stage.setFullScreen(true);
         });
 
-        //Hier krijgt Button_Terug zijn functionaliteit
-        Button_Terug.setOnAction(actionEvent -> {
-            HomeAlgemeen HomeAlgemeen=new HomeAlgemeen();
-            stage.setScene(HomeAlgemeen.HomeAlgemeen(stage));
-            stage.setFullScreen(true);
-        });
-
-
-
-
-
-        //Hier wordt scene Series aangemaakt.
-        Scene Series=new Scene(Borderpane_Series,1300,650);
-        stage.setTitle("Series");
-
-        //Hier wordt de scene gereturned.
-        return Series;
-    }
-}
+       */

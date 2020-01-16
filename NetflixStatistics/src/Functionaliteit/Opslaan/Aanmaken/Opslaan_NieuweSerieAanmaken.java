@@ -1,3 +1,4 @@
+/*
 package Functionaliteit.Opslaan.Aanmaken;
 
 public class Opslaan_NieuweSerieAanmaken {
@@ -8,3 +9,4 @@ public class Opslaan_NieuweSerieAanmaken {
         //moet weg
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package Functionaliteit.Verwijderen;
 
 import javafx.scene.control.SingleSelectionModel;
@@ -12,3 +13,4 @@ public class Verwijderen_Seizoen {
         //moet weg
     }
 }
+*/

@@ -21,10 +21,7 @@ public class Afleveringen {
         // Hier wordt het label aangemaakt.
         Label Label_Afleveringen=new Label("Afleveringen");
 
-        //Hier worden de buttons aangemaakt.
-        Button Button_NieuweAfleveringAanmaken=new Button("Nieuwe aflevering aanmaken");
-        Button Button_NieuweAfleveringWijzigen=new Button("aflevering wijzigen");
-        Button Button_AfleveringVerwijderen=new Button("Aflevering verwijderen");
+        //Hier wordt de button aangemaakt.
         Button Button_Terug=new Button("< Terug");
 
 
@@ -39,9 +36,6 @@ public class Afleveringen {
         Hbox_Label.getChildren().add(Label_Afleveringen);
 
         //Hier wordt alles aan Hbox_Button Toegevoegt
-        Hbox_Button.getChildren().add(Button_NieuweAfleveringAanmaken);
-        Hbox_Button.getChildren().add(Button_NieuweAfleveringWijzigen);
-        Hbox_Button.getChildren().add(Button_AfleveringVerwijderen);
         Hbox_Button.getChildren().add(Button_Terug);
 
 
@@ -57,17 +51,47 @@ public class Afleveringen {
         Label_Afleveringen.setStyle("-fx-background-color: Black; -fx-text-fill: Red; -fx-font-size: 40");
 
         //Hier wordt Hbox_Button netjes gemaakt.
-        Hbox_Button.setAlignment(Pos.TOP_CENTER);
-        Button_NieuweAfleveringAanmaken.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Button_NieuweAfleveringWijzigen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Button_AfleveringVerwijderen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Hbox_Button.setAlignment(Pos.TOP_RIGHT);
         Button_Terug.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Hbox_Button.setSpacing(220);
 
 
 
 
 
+        //Hier krijgt Button_Terug zijn functionaliteit.
+        Button_Terug.setOnAction(actionEvent -> {
+            Seizoenen Seizoenen=new Seizoenen();
+            stage.setScene(Seizoenen.Seizoenen(stage));
+            stage.setFullScreen(true);
+        });
+
+
+
+
+        //Hier wordt Scene Afleveringen aangemaakt.
+        Scene Afleveringen=new Scene(Borderpane_Afleveringen,1300,650);
+        stage.setTitle("Afleveringen van dit seizoen");
+
+        //Hier wordt de scene Afleveringen gereturned.
+        return Afleveringen;
+    }
+}
+//code die nu niet meer gebruikt wordt en verwijderd word.
+//Button Button_NieuweAfleveringAanmaken=new Button("Nieuwe aflevering aanmaken");
+//Button Button_NieuweAfleveringWijzigen=new Button("aflevering wijzigen");
+//Button Button_AfleveringVerwijderen=new Button("Aflevering verwijderen");
+//Hbox_Button.getChildren().add(Button_NieuweAfleveringAanmaken);
+//Hbox_Button.getChildren().add(Button_NieuweAfleveringWijzigen);
+//Hbox_Button.getChildren().add(Button_AfleveringVerwijderen);
+//Button_NieuweAfleveringAanmaken.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+//Button_NieuweAfleveringWijzigen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+//Button_AfleveringVerwijderen.setStyle("-fx-background-color: Black; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+//Hbox_Button.setSpacing(220);
+
+
+
+
+        /*
         //Hier krijgt Button_NieuweAfleveringAanmaken zijn functionaliteit.
         Button_NieuweAfleveringAanmaken.setOnAction(actionEvent -> {
             NieuweAfleveringAanmaken NieuweAfleveringAanmaken=new NieuweAfleveringAanmaken();
@@ -88,22 +112,4 @@ public class Afleveringen {
             stage.setScene(AfleveringVerwijderen.AfleveringVerwijderen(stage));
             stage.setFullScreen(true);
         });
-
-        //Hier krijgt Button_Terug zijn functionaliteit.
-        Button_Terug.setOnAction(actionEvent -> {
-            Seizoenen Seizoenen=new Seizoenen();
-            stage.setScene(Seizoenen.Seizoenen(stage));
-            stage.setFullScreen(true);
-        });
-
-
-
-
-        //Hier wordt Scene Afleveringen aangemaakt.
-        Scene Afleveringen=new Scene(Borderpane_Afleveringen,1300,650);
-        stage.setTitle("Afleveringen van dit seizoen");
-
-        //Hier wordt de scene Afleveringen gereturned.
-        return Afleveringen;
-    }
-}
+        */

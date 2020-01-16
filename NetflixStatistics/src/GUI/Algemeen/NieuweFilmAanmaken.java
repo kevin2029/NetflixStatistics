@@ -1,3 +1,4 @@
+/*
 package GUI.Algemeen;
 
 import Functionaliteit.Opslaan.Aanmaken.Opslaan_NieuwAccountAanmaken;
@@ -226,3 +227,4 @@ public class NieuweFilmAanmaken {
         return NieuweFilmAanmaken;
     }
 }
+*/

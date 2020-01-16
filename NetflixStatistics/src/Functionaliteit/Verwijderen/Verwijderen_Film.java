@@ -1,3 +1,4 @@
+/*
 package Functionaliteit.Verwijderen;
 
 import DatabaseConnectie.Connection;
@@ -19,3 +20,4 @@ public class Verwijderen_Film {
         //moet weg
     }
 }
+*/

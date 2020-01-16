@@ -1,3 +1,4 @@
+/*
 package GUI.Algemeen;
 
 import Functionaliteit.Verwijderen.Verwijderen_Aflevering;
@@ -168,3 +169,4 @@ public class AfleveringVerwijderen {
         return AfleveringVerwijderen;
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package GUI.Algemeen;
 
 import Functionaliteit.Verwijderen.Verwijderen_Seizoen;
@@ -143,3 +144,4 @@ public class SerieVerwijderen {
         return SerieVerwijderen;
     }
 }
+*/
