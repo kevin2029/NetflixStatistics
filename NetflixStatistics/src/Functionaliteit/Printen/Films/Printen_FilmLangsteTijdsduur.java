@@ -17,12 +17,12 @@ public class Printen_FilmLangsteTijdsduur {
         //Label Taal=new Label(querrie voor het taal te selecteren);
         //Label Tijdsduur=new Label(Querrie voor de tijdsduur te selecteren);
         //Label Leeftijdsindicatie=new Label(Querrie voor de leeftijdsindicatie te selecteren);
-        //film.getChildren().add(Naam);
-        //film.getChildren().add(Woonplaats);
-        //film.getChildren().add(Adres);
+        //film.getChildren().add(Titel);
+        //film.getChildren().add(Genre);
+        //film.getChildren().add(Taal);
         //film.getChildren().add(Tijdsduur);
         //film.getChildren().add(Leeftijdsindicatie);
-        //AlleAccounts.getChildren().add(film);
+        //LangsteTijdsduur.getChildren().add(film);
         ////Dus 1 film printen!!!
         return Langstetijdsduur;
     }

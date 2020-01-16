@@ -1,5 +1,6 @@
 package GUI.Algemeen;
 
+import Functionaliteit.Printen.Series.Printen_Afleveringen;
 import GUI.Basis.Home;
 import GUI.Basis.HomeAlgemeen;
 import javafx.geometry.Pos;
@@ -31,6 +32,7 @@ public class Afleveringen {
         //Hier wordt alles aan Borderpane_Afleveringen toegevoegt.
         Borderpane_Afleveringen.setTop(Hbox_Label);
         Borderpane_Afleveringen.setRight(Hbox_Button);
+        Borderpane_Afleveringen.setCenter(Printen_Afleveringen.AlleAfleveringen());
 
         //Hier wordt alles aan Hbox_Label toegevoegt.
         Hbox_Label.getChildren().add(Label_Afleveringen);

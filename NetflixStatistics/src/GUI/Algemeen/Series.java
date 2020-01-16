@@ -1,5 +1,6 @@
 package GUI.Algemeen;
 
+import Functionaliteit.Printen.Series.Printen_Series;
 import GUI.Basis.HomeAlgemeen;
 import GUI.Profiel.AccountProfiel;
 import javafx.geometry.Pos;
@@ -34,6 +35,7 @@ public class Series {
 
         //Hier wordt alles aan Borderpane_Series toegevoegd.
         Borderpane_Series.setTop(Vbox_LabelEnButtons);
+        Borderpane_Series.setCenter(Printen_Series.AlleSeries());
 
         //Hier wordt alles aan Vbox_LabelEnButtons toegevoegd.
         Vbox_LabelEnButtons.getChildren().add(Hbox_Label);

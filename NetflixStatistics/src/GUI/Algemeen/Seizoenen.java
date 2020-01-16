@@ -1,5 +1,6 @@
 package GUI.Algemeen;
 
+import Functionaliteit.Printen.Series.Printen_Seizoenen;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -31,6 +32,7 @@ public class Seizoenen {
 
         //Hier wordt alles aan Borderpane_Seizoenen toegevoegd.
         Borderpane_Seizoenen.setTop(Vbox_LabelEnButtons);
+        Borderpane_Seizoenen.setCenter(Printen_Seizoenen.AlleSeizoenen());
 
         //Hier wordt alles aan Vbox_LabelEnButtons toegevoegd.
         Vbox_LabelEnButtons.getChildren().add(Hbox_Label);
