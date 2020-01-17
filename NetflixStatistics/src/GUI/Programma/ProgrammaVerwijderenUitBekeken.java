@@ -1,9 +1,6 @@
 package GUI.Programma;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 62015c60bebe4c1da939e772df40ec674682e684
 import Functionaliteit.Verwijderen.Verwijderen_Programma;
 import GUI.AccountGericht.AccountGerichtAccount;
 import GUI.Algemeen.Afleveringen;
@@ -147,7 +144,7 @@ public class ProgrammaVerwijderenUitBekeken {
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else{
                 //Als we hier zijn is er een account, profiel en programma geselecteerd dus maken we een methodcall.
-                Verwijderen_Programma.Verwijderen(Combobox_WelkAccount.getSelectionModel(),Combobox_WelkProfiel.getSelectionModel(),Combobox_WelkProgramma.getSelectionModel());
+
 
                 //Hier gaan we terug naar het scherm AccountProfiel.
                 AccountProfiel Profiel=new AccountProfiel();

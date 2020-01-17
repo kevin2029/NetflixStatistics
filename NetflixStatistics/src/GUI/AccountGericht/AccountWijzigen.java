@@ -3,6 +3,7 @@ package GUI.AccountGericht;
 import Functionaliteit.Opslaan.Wijzigen.Opslaan_AccountWijzigen;
 import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProfielWijzigen;
 import GUI.Basis.AccountGericht;
+import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,10 +15,11 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 public class AccountWijzigen {
 
     public Scene AccountWijzigen(Stage stage){
-
         //Hier worden de grids aangemaakt.
         BorderPane Borderpane_AccountWijzigen= new BorderPane();
         HBox Hbox_Label=new HBox();

@@ -118,7 +118,7 @@ public class AccountVerwijderen {
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else{
                 //Als we hier zijn is er een account geselecteerd dus maken we een methodcall.
-                Verwijderen_Account.Verwijderen(Combobox_WelkAccount.getSelectionModel());
+
 
                 //Hier gaan we terug naar het scherm AccountGericht.
                 AccountGericht AccountGericht=new AccountGericht();

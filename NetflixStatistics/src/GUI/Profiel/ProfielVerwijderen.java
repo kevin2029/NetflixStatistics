@@ -126,7 +126,7 @@ public class ProfielVerwijderen {
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else{
                 //Als we hier zijn is er een account en een profiel geselecteerd dus maken we een methodcall.
-                Verwijderen_Profiel.Verwijderen(Combobox_WelkAccount.getSelectionModel(),Combobox_WelkProfiel.getSelectionModel());
+
 
                 //Hier gaan we terug naar het scherm Account.
                 AccountGerichtAccount Account=new AccountGerichtAccount();
