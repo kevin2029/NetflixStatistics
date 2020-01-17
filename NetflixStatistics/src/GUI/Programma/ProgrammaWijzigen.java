@@ -21,7 +21,6 @@ public class ProgrammaWijzigen {
         BorderPane Borderpane_ProgrammaWijzigen=new BorderPane();
         HBox Hbox_Label=new HBox();
         VBox Vbox_Gegevens=new VBox();
-        HBox Hbox_WelkAccount=new HBox();
         HBox Hbox_WelkProfiel=new HBox();
         HBox Hbox_WelkProgramma=new HBox();
         HBox Hbox_Percentage=new HBox();
@@ -33,7 +32,6 @@ public class ProgrammaWijzigen {
 
         //Hier worden de labels aangemaakt.
         Label Label_ProgrammaWijzigen=new Label("Programma wijzigen");
-        Label Label_WelkAccount=new Label("Van welk Account wilt U een profiel selecteren?");
         Label Label_WelkProfiel=new Label("Op welk profiel wilt U een programma wijzigen?");
         Label Label_WelkProgramma=new Label("Welk programma wilt U wijzigen?");
         Label Label_NieuwPercentage=new Label("Geef het nieuwe bekeken percentage");
@@ -43,7 +41,6 @@ public class ProgrammaWijzigen {
         Label Label_ErrorPercentage=new Label("Het nieuwe percentage mag niet groter dan 100 zijn");
 
         //Hier worden de comboboxen aangemaakt.
-        ComboBox Combobox_WelkAccount=new ComboBox();//Hier staan alle accounts.
         ComboBox Combobox_WelkProfiel=new ComboBox();//Hier staan alle profielen.
         ComboBox Combobox_WelkProgramma=new ComboBox(); //Hier staan alle programmas.
 
@@ -66,15 +63,10 @@ public class ProgrammaWijzigen {
         Hbox_Label.getChildren().add(Label_ProgrammaWijzigen);
 
         //Hier wordt alles aan Vbox_Gegevens toegevoegd.
-        Vbox_Gegevens.getChildren().add(Hbox_WelkAccount);
         Vbox_Gegevens.getChildren().add(Hbox_WelkProfiel);
         Vbox_Gegevens.getChildren().add(Hbox_WelkProgramma);
         Vbox_Gegevens.getChildren().add(Hbox_Percentage);
         Vbox_Gegevens.getChildren().add(Hbox_Buttons);
-
-        //Hier wordt alles aan Hbox_WelkAccount toegevoegd.
-        Hbox_WelkAccount.getChildren().add(Label_WelkAccount);
-        Hbox_WelkAccount.getChildren().add(Combobox_WelkAccount);
 
         //Hier wordt alles aan Hbox_WelkProfiel toegevoegd.
         Hbox_WelkProfiel.getChildren().add(Label_WelkProfiel);
@@ -118,14 +110,6 @@ public class ProgrammaWijzigen {
         //Hier wordt Vbox_Gegevens netjes gemaakt
         Vbox_Gegevens.setAlignment(Pos.CENTER);
         Vbox_Gegevens.setSpacing(40);
-
-        //Hier wordt Hbox_WelkAccount netjes gemaakt.
-        Label_WelkAccount.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
-        Combobox_WelkAccount.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
-        Hbox_WelkAccount.setAlignment(Pos.CENTER);
-        Hbox_WelkAccount.setSpacing(100);
-        Label_WelkAccount.setPrefSize(500,50);
-        Combobox_WelkAccount.setPrefSize(500,50);
 
         //Hier wordt Hbox_WelkProfiel netjes gemaakt.
         Label_WelkProfiel.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
@@ -190,7 +174,7 @@ public class ProgrammaWijzigen {
         //Hier krijgt Button_Opslaan zijn functionaliteit.
         Button_Opslaan.setOnAction(actionEvent -> {
             //Hier wordt gekeken of het account, profiel en programma geselecteerd zijn.
-            if(Combobox_WelkAccount.getSelectionModel().isEmpty()||Combobox_WelkProfiel.getSelectionModel().isEmpty()||Combobox_WelkProgramma.getSelectionModel().isEmpty()){
+            if(Combobox_WelkProfiel.getSelectionModel().isEmpty()||Combobox_WelkProgramma.getSelectionModel().isEmpty()){
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else {
                 //Als we hier zijn is alles geselecteerd dus kan de error weg.

@@ -22,7 +22,6 @@ public class ProfielWijzigen {
         BorderPane Borderpane_ProfielWijzigen=new BorderPane();
         HBox Hbox_Label=new HBox();
         VBox VBox_Gegevens=new VBox();
-        HBox Hbox_WelkAccount=new HBox();
         HBox Hbox_WelkProfiel=new HBox();
         HBox Hbox_Naam=new HBox();
         HBox Hbox_Leeftijd=new HBox();
@@ -33,7 +32,6 @@ public class ProfielWijzigen {
 
         //Hier worden de labels aangemaakt.
         Label Label_ProfielWijzigen=new Label("Profiel wijzigen");
-        Label Label_WelkAccount=new Label("Van welk account wilt U een profiel wijzigen?");
         Label Label_WelkProfiel=new Label("Welk profiel wilt u wijzigen?");
         Label Label_Naam=new Label("Wat is uw voor- en achternaam?");
         Label Label_Leeftijd=new Label("Wat is uw leeftijd?");
@@ -42,7 +40,6 @@ public class ProfielWijzigen {
         Label Label_ErrorInteger=new Label("Leeftijd moet een getal zijn");
 
         //Hier worden de comboboxen aangemaakt.
-        ComboBox Combobox_WelkAccount=new ComboBox();
         ComboBox Combobox_WelkProfiel=new ComboBox();
 
         //Hier worden de textfields aangemaakt.
@@ -65,15 +62,10 @@ public class ProfielWijzigen {
         Hbox_Label.getChildren().add(Label_ProfielWijzigen);
 
         //Hier wordt alles aan Vbox_Gegevens toegevoegd.
-        VBox_Gegevens.getChildren().add(Hbox_WelkAccount);
         VBox_Gegevens.getChildren().add(Hbox_WelkProfiel);
         VBox_Gegevens.getChildren().add(Hbox_Naam);
         VBox_Gegevens.getChildren().add(Hbox_Leeftijd);
         VBox_Gegevens.getChildren().add(Hbox_Buttons);
-
-        //Hier wordt alles aan Hbox_WelkAccount toegevoegd.
-        Hbox_WelkAccount.getChildren().add(Label_WelkAccount);
-        Hbox_WelkAccount.getChildren().add(Combobox_WelkAccount);
 
         //Hier wordt alles aan Hbox_WelkProfiel toegevoegd.
         Hbox_WelkProfiel.getChildren().add(Label_WelkProfiel);
@@ -114,14 +106,6 @@ public class ProfielWijzigen {
         //Hier wordt Vbox_Gegevens netjes gemaakt.
         VBox_Gegevens.setAlignment(Pos.CENTER);
         VBox_Gegevens.setSpacing(40);
-
-        //Hier wordt Hbox_WelkAccount netjes gemaakt.
-        Label_WelkAccount.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
-        Combobox_WelkAccount.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
-        Hbox_WelkAccount.setAlignment(Pos.CENTER);
-        Hbox_WelkAccount.setSpacing(100);
-        Label_WelkAccount.setPrefSize(500,50);
-        Combobox_WelkAccount.setPrefSize(500,50);
 
         //Hier wordt Hbox_WelkProfiel netjes gemaakt.
         Label_WelkProfiel.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
@@ -180,7 +164,7 @@ public class ProfielWijzigen {
         //Hier krijgt Button_Opslaan zijn functionaliteit.
         Button_Opslaan.setOnAction(actionEvent -> {
             //Hier wordt gekeken of het account en een profiel geselecteerd zijn.
-            if(Combobox_WelkAccount.getSelectionModel().isEmpty()||Combobox_WelkProfiel.getSelectionModel().isEmpty()){
+            if(Combobox_WelkProfiel.getSelectionModel().isEmpty()){
                 VBox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else {
                 //Als we hier zijn is alles geselecteerd dus kan de error weg.

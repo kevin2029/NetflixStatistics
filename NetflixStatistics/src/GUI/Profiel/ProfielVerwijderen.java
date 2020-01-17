@@ -20,19 +20,17 @@ public class ProfielVerwijderen {
         BorderPane Borderpane_ProfielVerwijderen=new BorderPane();
         HBox Hbox_Label=new HBox();
         VBox Vbox_Gegevens=new VBox();
-        HBox Hbox_WelkAccount=new HBox();
-        HBox Hbox_WelkProfiel=new HBox();
+        HBox Hbox_WelkProfiel_Label=new HBox();
+        HBox Hbox_WelkProfiel_Combobox=new HBox();
         HBox Hbox_Buttons=new HBox();
         HBox Hbox_ErrorKies=new HBox();
 
         //Hier worden de labels aangemaakt.
         Label Label_ProfielVerwijderen=new Label("Profiel verwijderen");
-        Label Label_WelkAccount=new Label("Van welk account wilt U een profiel verwijderen?");
         Label Label_WelkProfiel=new Label("Welk profiel wilt U verwijderen?");
         Label Label_ErrorKies=new Label("Kies eerst een account en een profiel");
 
         //Hier worden de comboboxen aangemaakt.
-        ComboBox Combobox_WelkAccount=new ComboBox();//Hier staan alle account.
         ComboBox Combobox_WelkProfiel=new ComboBox();//Hier staan alle profielen van het account.
 
         //Hier worden de buttons aangemaakt.
@@ -51,17 +49,15 @@ public class ProfielVerwijderen {
         Hbox_Label.getChildren().add(Label_ProfielVerwijderen);
 
         //Hier wordt alles aan Vbox_Gegevens toegevoegd.
-        Vbox_Gegevens.getChildren().add(Hbox_WelkAccount);
-        Vbox_Gegevens.getChildren().add(Hbox_WelkProfiel);
+        Vbox_Gegevens.getChildren().add(Hbox_WelkProfiel_Label);
+        Vbox_Gegevens.getChildren().add(Hbox_WelkProfiel_Combobox);
         Vbox_Gegevens.getChildren().add(Hbox_Buttons);
 
-        //Hier wordt alles aan Hbox_WelkAccount toegevoegd.
-        Hbox_WelkAccount.getChildren().add(Label_WelkAccount);
-        Hbox_WelkAccount.getChildren().add(Combobox_WelkAccount);
+        //Hier wordt alles aan Hbox_WelkProfiel_Label toegevoegd.
+        Hbox_WelkProfiel_Label.getChildren().add(Label_WelkProfiel);
 
-        //Hier wordt alles aan Hbox_WelkProfiel toegevoegd.
-        Hbox_WelkProfiel.getChildren().add(Label_WelkProfiel);
-        Hbox_WelkProfiel.getChildren().add(Combobox_WelkProfiel);
+        //Hier wordt alles aan Hbox_WelkProfiel_Combobox toegevoegd.
+        Hbox_WelkProfiel_Combobox.getChildren().add(Combobox_WelkProfiel);
 
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_Buttons.getChildren().add(Button_Verwijderen);
@@ -85,20 +81,14 @@ public class ProfielVerwijderen {
         Vbox_Gegevens.setAlignment(Pos.CENTER);
         Vbox_Gegevens.setSpacing(40);
 
-        //Hier wordt Hbox_WelkAccount netjes gemaakt.
-        Label_WelkAccount.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
-        Combobox_WelkAccount.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
-        Hbox_WelkAccount.setAlignment(Pos.CENTER);
-        Hbox_WelkAccount.setSpacing(100);
-        Label_WelkAccount.setPrefSize(580,50);
-        Combobox_WelkAccount.setPrefSize(580,50);
-
-        //Hier wordt Hbox_WelkProfiel netjes gemaakt.
+        //Hier wordt Hbox_WelkProfiel_Label netjes gemaakt.
         Label_WelkProfiel.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
-        Combobox_WelkProfiel.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
-        Hbox_WelkProfiel.setAlignment(Pos.CENTER);
-        Hbox_WelkProfiel.setSpacing(100);
+        Hbox_WelkProfiel_Label.setAlignment(Pos.CENTER);
         Label_WelkProfiel.setPrefSize(580,50);
+
+        //Hier wordt Hbox_WelkProfiel_Combobox netjes gemaakt.
+        Combobox_WelkProfiel.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
+        Hbox_WelkProfiel_Combobox.setAlignment(Pos.CENTER);
         Combobox_WelkProfiel.setPrefSize(580,50);
 
         //Hier wordt Hbox_Buttons netjes gemaakt.
@@ -122,7 +112,7 @@ public class ProfielVerwijderen {
         //Hier krijgt Button_Verwijderen zijn functionaliteit.
         Button_Verwijderen.setOnAction(actionEvent -> {
             //Eerst kijken we of het account en een profiel geselecteerd zijn.
-            if(Combobox_WelkAccount.getSelectionModel().isEmpty()||Combobox_WelkProfiel.getSelectionModel().isEmpty()){
+            if(Combobox_WelkProfiel.getSelectionModel().isEmpty()){
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else{
                 //Als we hier zijn is er een account en een profiel geselecteerd dus maken we een methodcall.
