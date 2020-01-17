@@ -26,6 +26,7 @@ public class Home extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+
         //hier wordt de stage klaargemaakt.
         stage.setScene(Home(stage));
         stage.setFullScreen(true);
