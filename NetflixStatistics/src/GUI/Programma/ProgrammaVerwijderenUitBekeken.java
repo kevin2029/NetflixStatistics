@@ -1,7 +1,11 @@
 package GUI.Programma;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 62015c60bebe4c1da939e772df40ec674682e684
 import Functionaliteit.Verwijderen.Verwijderen_Programma;
+import GUI.AccountGericht.AccountGerichtAccount;
 import GUI.Algemeen.Afleveringen;
 import GUI.Basis.AccountGericht;
 import GUI.Profiel.AccountProfiel;
@@ -154,8 +158,8 @@ public class ProgrammaVerwijderenUitBekeken {
 
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {
-            AccountProfiel Profiel=new AccountProfiel();
-            stage.setScene(Profiel.AccountProfiel(stage));
+            AccountGerichtAccount Account=new AccountGerichtAccount();
+            stage.setScene(Account.Account(stage));
             stage.setFullScreen(true);
         });
 

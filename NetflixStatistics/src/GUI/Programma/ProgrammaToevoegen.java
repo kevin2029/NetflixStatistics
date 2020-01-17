@@ -236,8 +236,8 @@ public class ProgrammaToevoegen {
 
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {
-            AccountProfiel Profiel=new AccountProfiel();
-            stage.setScene(Profiel.AccountProfiel(stage));
+            AccountGerichtAccount Account=new AccountGerichtAccount();
+            stage.setScene(Account.Account(stage));
             stage.setFullScreen(true);
         });
 

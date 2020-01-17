@@ -1,8 +1,10 @@
 package GUI.AccountGericht;
 
+import GUI.Basis.AccountGericht;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -20,8 +22,12 @@ public class BekekenFilmsAccount {
         //Hier wordt het label aangemaakt.
         Label Label_BekekenFilms=new Label("Bekeken films voor dit account");
 
-        //Hier wordt de button aangemaakt.
+        //Hier worden de buttons aangemaakt.
+        Button Button_Print=new Button("Print");
         Button Button_Terug=new Button("< Terug");
+
+        //Hier wordt de combobox aangemaakt.
+        ComboBox Combobox_Account=new ComboBox();
 
 
 
@@ -35,6 +41,8 @@ public class BekekenFilmsAccount {
         Hbox_Label.getChildren().add(Label_BekekenFilms);
 
         //Hier wordt alles aan Hbox_Button toegevoegd
+        Hbox_Button.getChildren().add(Button_Print);
+        Hbox_Button.getChildren().add(Combobox_Account);
         Hbox_Button.getChildren().add(Button_Terug);
 
 
@@ -49,16 +57,25 @@ public class BekekenFilmsAccount {
         Label_BekekenFilms.setStyle("-fx-background-color: Black; -fx-text-fill: Red; -fx-font-size: 40");
 
         //Hier wordt Hbox_Button netjes gemaakt.
+        Button_Print.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Combobox_Account.setPromptText("Selecteer een account");
+        Combobox_Account.setPrefSize(300,40);
+        Combobox_Account.setStyle("-fx-background-color: White; -fx-font-size:20; -fx-text-fill: Black; -fx-font-weight: bold");
         Button_Terug.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Hbox_Button.setAlignment(Pos.TOP_RIGHT);
+        Hbox_Button.setSpacing(500);
 
 
 
 
+
+        //Hier krijgt Button_Print zijn functionaliteit.
+        
 
         //Hier krijgt Button_Terug zijn functionaliteit
         Button_Terug.setOnAction(actionEvent -> {
-            AccountGerichtAccount AccountGerichtAccount=new AccountGerichtAccount();
-            stage.setScene(AccountGerichtAccount.Account(stage));
+            AccountGericht AccountGericht=new AccountGericht();
+            stage.setScene(AccountGericht.HomeAccountGericht(stage));
             stage.setFullScreen(true);
         });
 
