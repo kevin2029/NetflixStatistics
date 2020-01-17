@@ -85,6 +85,12 @@ public class Films {
         //Hier krijgt Button_AlleFilms zijn functionaliteit.
         Button_AlleFilms.setOnAction(actionEvent -> {
             Borderpane_Films.setCenter(Printen_AlleFilms.AlleFilms());
+            //Hier worden de booleans naar false gezet.
+            SetIsLangsteTijdsduurSelectedFalse();
+            SetIsFilmsMetLeeftijdsindicatieOnder16SelectedFalse();
+            //Dan krijgen beide buttons hun standaard uiterlijk terug.
+            Button_LangsteTijdsduur.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+            Button_FilmsMetLeeftijdsindicatieOnder16.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         });
 
         //Hier krijgt Button_LangsteTijdsduur zijn functionaliteit.
@@ -173,6 +179,18 @@ public class Films {
         }else{
             IsFilmsMetLeeftijdsindicatieOnder16Selected=true;
         }
+        return IsFilmsMetLeeftijdsindicatieOnder16Selected;
+    }
+
+    //Deze method zet IsLangsteTijdsduurSelected naar false.
+    public boolean SetIsLangsteTijdsduurSelectedFalse(){
+        IsLangsteTijdsduurSelected=false;
+        return IsLangsteTijdsduurSelected;
+    }
+
+    //Deze method zet IsFilmsMetLeeftijdsindicatieOnder16Selected naar false.
+    public boolean SetIsFilmsMetLeeftijdsindicatieOnder16SelectedFalse(){
+        IsFilmsMetLeeftijdsindicatieOnder16Selected=false;
         return IsFilmsMetLeeftijdsindicatieOnder16Selected;
     }
 }
