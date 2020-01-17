@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c96c67d9-a433-4329-9ef8-fe1e428c6756" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/NetflixStatistics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NetflixStatistics.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mssql_jdbc_7_4_1_jre121.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ObservableLists/ObservableList_Accounts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ObservableLists/ObservableList_Profielen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ObservableLists/ObservableList_Programmas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AccountGericht/AccountVerwijderen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AccountGericht/AccountVerwijderen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Algemeen/Afleveringen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Algemeen/Afleveringen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Profiel/ProfielVerwijderen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Profiel/ProfielVerwijderen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Programma/ProgrammaVerwijderenUitBekeken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Programma/ProgrammaVerwijderenUitBekeken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AccountGericht/AccountWijzigen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AccountGericht/AccountWijzigen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/../../../../output path/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +16,60 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/AccountGericht/AccountWijzigen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ObservableLists/ObservableList_Accounts.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ObservableLists/ObservableList_Programmas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ObservableLists/ObservableList_Profielen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -27,9 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/GUI/Algemeen/FilmVerwijderen.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Algemeen/NieuweFilmAanmaken.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Algemeen/NieuweFilmWijzigen.java" />
         <option value="$PROJECT_DIR$/src/GUI/Algemeen/AfleveringVerwijderen.java" />
         <option value="$PROJECT_DIR$/src/GUI/Algemeen/NieuweAfleveringAanmaken.java" />
         <option value="$PROJECT_DIR$/src/GUI/Algemeen/NieuweAfleveringWijzigen.java" />
@@ -77,6 +124,10 @@
         <option value="$PROJECT_DIR$/src/GUI/Profiel/ProfielVerwijderen.java" />
         <option value="$PROJECT_DIR$/src/GUI/AccountGericht/AccountVerwijderen.java" />
         <option value="$PROJECT_DIR$/src/GUI/Algemeen/Afleveringen.java" />
+        <option value="$PROJECT_DIR$/src/ObservableLists/ObservableList_Accounts.java" />
+        <option value="$PROJECT_DIR$/src/GUI/AccountGericht/AccountWijzigen.java" />
+        <option value="$PROJECT_DIR$/src/ObservableLists/ObservableList_Profielen.java" />
+        <option value="$PROJECT_DIR$/src/ObservableLists/ObservableList_Programmas.java" />
       </list>
     </option>
   </component>
@@ -122,14 +173,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Functionaliteit" type="462c0819:PsiDirectoryNode" />
               <item name="Printen" type="462c0819:PsiDirectoryNode" />
-              <item name="Accounts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NetflixStatistics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NetflixStatistics" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Functionaliteit" type="462c0819:PsiDirectoryNode" />
-              <item name="Printen" type="462c0819:PsiDirectoryNode" />
               <item name="Profielen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -146,6 +189,19 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="NetflixStatistics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetflixStatistics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="AccountGericht" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetflixStatistics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetflixStatistics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ObservableLists" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -153,6 +209,12 @@
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579293647088" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -191,6 +253,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -387,6 +450,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/AccountGericht/AccountWijzigen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ObservableLists/ObservableList_Profielen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ObservableLists/ObservableList_Accounts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ObservableLists/ObservableList_Programmas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
