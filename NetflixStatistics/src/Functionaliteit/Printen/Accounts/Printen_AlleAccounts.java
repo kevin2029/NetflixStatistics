@@ -20,7 +20,7 @@ public class Printen_AlleAccounts {
         //account.getChildren().add(Naam);
         //account.getChildren().add(Woonplaats);
         //account.getChildren().add(Adres);
-        //AlleAccounts.getChildren().add(Account);
+        //AlleAccounts.getChildren().add(account);
         return AlleAccounts;
     }
 }

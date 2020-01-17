@@ -1,6 +1,8 @@
 package GUI.Basis;
 
 import Functionaliteit.Opslaan.Wijzigen.Opslaan_AccountWijzigen;
+import Functionaliteit.Printen.Accounts.Printen_AccountMet1Profiel;
+import Functionaliteit.Printen.Accounts.Printen_AccountMetMeerDan1Profiel;
 import Functionaliteit.Printen.Accounts.Printen_AlleAccounts;
 import GUI.AccountGericht.AccountAanmaken;
 import GUI.AccountGericht.AccountGerichtAccount;
@@ -131,10 +133,19 @@ public class AccountGericht {
         });
 
         //Hier krijgt Button_AlleAccounts zijn functionaliteit.
+        Button_AlleAccounts.setOnAction(actionEvent -> {
+            Borderpane_Accounts.setCenter(Printen_AlleAccounts.AlleAccounts());
+        });
 
         //Hier krijgt Button_AccountsMet1Profiel zijn functionaliteit.
+        Button_AccountsMet1Profiel.setOnAction(actionEvent -> {
+            Borderpane_Accounts.setCenter(Printen_AccountMet1Profiel.AccountsMet1Profiel());
+        });
 
         //Hier krijgt Button_AccountsMetMeerDan1Profiel zijn functionaliteit.
+        Button_AccountsMetMeerDan1Profiel.setOnAction(actionEvent -> {
+            Borderpane_Accounts.setCenter(Printen_AccountMetMeerDan1Profiel.AccountsMetMeerDan1Profiel());
+        });
 
         //Hier krijgt Button_Terug zijn functionaliteit.
         Button_Terug.setOnAction(actionEvent -> {
