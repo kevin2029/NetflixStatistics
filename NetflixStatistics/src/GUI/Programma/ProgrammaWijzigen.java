@@ -2,6 +2,7 @@ package GUI.Programma;
 
 import Functionaliteit.Opslaan.Aanmaken.Opslaan_ProgrammaToevoegen;
 import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProgrammaWijzigen;
+import GUI.AccountGericht.AccountGerichtAccount;
 import GUI.Profiel.AccountProfiel;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -230,8 +231,8 @@ public class ProgrammaWijzigen {
 
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {
-            AccountProfiel Profiel=new AccountProfiel();
-            stage.setScene(Profiel.AccountProfiel(stage));
+            AccountGerichtAccount Account=new AccountGerichtAccount();
+            stage.setScene(Account.Account(stage));
             stage.setFullScreen(true);
         });
 

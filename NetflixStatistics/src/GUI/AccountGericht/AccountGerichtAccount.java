@@ -5,6 +5,9 @@ import GUI.Profiel.AccountProfiel;
 import GUI.Profiel.ProfielAanmaken;
 import GUI.Profiel.ProfielVerwijderen;
 import GUI.Profiel.ProfielWijzigen;
+import GUI.Programma.ProgrammaToevoegen;
+import GUI.Programma.ProgrammaVerwijderenUitBekeken;
+import GUI.Programma.ProgrammaWijzigen;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -27,32 +30,21 @@ public class AccountGerichtAccount {
         HBox Hbox_Buttons=new HBox();
 
         //Hier wordt het label aangemaakt
-        Label Label_Accountnaam=new Label("Account"); //Wat er in het label staat wordt is anders voor elk account. Zo heeft account: Klaas de naam Klaas in het label
+        Label Label_Accountnaam=new Label("Profielen"); //Wat er in het label staat wordt is anders voor elk account. Zo heeft account: Klaas de naam Klaas in het label
 
         //Hier worden de buttons aangemaakt
         Button Button_ProfielAanmaken=new Button("Profiel aanmaken");
         Button Button_ProfielWijzigen=new Button("Profiel wijzigen");
         Button Button_ProfielVerwijderen=new Button("Profiel verwijderen");
-        Button Button_Profielen=new Button("Profielen");
+        Button Button_ProgrammaToevoegen=new Button("Programma toevoegen");
+        Button Button_ProgrammaWijzigen=new Button("Programma wijzigen");
+        Button Button_ProgrammaVerwijderen=new Button("Programma verwijderen");
         Button Button_Terug=new Button("< Terug");
 
-        //Hier worden de ComboBoxen aangemaakt.
-        ComboBox Combobox_BekekenFilmsAccount=new ComboBox(); //Hier staan de accounts in
-        ComboBox Combobox_BekekenAfleveringenAccount=new ComboBox(); //Hier staan de accounts in
 
 
-//Dit is een test voor de view zelf en moet zo snel mogelijk verwijderd worden.
-        HBox Hbox=new HBox();
-        VBox Vbox=new VBox();
-        Button klik=new Button("Naam");
-        Borderpane_Account.setBottom(Hbox);
-        Hbox.getChildren().add(Vbox);
-        Vbox.getChildren().add(klik);
-        klik.setOnAction(actionEvent -> {
-            AccountProfiel Profiel=new AccountProfiel();
-            stage.setScene(Profiel.AccountProfiel(stage));
-            stage.setFullScreen(true);
-        });
+
+
 
 
         //Hier wordt alles aan Borderpane_Account toegevoegd.
@@ -72,8 +64,9 @@ public class AccountGerichtAccount {
         Hbox_CRUD.getChildren().add(Button_ProfielVerwijderen);
 
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
-        Hbox_Buttons.getChildren().add(Combobox_BekekenFilmsAccount);
-        Hbox_Buttons.getChildren().add(Combobox_BekekenAfleveringenAccount);
+        Hbox_Buttons.getChildren().add(Button_ProgrammaToevoegen);
+        Hbox_Buttons.getChildren().add(Button_ProgrammaWijzigen);
+        Hbox_Buttons.getChildren().add(Button_ProgrammaVerwijderen);
         Hbox_Buttons.getChildren().add(Button_Terug);
 
 
@@ -97,13 +90,12 @@ public class AccountGerichtAccount {
         Hbox_CRUD.setSpacing(150);
 
         //Hier wordt Hbox_Buttons netjes gemaakt.
-        Combobox_BekekenFilmsAccount.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
-        Combobox_BekekenAfleveringenAccount.setStyle("-fx-background-color: White; -fx-text-fill: Black; -fx-font-size: 20");
+        Button_ProgrammaToevoegen.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_ProgrammaWijzigen.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_ProgrammaVerwijderen.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_Terug.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Hbox_Buttons.setAlignment(Pos.CENTER);
-        Hbox_Buttons.setSpacing(350);
-        Combobox_BekekenFilmsAccount.setPrefSize(200,40);
-        Combobox_BekekenAfleveringenAccount.setPrefSize(200,40);
+        Hbox_Buttons.setAlignment(Pos.TOP_RIGHT);
+        Hbox_Buttons.setSpacing(200);
 
 
 
@@ -130,6 +122,27 @@ public class AccountGerichtAccount {
             stage.setFullScreen(true);
         });
 
+        //Hier krijgt Button_ProgrammaToevoegen zijn functionaliteit.
+        Button_ProgrammaToevoegen.setOnAction(actionEvent -> {
+            ProgrammaToevoegen ProgrammaToevoegen=new ProgrammaToevoegen();
+            stage.setScene(ProgrammaToevoegen.ProgrammaToevoegen(stage));
+            stage.setFullScreen(true);
+        });
+
+        //Hier krijgt Button_ProgrammaWijzigen zijn functionaliteit.
+        Button_ProgrammaWijzigen.setOnAction(actionEvent -> {
+            ProgrammaWijzigen ProgrammaWijzigen=new ProgrammaWijzigen();
+            stage.setScene(ProgrammaWijzigen.ProgrammaWijzigen(stage));
+            stage.setFullScreen(true);
+        });
+
+        //Hier krijgt Button_ProgrammaVerwijderen zijn functionaliteit.
+        Button_ProgrammaVerwijderen.setOnAction(actionEvent -> {
+            ProgrammaVerwijderenUitBekeken ProgrammaVerwijderen=new ProgrammaVerwijderenUitBekeken();
+            stage.setScene(ProgrammaVerwijderen.ProgrammaVerwijderenUitBekeken(stage));
+            stage.setFullScreen(true);
+        });
+
         //Hier krijgt Button_Terug zijn functionaliteit.
         Button_Terug.setOnAction(actionEvent -> {
             AccountGericht AccountGericht=new AccountGericht();
@@ -149,18 +162,3 @@ public class AccountGerichtAccount {
         return Account;
     }
 }
-/*
-//Hier krijgt Button_BekekenFilmsAccount zijn functionaliteit.
-        Button_BekekenFilmsAccount.setOnAction(actionEvent -> {
-            BekekenFilmsAccount BekekenFilmsAccount=new BekekenFilmsAccount();
-            stage.setScene(BekekenFilmsAccount.BekekenFilmsAccount(stage));
-            stage.setFullScreen(true);
-        });
-
-        //Hier krijgt Button_BekekenAfleveringenAccount zijn functionaliteit.
-        Button_BekekenAfleveringenAccount.setOnAction(actionEvent -> {
-            BekekenAfleveringenAccount BekekenAfleveringenAccount=new BekekenAfleveringenAccount();
-            stage.setScene(BekekenAfleveringenAccount.BekekenAfleveringenAccount(stage));
-            stage.setFullScreen(true);
-        });
- */
