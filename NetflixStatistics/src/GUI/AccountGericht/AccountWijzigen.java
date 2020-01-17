@@ -180,7 +180,7 @@ public class AccountWijzigen {
                     Vbox_Gegevens.getChildren().add(Hbox_ErrorVakjes);
                 } else {
                     //Hier komt de methodcall
-                    Opslaan_AccountWijzigen.Opslaan(Combobox_WelkAccount.getSelectionModel(), Textfield_Naam.getText().trim(), Textfield_Woonplaats.getText().trim(),Textfield_Adres.getText().trim());
+                    //Opslaan_AccountWijzigen.Opslaan(AcountID, Textfield_Naam.getText().trim(), Textfield_Woonplaats.getText().trim(),Textfield_Adres.getText().trim());
 
                     //Hier gaat men terug naar het scherm AccountGericht.
                     AccountGericht Accounts=new AccountGericht();

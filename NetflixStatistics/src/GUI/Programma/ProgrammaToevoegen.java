@@ -217,7 +217,9 @@ public class ProgrammaToevoegen {
                             Vbox_Gegevens.getChildren().add(Hbox_ErrorPercentage);
                         } else {
                             //Hier komt de methodcall
-                            Opslaan_ProgrammaToevoegen.Opslaan(Combobox_WelkAccount.getSelectionModel(), Combobox_WelkProfiel.getSelectionModel(), Combobox_WelkProgramma.getSelectionModel(), Percentage);
+                            //TODO: Get selected ProfielID and ProgrammaID use Combobox_WelkAccount.getSelectionModel().getSelectedItem() cast it to the right datatype and get the ids
+
+                            //Opslaan_ProgrammaToevoegen.Opslaan(ProfielID, ProgrammaID, Percentage);
 
                             //Hier gaat men terug naar het scherm AccountProfiel.
                             AccountProfiel Profiel = new AccountProfiel();

@@ -1,5 +1,9 @@
 package GUI.Programma;
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 62015c60bebe4c1da939e772df40ec674682e684
 import Functionaliteit.Verwijderen.Verwijderen_Programma;
 import GUI.AccountGericht.AccountGerichtAccount;
 import GUI.Algemeen.Afleveringen;

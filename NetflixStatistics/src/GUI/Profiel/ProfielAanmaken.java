@@ -182,7 +182,7 @@ public class ProfielAanmaken {
                         int Leeftijd = Integer.parseInt(Textfield_Leeftijd.getText().trim());
 
                         //Hier wordt de method call gedaan om het profiel toe te voegen.
-                        Opslaan_NieuwProfielAanmaken.Opslaan(Combobox_WelkAccount.getSelectionModel(), Textfield_Naam.getText().trim(), Leeftijd);
+                        //Opslaan_NieuwProfielAanmaken.Opslaan(Combobox_WelkAccount.getSelectionModel(), Textfield_Naam.getText().trim(), Leeftijd);
 
                         //Hier gaat men terug naar het scherm Account.
                         AccountGerichtAccount Account = new AccountGerichtAccount();
