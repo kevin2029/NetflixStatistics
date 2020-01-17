@@ -70,7 +70,7 @@ public class BekekenFilmsAccount {
 
 
         //Hier krijgt Button_Print zijn functionaliteit.
-        
+
 
         //Hier krijgt Button_Terug zijn functionaliteit
         Button_Terug.setOnAction(actionEvent -> {
