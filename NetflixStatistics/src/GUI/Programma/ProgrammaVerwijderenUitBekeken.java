@@ -1,6 +1,6 @@
 package GUI.Programma;
 
-import Functionaliteit.Verwijderen.Verwijderen_Aflevering;
+
 import Functionaliteit.Verwijderen.Verwijderen_Programma;
 import GUI.Algemeen.Afleveringen;
 import GUI.Basis.AccountGericht;

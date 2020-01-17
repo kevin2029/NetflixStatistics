@@ -199,7 +199,7 @@ public class ProfielWijzigen {
                         int Leeftijd = Integer.parseInt(Textfield_Leeftijd.getText().trim());
 
                         //Hier komt de methodcall
-                        Opslaan_ProfielWijzigen.Opslaan(Combobox_WelkAccount.getSelectionModel(), Combobox_WelkProfiel.getSelectionModel(), Textfield_Naam.getText().trim(), Leeftijd);
+                        //Opslaan_ProfielWijzigen.Opslaan(ProfielID, Textfield_Naam.getText().trim(), Leeftijd);
 
                         //Hier gaat men terug naar het scherm AccountGerichtAccount.
                         AccountGerichtAccount Account=new AccountGerichtAccount();

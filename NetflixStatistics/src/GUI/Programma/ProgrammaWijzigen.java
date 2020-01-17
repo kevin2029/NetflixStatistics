@@ -213,7 +213,7 @@ public class ProgrammaWijzigen {
                             Vbox_Gegevens.getChildren().add(Hbox_ErrorPercentage);
                         } else {
                             //Hier komt de methodcall
-                            Opslaan_ProgrammaWijzigen.Opslaan(Combobox_WelkAccount.getSelectionModel(),Combobox_WelkProfiel.getSelectionModel(),Combobox_WelkProgramma.getSelectionModel(),Percentage);
+                            //Opslaan_ProgrammaWijzigen.Opslaan(ProfielID,ProgrammaID,Percentage);
 
                             //Hier gaat men terug naar het scherm AccountProfiel.
                             AccountProfiel Profiel = new AccountProfiel();
