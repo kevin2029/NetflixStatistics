@@ -29,7 +29,7 @@ public class Home extends Application {
 
         //hier wordt de stage klaargemaakt.
         stage.setScene(Home(stage));
-        stage.setFullScreen(true);
+        //stage.setFullScreen(true);
         stage.show();
     }
 

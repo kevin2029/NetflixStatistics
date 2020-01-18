@@ -12,7 +12,6 @@ public class Printen_Seizoenen {
 
     public static FlowPane AlleSeizoenen(){
         FlowPane AlleSeizoenen=new FlowPane();
-        VBox Seizoenen=new VBox();
 
         List<Map<String, Object>> result = Connection.executeQuery(
                 "SELECT Serie.Naam,Seizoen.Seizoensnummer\n" +
@@ -20,9 +19,12 @@ public class Printen_Seizoenen {
                         "JOIN Seizoen\n" +
                         "ON Serie.SerieID = Seizoen.SerieID");
 
-        for(Map<String, Object> seizoen :result){
-            Label alleSeizoenen=new Label(seizoen.toString());
-            Seizoenen.getChildren().add(alleSeizoenen);
+        for(Map<String, Object>  seizoen : result){
+            VBox Seizoenen=new VBox();
+            //Lambda Expression
+            seizoen.forEach((column, value) -> {
+                Seizoenen.getChildren().add(new Label(column + ": " + value));
+            });
             AlleSeizoenen.getChildren().add(Seizoenen);
         }
 

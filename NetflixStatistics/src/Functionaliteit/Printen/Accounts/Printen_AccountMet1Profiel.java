@@ -12,7 +12,7 @@ public class Printen_AccountMet1Profiel {
 
     public static FlowPane AccountsMet1Profiel(){
         FlowPane AccountsMet1Profiel=new FlowPane();
-        VBox eenprofiel=new VBox();
+
 
         List<Map<String, Object>> result = Connection.executeQuery(
                 "SELECT Account.AccountID,Naam \n" +
@@ -24,8 +24,11 @@ public class Printen_AccountMet1Profiel {
         );
 
         for(Map<String, Object> profiel:result){
-            Label maarEenProfiel=new Label(profiel.toString());
-            eenprofiel.getChildren().add(maarEenProfiel);
+            VBox eenprofiel=new VBox();
+            //Lambda Expression
+            profiel.forEach((column, value) -> {
+                eenprofiel.getChildren().add(new Label(column + ": " + value));
+            });
             AccountsMet1Profiel.getChildren().add(eenprofiel);
         }
 

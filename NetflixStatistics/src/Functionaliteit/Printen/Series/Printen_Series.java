@@ -12,16 +12,17 @@ public class Printen_Series {
 
     public static FlowPane AlleSeries(){
         FlowPane AlleSeries=new FlowPane();
-        VBox Series=new VBox();
 
         List<Map<String, Object>> result = Connection.executeQuery(
                 "SELECT Naam,Genre,Taal,Leeftijdsindicatie\n" +
                 "FROM Serie;");
 
-
-        for(Map<String, Object> series :result){
-            Label alleSeries=new Label(series.toString());
-            Series.getChildren().add(alleSeries);
+        for(Map<String, Object>  series : result){
+            VBox Series=new VBox();
+            //Lambda Expression
+            series.forEach((column, value) -> {
+                Series.getChildren().add(new Label(column + ": " + value));
+            });
             AlleSeries.getChildren().add(Series);
         }
 

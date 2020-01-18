@@ -12,7 +12,6 @@ public class Printen_FilmLangsteTijdsduur {
 
     public static FlowPane Langstetijdsduur(){
         FlowPane Langstetijdsduur=new FlowPane();
-        VBox film=new VBox();
 
         List<Map<String, Object>> result = Connection.executeQuery(
                 "SELECT TOP 1 Titel,TijdsduurInMinuten,film.Genre,film.Taal,film.Leeftijdsindicatie\n" +
@@ -20,10 +19,12 @@ public class Printen_FilmLangsteTijdsduur {
                         "JOIN film\n" +
                         "ON Programma.ProgrammaID = Film.ProgrammaID;");
 
-
-        for(Map<String, Object> films :result){
-            Label alleFilms=new Label(films.toString());
-            film.getChildren().add(alleFilms);
+        for(Map<String, Object>  films : result){
+            VBox film=new VBox();
+            //Lambda Expression
+            films.forEach((column, value) -> {
+                film.getChildren().add(new Label(column + ": " + value));
+            });
             Langstetijdsduur.getChildren().add(film);
         }
 

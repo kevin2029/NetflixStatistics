@@ -12,7 +12,7 @@ public class Printen_AccountMetMeerDan1Profiel {
 
     public static FlowPane AccountsMetMeerDan1Profiel(){
         FlowPane AccountsMetMeerDan1Profiel=new FlowPane();
-        VBox meerprofiel=new VBox();
+
 
         List<Map<String, Object>> result = Connection.executeQuery(
                 "SELECT Account.AccountID,Naam \n" +
@@ -20,12 +20,15 @@ public class Printen_AccountMetMeerDan1Profiel {
                         "JOIN Profiel \n" +
                         "ON Account.AccountID = Profiel.AccountID \n" +
                         "GROUP BY Account.AccountID,Naam \n" +
-                        "HAVING COUNT(Account.AccountID) = >1; "
+                        "HAVING COUNT(Account.AccountID) >1; "
         );
 
         for(Map<String, Object> profiel:result){
-            Label metMeerProfiel=new Label(profiel.toString());
-            meerprofiel.getChildren().add(metMeerProfiel);
+            VBox meerprofiel=new VBox();
+            //Lambda Expression
+            profiel.forEach((column, value) -> {
+                meerprofiel.getChildren().add(new Label(column + ": " + value));
+            });
             AccountsMetMeerDan1Profiel.getChildren().add(meerprofiel);
         }
 

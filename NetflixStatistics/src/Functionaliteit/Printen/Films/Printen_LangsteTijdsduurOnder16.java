@@ -12,7 +12,6 @@ public class Printen_LangsteTijdsduurOnder16 {
 
     public static FlowPane LangsteTijdsduurOnder16(){
         FlowPane LangstetijdsduurOnder16=new FlowPane();
-        VBox film=new VBox();
 
         List<Map<String, Object>> result = Connection.executeQuery(
                 "SELECT TOP 1 Titel,TijdsduurInMinuten,film.Genre,film.Taal,film.Leeftijdsindicatie\n" +
@@ -22,9 +21,12 @@ public class Printen_LangsteTijdsduurOnder16 {
                         "WHERE Leeftijdsindicatie < 16 \n" +
                         "ORDER BY TijdsduurInMinuten DESC;");
 
-        for(Map<String, Object> films :result){
-            Label alleFilms=new Label(films.toString());
-            film.getChildren().add(alleFilms);
+        for(Map<String, Object>  films : result){
+            VBox film=new VBox();
+            //Lambda Expression
+            films.forEach((column, value) -> {
+                film.getChildren().add(new Label(column + ": " + value));
+            });
             LangstetijdsduurOnder16.getChildren().add(film);
         }
 

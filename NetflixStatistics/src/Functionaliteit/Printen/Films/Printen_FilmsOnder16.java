@@ -13,8 +13,6 @@ public class Printen_FilmsOnder16 {
     public static FlowPane FilmsOnder16(){
         FlowPane AlleFilmsOnder16=new FlowPane();
 
-        VBox film=new VBox();
-
         List<Map<String, Object>> result = Connection.executeQuery(
                 "SELECT  Titel,TijdsduurInMinuten,film.Genre,film.Taal,film.Leeftijdsindicatie\n" +
                         "FROM Programma\n" +
@@ -23,10 +21,12 @@ public class Printen_FilmsOnder16 {
                         "WHERE Leeftijdsindicatie < 16 \n" +
                         "ORDER BY TijdsduurInMinuten DESC;");
 
-
-        for(Map<String, Object> films :result){
-            Label alleFilms=new Label(films.toString());
-            film.getChildren().add(alleFilms);
+        for(Map<String, Object>  films : result){
+            VBox film=new VBox();
+            //Lambda Expression
+            films.forEach((column, value) -> {
+                film.getChildren().add(new Label(column + ": " + value));
+            });
             AlleFilmsOnder16.getChildren().add(film);
         }
 
