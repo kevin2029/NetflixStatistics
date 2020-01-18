@@ -5,6 +5,8 @@ import Functionaliteit.Verwijderen.Verwijderen_Programma;
 import GUI.AccountGericht.AccountGerichtAccount;
 import GUI.Algemeen.Afleveringen;
 import GUI.Basis.AccountGericht;
+import ObservableLists.ObservableList_Profielen;
+import ObservableLists.ObservableList_Programmas;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -33,8 +35,8 @@ public class ProgrammaVerwijderenUitBekeken {
         Label Label_ErrorKies=new Label("Kies eerst een account, profiel en programma");
 
         //Hier wordt de combobox aangemaakt.
-        ComboBox Combobox_WelkProfiel=new ComboBox();//Hier staan alle profielen.
-        ComboBox Combobox_WelkProgramma=new ComboBox(); //Hier staan alle programmas.
+        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen());//Hier staan alle profielen.
+        ComboBox Combobox_WelkProgramma=new ComboBox(ObservableList_Programmas.ObservableList_Programmas()); //Hier staan alle programmas.
 
         //Hier worden de buttons aangemaakt.
         Button Button_Verwijderen=new Button("Verwijderen");

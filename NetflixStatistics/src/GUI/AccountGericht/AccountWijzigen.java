@@ -43,7 +43,7 @@ public class AccountWijzigen {
         Label Label_ErrorVakjes=new Label("Vul alle vakjes in");
 
         //Hier wordt de combobox aangemaakt.
-        ComboBox Combobox_WelkAccount=new ComboBox();//Hierin moeten alle accounts staan.
+        ComboBox Combobox_WelkAccount=new ComboBox(ObservableList_Accounts.ObservableList_Accounts());//Hierin moeten alle accounts staan.
 
         //Hier worden de textfields aangemaakt.
         TextField Textfield_Naam=new TextField();

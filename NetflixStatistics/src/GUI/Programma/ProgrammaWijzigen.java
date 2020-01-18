@@ -3,6 +3,8 @@ package GUI.Programma;
 import Functionaliteit.Opslaan.Aanmaken.Opslaan_ProgrammaToevoegen;
 import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProgrammaWijzigen;
 import GUI.AccountGericht.AccountGerichtAccount;
+import ObservableLists.ObservableList_Profielen;
+import ObservableLists.ObservableList_Programmas;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -40,8 +42,8 @@ public class ProgrammaWijzigen {
         Label Label_ErrorPercentage=new Label("Het nieuwe percentage mag niet groter dan 100 zijn");
 
         //Hier worden de comboboxen aangemaakt.
-        ComboBox Combobox_WelkProfiel=new ComboBox();//Hier staan alle profielen.
-        ComboBox Combobox_WelkProgramma=new ComboBox(); //Hier staan alle programmas.
+        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen());//Hier staan alle profielen.
+        ComboBox Combobox_WelkProgramma=new ComboBox(ObservableList_Programmas.ObservableList_Programmas()); //Hier staan alle programmas.
 
         //Hier wordt het textfield aangemaakt.
         TextField Textfield_Percentage=new TextField();

@@ -1,6 +1,7 @@
 package Functionaliteit.Printen.Accounts;
 
 import DatabaseConnectie.Connection;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
@@ -12,6 +13,10 @@ public class Printen_AccountMetMeerDan1Profiel {
 
     public static FlowPane AccountsMetMeerDan1Profiel(){
         FlowPane AccountsMetMeerDan1Profiel=new FlowPane();
+
+        AccountsMetMeerDan1Profiel.setAlignment(Pos.TOP_CENTER);
+        AccountsMetMeerDan1Profiel.setHgap(50);
+        AccountsMetMeerDan1Profiel.setVgap(50);
 
 
         List<Map<String, Object>> result = Connection.executeQuery(
@@ -25,6 +30,7 @@ public class Printen_AccountMetMeerDan1Profiel {
 
         for(Map<String, Object> profiel:result){
             VBox meerprofiel=new VBox();
+            meerprofiel.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size: 20");
             //Lambda Expression
             profiel.forEach((column, value) -> {
                 meerprofiel.getChildren().add(new Label(column + ": " + value));

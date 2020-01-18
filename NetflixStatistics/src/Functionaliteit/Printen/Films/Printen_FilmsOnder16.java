@@ -1,6 +1,7 @@
 package Functionaliteit.Printen.Films;
 
 import DatabaseConnectie.Connection;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
@@ -13,6 +14,10 @@ public class Printen_FilmsOnder16 {
     public static FlowPane FilmsOnder16(){
         FlowPane AlleFilmsOnder16=new FlowPane();
 
+        AlleFilmsOnder16.setAlignment(Pos.TOP_CENTER);
+        AlleFilmsOnder16.setHgap(50);
+        AlleFilmsOnder16.setVgap(50);
+
         List<Map<String, Object>> result = Connection.executeQuery(
                 "SELECT  Titel,TijdsduurInMinuten,film.Genre,film.Taal,film.Leeftijdsindicatie\n" +
                         "FROM Programma\n" +
@@ -23,6 +28,8 @@ public class Printen_FilmsOnder16 {
 
         for(Map<String, Object>  films : result){
             VBox film=new VBox();
+            film.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size: 20");
+
             //Lambda Expression
             films.forEach((column, value) -> {
                 film.getChildren().add(new Label(column + ": " + value));
