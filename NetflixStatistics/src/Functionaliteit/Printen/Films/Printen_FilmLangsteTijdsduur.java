@@ -17,7 +17,8 @@ public class Printen_FilmLangsteTijdsduur {
                 "SELECT TOP 1 Titel,TijdsduurInMinuten,film.Genre,film.Taal,film.Leeftijdsindicatie\n" +
                         "FROM Programma\n" +
                         "JOIN film\n" +
-                        "ON Programma.ProgrammaID = Film.ProgrammaID;");
+                        "ON Programma.ProgrammaID = Film.ProgrammaID\n" +
+                        "ORDER BY TijdsduurInMinuten DESC;");
 
         for(Map<String, Object>  films : result){
             VBox film=new VBox();

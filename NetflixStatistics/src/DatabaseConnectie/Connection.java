@@ -27,7 +27,7 @@ public class Connection {
             rs = stmt.executeQuery(sql);
             result = resultSetToList(rs);
         }
-        // Handle any errors that may have occurred.
+
         catch (Exception e) {
             e.printStackTrace();
         }
