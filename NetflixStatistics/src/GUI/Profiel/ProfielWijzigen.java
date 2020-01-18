@@ -4,6 +4,7 @@ import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProfielWijzigen;
 import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProgrammaWijzigen;
 import GUI.AccountGericht.AccountGerichtAccount;
 import GUI.Basis.AccountGericht;
+import ObservableLists.ObservableList_Profielen;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -40,7 +41,7 @@ public class ProfielWijzigen {
         Label Label_ErrorInteger=new Label("Leeftijd moet een getal zijn");
 
         //Hier worden de comboboxen aangemaakt.
-        ComboBox Combobox_WelkProfiel=new ComboBox();
+        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen());
 
         //Hier worden de textfields aangemaakt.
         TextField Textfield_Naam=new TextField();

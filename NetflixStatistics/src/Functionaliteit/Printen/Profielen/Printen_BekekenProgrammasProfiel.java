@@ -1,3 +1,4 @@
+/*
 package Functionaliteit.Printen.Profielen;
 
 import DatabaseConnectie.Connection;
@@ -19,4 +20,4 @@ public class Printen_BekekenProgrammasProfiel {
             "WHERE Profiel.Profielnaam = '" + NAAM +"';");
 
             */
-}
+//}

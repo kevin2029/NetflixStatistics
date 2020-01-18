@@ -4,6 +4,7 @@ import Functionaliteit.Verwijderen.Verwijderen_Account;
 import Functionaliteit.Verwijderen.Verwijderen_Profiel;
 import GUI.Algemeen.Series;
 import GUI.Basis.AccountGericht;
+import ObservableLists.ObservableList_Accounts;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -31,7 +32,7 @@ public class AccountVerwijderen {
         Label Label_ErrorKies=new Label("Kies eerst een account");
 
         //Hier wordt de combobox aangemaakt.
-        ComboBox Combobox_WelkAccount=new ComboBox();//Hier staan alle accounts.
+        ComboBox Combobox_WelkAccount=new ComboBox(ObservableList_Accounts.ObservableList_Accounts());//Hier staan alle accounts.
 
         //Hier worden de buttons aangemaakt.
         Button Button_Verwijderen=new Button("Verwijderen");

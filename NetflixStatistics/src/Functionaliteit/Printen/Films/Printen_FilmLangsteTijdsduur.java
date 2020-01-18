@@ -1,6 +1,7 @@
 package Functionaliteit.Printen.Films;
 
 import DatabaseConnectie.Connection;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
@@ -13,6 +14,10 @@ public class Printen_FilmLangsteTijdsduur {
     public static FlowPane Langstetijdsduur(){
         FlowPane Langstetijdsduur=new FlowPane();
 
+        Langstetijdsduur.setAlignment(Pos.TOP_CENTER);
+        Langstetijdsduur.setHgap(50);
+        Langstetijdsduur.setVgap(50);
+
         List<Map<String, Object>> result = Connection.executeQuery(
                 "SELECT TOP 1 Titel,TijdsduurInMinuten,film.Genre,film.Taal,film.Leeftijdsindicatie\n" +
                         "FROM Programma\n" +
@@ -22,6 +27,7 @@ public class Printen_FilmLangsteTijdsduur {
 
         for(Map<String, Object>  films : result){
             VBox film=new VBox();
+            film.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size: 20");
             //Lambda Expression
             films.forEach((column, value) -> {
                 film.getChildren().add(new Label(column + ": " + value));

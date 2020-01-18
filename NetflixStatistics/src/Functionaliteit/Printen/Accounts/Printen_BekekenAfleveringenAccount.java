@@ -1,6 +1,23 @@
 package Functionaliteit.Printen.Accounts;
 
+import javafx.geometry.Pos;
+import javafx.scene.layout.FlowPane;
+
 public class Printen_BekekenAfleveringenAccount {
+    public static FlowPane BekekenAfleveringenAccount(int AccountID){
+        FlowPane BekekenAfleveringenAccount=new FlowPane();
+
+        BekekenAfleveringenAccount.setAlignment(Pos.TOP_CENTER);
+        BekekenAfleveringenAccount.setHgap(25);
+        BekekenAfleveringenAccount.setVgap(25);
+
+        //naamVbox.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size: 13");
+
+        return BekekenAfleveringenAccount;
+    }
+
+
+
       /* NAAM MOET NAAR DE NAAM VAN HET ACCOUNT VERWEZEN WORDEN
     List<Map<String, Object>> result = Connection.executeQuery(
             "SELECT Programma.Titel, Profiel.Profielnaam FROM Programma\n" +

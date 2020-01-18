@@ -1,7 +1,9 @@
 package GUI.AccountGericht;
 
+import Functionaliteit.Printen.Accounts.Printen_BekekenAfleveringenAccount;
 import Functionaliteit.Verwijderen.Verwijderen_Account;
 import GUI.Basis.AccountGericht;
+import ObservableLists.ObservableList_Accounts;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -33,7 +35,7 @@ public class BekekenAfleveringenAccount {
         Button Button_Terug=new Button("< Terug");
 
         //Hier wordt de combobox aangemaakt.
-        ComboBox Combobox_Account=new ComboBox();
+        ComboBox Combobox_Account=new ComboBox(ObservableList_Accounts.ObservableList_Accounts());
 
 
 
@@ -97,7 +99,9 @@ public class BekekenAfleveringenAccount {
                 int AccountID= Integer.parseInt((String)Combobox_Account.getSelectionModel().getSelectedItem());
 
                 //Hier komt de methodcall om te printen.
-
+                Button_Print.setOnAction(actionEvent1 -> {
+                    Borderpane_BekekenAfleveringenAccount.setCenter(Printen_BekekenAfleveringenAccount.BekekenAfleveringenAccount(AccountID));
+                });
             }
         });
 

@@ -4,6 +4,7 @@ import Functionaliteit.Verwijderen.Verwijderen_Profiel;
 import Functionaliteit.Verwijderen.Verwijderen_Programma;
 import GUI.AccountGericht.AccountGerichtAccount;
 import GUI.Algemeen.Seizoenen;
+import ObservableLists.ObservableList_Profielen;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -31,7 +32,7 @@ public class ProfielVerwijderen {
         Label Label_ErrorKies=new Label("Kies eerst een account en een profiel");
 
         //Hier worden de comboboxen aangemaakt.
-        ComboBox Combobox_WelkProfiel=new ComboBox();//Hier staan alle profielen van het account.
+        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen());//Hier staan alle profielen van het account.
 
         //Hier worden de buttons aangemaakt.
         Button Button_Verwijderen=new Button("Verwijderen");

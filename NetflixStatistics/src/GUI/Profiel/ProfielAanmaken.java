@@ -2,6 +2,7 @@ package GUI.Profiel;
 
 import Functionaliteit.Opslaan.Aanmaken.Opslaan_NieuwProfielAanmaken;
 import GUI.AccountGericht.AccountGerichtAccount;
+import ObservableLists.ObservableList_Accounts;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -39,7 +40,7 @@ public class ProfielAanmaken {
         Label Label_ErrorInteger=new Label("leeftijd moet een getal zijn");
 
         //Hier wordt de combobox aangemaakt.
-        ComboBox Combobox_WelkAccount=new ComboBox();
+        ComboBox Combobox_WelkAccount=new ComboBox(ObservableList_Accounts.ObservableList_Accounts());
 
         //Hier worden de textfields aangemaakt.
         TextField Textfield_Naam=new TextField();

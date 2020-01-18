@@ -1,5 +1,6 @@
 package GUI.AccountGericht;
 
+import Functionaliteit.Printen.Profielen.Printen_AlleProfielen;
 import GUI.Basis.AccountGericht;
 import GUI.Profiel.ProfielAanmaken;
 import GUI.Profiel.ProfielVerwijderen;
@@ -48,6 +49,7 @@ public class AccountGerichtAccount {
 
         //Hier wordt alles aan Borderpane_Account toegevoegd.
         Borderpane_Account.setTop(Vbox_LabelEnButtons);
+        Borderpane_Account.setCenter(Printen_AlleProfielen.AlleProfielen());
 
         //Hier wordt alles aan Vbox_LabelEnButtons toegevoegd.
         Vbox_LabelEnButtons.getChildren().add(Hbox_Label);
