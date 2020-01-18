@@ -11,16 +11,7 @@ public class Verwijderen_Programma {
     public static void Verwijderen(int Profiel, int Programma){
         //Hier komt de querie om het programma uit de bekeken programmas van Profiel te verwijderen.
 
-        /*
-        List<Map<String, Object>> result = Connection.executeQuery("DELETE FROM ProgrammaBekekenDoor\n" +
-                "FROM ProgrammaBekekenDoor\n" +
-                "join Profiel\n" +
-                "\ton Profiel.ProfielID = ProgrammaBekekenDoor.ProfielID\n" +
-                "join Account\n" +
-                "\ton Profiel.AccountID = Account.AccountID\n" +
-                "\n" +
-                "\twhere Profiel.Profielnaam = '' and Account.Naam = '' and ProgrammaBekekenDoor = '';");
-
-                */
+        Connection.executeQuery("DELETE FROM ProgrammaBekekenDoor\n" +
+                "WHERE ProgrammaBekekenDoor.ProfielID = '" +Profiel+"' AND ProgrammaBekekenDoor.ProgrammaID = '"+Programma+"' ;");
     }
 }

@@ -14,7 +14,7 @@ public class Verwijderen_Account {
         //Hier komt de querrie om het account uit de database te verwijderen.
 
         Connection.executeQuery("DELETE FROM Account\n" +
-                "WHERE Account. = '" +Account+"';");
+                "WHERE Account.AccountID = '" +Account+"';");
 
 
     }
