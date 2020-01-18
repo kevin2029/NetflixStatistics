@@ -9,12 +9,9 @@ import java.util.List;
 import java.util.Map;
 
 public class Printen_Afleveringen {
-    // prgromaa serie.naam,seizoen.nummer, afleveringsnummer,naam,tijdsduurinmin
 
     public static FlowPane AlleAfleveringen(){
         FlowPane AlleAfleveringen=new FlowPane();
-        VBox afleverings=new VBox();
-
 
         List<Map<String, Object>> result = Connection.executeQuery(
                 "SELECT Serie.Naam,Seizoen.Seizoensnummer,Aflevering.AfleveringNummer,Programma.Titel,Programma.TijdsduurInMinuten\n" +
@@ -27,10 +24,13 @@ public class Printen_Afleveringen {
                         "ON Seizoen.SerieID = Serie.SerieID;");
 
 
-        for(Map<String, Object> aflevering:result){
-            Label SerieTitel=new Label(result.toString());
-            afleverings.getChildren().add(SerieTitel);
-            AlleAfleveringen.getChildren().add(afleverings);
+        for(Map<String, Object>  aflevering : result){
+            VBox afleveringen=new VBox();
+            //Lambda Expression
+            aflevering.forEach((column, value) -> {
+                afleveringen.getChildren().add(new Label(column + ": " + value));
+            });
+            AlleAfleveringen.getChildren().add(afleveringen);
         }
 
         return AlleAfleveringen;

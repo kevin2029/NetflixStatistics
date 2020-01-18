@@ -7,24 +7,25 @@ import javafx.scene.layout.VBox;
 
 import java.util.List;
 import java.util.Map;
+import java.util.function.BiConsumer;
 
 public class Printen_AlleAccounts {
 
     public static FlowPane AlleAccounts(){
         FlowPane AlleAccounts=new FlowPane();
-        //for(Account:Database){
-        //VBox account=new VBox();
-        //Label Naam=new Label(Querrie voor de naam te selecteren);
-        //Label Woonplaats=new Label(Querrie voor de woonplaats te selecteren);
-        //Label Adres=new Label(querrie voor het adres te selecteren);
-        //account.getChildren().add(Naam);
-        //account.getChildren().add(Woonplaats);
-        //account.getChildren().add(Adres);
-        //AlleAccounts.getChildren().add(account);
+
+        List<Map<String, Object>> accounts = Connection.executeQuery( "SELECT * FROM Account;");
+
+        for(Map<String, Object>  account : accounts){
+            VBox row = new VBox();
+            //Lambda Expression
+            account.forEach((column, value) -> {
+                row.getChildren().add(new Label(column + ": " + value));
+            });
+            AlleAccounts.getChildren().add(row);
+        }
         return AlleAccounts;
     }
 }
 
-
-    //List<Map<String, Object>> result = Connection.executeQuery( "SELECT * FROM Accounts;");
 

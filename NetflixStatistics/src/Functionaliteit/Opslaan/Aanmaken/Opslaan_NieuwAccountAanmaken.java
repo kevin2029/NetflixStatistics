@@ -7,7 +7,7 @@ import java.util.Map;
 public class Opslaan_NieuwAccountAanmaken {
 
     public static void Opslaan(String Naam, String Woonplaats, String Adres){
-        List<Map<String, Object>> result = Connection.executeQuery("INSERT INTO Account(Naam,Woonplaats,Adres)\n" +
+        Connection.executeQuery("INSERT INTO Account(Naam,Woonplaats,Adres)\n" +
                 "VALUES('"+Naam+"','"+Woonplaats+"','"+Adres+"');");
     }
 }

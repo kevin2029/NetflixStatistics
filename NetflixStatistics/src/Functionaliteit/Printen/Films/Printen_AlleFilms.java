@@ -1,7 +1,9 @@
 package Functionaliteit.Printen.Films;
 
 import DatabaseConnectie.Connection;
+import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 
 import java.util.List;
 import java.util.Map;
@@ -10,27 +12,25 @@ public class Printen_AlleFilms {
 
     public static FlowPane AlleFilms(){
         FlowPane AlleFilms=new FlowPane();
-        //for(Film:Database){
-        //VBox film=new VBox();
-        //Label Titel=new Label(Querrie voor de titel te selecteren);
-        //Label Genre=new Label(Querrie voor de genre te selecteren);
-        //Label Taal=new Label(querrie voor het taal te selecteren);
-        //Label Tijdsduur=new Label(Querrie voor de tijdsduur te selecteren);
-        //Label Leeftijdsindicatie=new Label(Querrie voor de leeftijdsindicatie te selecteren);
-        //Label AantalKijkers=new Label(Querrie voor het aantal kijkers);
-        //film.getChildren().add(Titel);
-        //film.getChildren().add(Genre);
-        //film.getChildren().add(Taal);
-        //film.getChildren().add(Tijdsduur);
-        //film.getChildren().add(Leeftijdsindicatie);
-        //film.getChildren().add(AantalKijkers
-        //AlleFilms.getChildren().add(film);
+
+
+        List<Map<String, Object>> result = Connection.executeQuery(
+                "SELECT Programma.Titel, Film.Genre, film.Taal,Programma.TijdsduurInMinuten,film.Leeftijdsindicatie\n" +
+                "FROM Programma\n" +
+                "JOIN film\n" +
+                "ON Programma.ProgrammaID = Film.ProgrammaID;");
+
+
+        for(Map<String, Object>  films : result){
+            VBox film=new VBox();
+            //Lambda Expression
+            films.forEach((column, value) -> {
+                film.getChildren().add(new Label(column + ": " + value));
+            });
+            AlleFilms.getChildren().add(film);
+        }
         return AlleFilms;
     }
 
 
-    List<Map<String, Object>> result = Connection.executeQuery( "SELECT Programma.Titel\n" +
-            "FROM Programma\n" +
-            "JOIN film\n" +
-            "ON Programma.ProgrammaID = Film.ProgrammaID;");
 }
