@@ -117,8 +117,11 @@ public class AccountVerwijderen {
             if(Combobox_WelkAccount.getSelectionModel().isEmpty()){
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else{
-                //Als we hier zijn is er een account geselecteerd dus maken we een methodcall.
+                //Hier gaat het geselecteerd ID omgezet worden in een int.
+                int AccountID=Integer.parseInt((String)Combobox_WelkAccount.getSelectionModel().getSelectedItem());
 
+                //Als we hier zijn is er een account geselecteerd dus maken we een methodcall.
+                Verwijderen_Account.Verwijderen(AccountID);
 
                 //Hier gaan we terug naar het scherm AccountGericht.
                 AccountGericht AccountGericht=new AccountGericht();
@@ -140,7 +143,7 @@ public class AccountVerwijderen {
 
         //Hier wordt scene AccountVerwijderen aangemaakt.
         Scene AccountVerwijderen=new Scene(Borderpane_AccountVerwijderen,1300,650);
-        stage.setTitle("Account verwijderen");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt de scene gereturned
         return AccountVerwijderen;

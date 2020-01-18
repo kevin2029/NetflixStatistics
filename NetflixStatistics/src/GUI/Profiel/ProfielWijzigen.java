@@ -182,8 +182,11 @@ public class ProfielWijzigen {
                         //Hier wordt gekeken of de leeftijd ook daadwerkelijk een cijfer is.
                         int Leeftijd = Integer.parseInt(Textfield_Leeftijd.getText().trim());
 
+                        //Hier zetten we het geselecteerde ProfielID om in een Integer.
+                        int ProfielID= Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
+
                         //Hier komt de methodcall
-                        //Opslaan_ProfielWijzigen.Opslaan(ProfielID, Textfield_Naam.getText().trim(), Leeftijd);
+                        Opslaan_ProfielWijzigen.Opslaan(ProfielID, Textfield_Naam.getText().trim(), Leeftijd);
 
                         //Hier gaat men terug naar het scherm AccountGerichtAccount.
                         AccountGerichtAccount Account=new AccountGerichtAccount();
@@ -212,7 +215,7 @@ public class ProfielWijzigen {
 
         //Hier wordt de scene ProfielWijzigen gemaakt.
         Scene ProfielWijzigen=new Scene(Borderpane_ProfielWijzigen,1300,650);
-        stage.setTitle("Profiel wijzigen");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt de scene gereturned.
         return ProfielWijzigen;

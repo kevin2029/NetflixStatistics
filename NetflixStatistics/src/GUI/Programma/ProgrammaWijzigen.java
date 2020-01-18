@@ -3,7 +3,6 @@ package GUI.Programma;
 import Functionaliteit.Opslaan.Aanmaken.Opslaan_ProgrammaToevoegen;
 import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProgrammaWijzigen;
 import GUI.AccountGericht.AccountGerichtAccount;
-import GUI.Profiel.AccountProfiel;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -197,12 +196,16 @@ public class ProgrammaWijzigen {
                             Vbox_Gegevens.getChildren().remove(Hbox_ErrorInteger);
                             Vbox_Gegevens.getChildren().add(Hbox_ErrorPercentage);
                         } else {
+                            //Hier zetten we de geselecteerde ID's om in Integers.
+                            int ProfielID= Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
+                            int ProgrammaID=Integer.parseInt((String)Combobox_WelkProgramma.getSelectionModel().getSelectedItem());
+
                             //Hier komt de methodcall
-                            //Opslaan_ProgrammaWijzigen.Opslaan(ProfielID,ProgrammaID,Percentage);
+                            Opslaan_ProgrammaWijzigen.Opslaan(ProfielID,ProgrammaID,Percentage);
 
                             //Hier gaat men terug naar het scherm AccountProfiel.
-                            AccountProfiel Profiel = new AccountProfiel();
-                            stage.setScene(Profiel.AccountProfiel(stage));
+                            AccountGerichtAccount Account = new AccountGerichtAccount();
+                            stage.setScene(Account.Account(stage));
                             stage.setFullScreen(true);
                         }
                     } catch (NumberFormatException NFE) {
@@ -226,7 +229,7 @@ public class ProgrammaWijzigen {
 
         //Hier wordt scene ProgrammaWijzigen aangemaakt.
         Scene ProgrammaWijzigen=new Scene(Borderpane_ProgrammaWijzigen,1300,650);
-        stage.setTitle("Programma wijzigen");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt de scene gereturned.
         return ProgrammaWijzigen;

@@ -102,7 +102,7 @@ public class HomeAlgemeen {
 
         //Hier wordt scene Algemeen aangemaakt.
         Scene Algemeen=new Scene(Borderpane_Algemeen,1300,650);
-        stage.setTitle("Algemeen");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt scene Algemeen gereturned.
         return Algemeen;

@@ -164,7 +164,7 @@ public class AccountAanmaken {
 
         //Hier wordt de scene AccountAanmaken aangemaakt.
         Scene AccountAanmaken=new Scene(Borderpane_AccountAanmaken,1300,650);
-        stage.setTitle("Account aanmaken");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt de scene gereturned.
         return AccountAanmaken;

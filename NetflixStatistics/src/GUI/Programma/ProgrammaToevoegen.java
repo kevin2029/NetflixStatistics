@@ -3,7 +3,6 @@ package GUI.Programma;
 import Functionaliteit.Opslaan.Aanmaken.Opslaan_NieuwProfielAanmaken;
 import Functionaliteit.Opslaan.Aanmaken.Opslaan_ProgrammaToevoegen;
 import GUI.AccountGericht.AccountGerichtAccount;
-import GUI.Profiel.AccountProfiel;
 import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -200,14 +199,17 @@ public class ProgrammaToevoegen {
                             Vbox_Gegevens.getChildren().remove(Hbox_ErrorInteger);
                             Vbox_Gegevens.getChildren().add(Hbox_ErrorPercentage);
                         } else {
+                            //Hier zetten we de geselecteerde ID's om in Integers.
+                            int ProfielID=Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
+                            int ProgrammaID=Integer.parseInt((String)Combobox_WelkProgramma.getSelectionModel().getSelectedItem());
+
                             //Hier komt de methodcall
                             //TODO: Get selected ProfielID and ProgrammaID use Combobox_WelkAccount.getSelectionModel().getSelectedItem() cast it to the right datatype and get the ids
-
-                            //Opslaan_ProgrammaToevoegen.Opslaan(ProfielID, ProgrammaID, Percentage);
+                            Opslaan_ProgrammaToevoegen.Opslaan(ProfielID, ProgrammaID, Percentage);
 
                             //Hier gaat men terug naar het scherm AccountProfiel.
-                            AccountProfiel Profiel = new AccountProfiel();
-                            stage.setScene(Profiel.AccountProfiel(stage));
+                            AccountGerichtAccount Account=new AccountGerichtAccount();
+                            stage.setScene(Account.Account(stage));
                             stage.setFullScreen(true);
                         }
                     } catch (NumberFormatException NFE) {
@@ -231,7 +233,7 @@ public class ProgrammaToevoegen {
 
         //Hier wordt scene ProgrammaToevoegen aangemaakt.
         Scene ProgrammaToevoegen=new Scene(Borderpane_ProgrammaToevoegen,1300,650);
-        stage.setTitle("Programma toevoegen");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt de scene gereturned.
         return ProgrammaToevoegen;

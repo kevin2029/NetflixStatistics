@@ -156,7 +156,7 @@ public class Films {
 
         //Hier wordt Scene films gemaakt.
         Scene Films=new Scene(Borderpane_Films,1300,650);
-        stage.setTitle("Films");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt scene Films gereturned.
         return Films;

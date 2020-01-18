@@ -5,7 +5,6 @@ import Functionaliteit.Verwijderen.Verwijderen_Programma;
 import GUI.AccountGericht.AccountGerichtAccount;
 import GUI.Algemeen.Afleveringen;
 import GUI.Basis.AccountGericht;
-import GUI.Profiel.AccountProfiel;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -127,12 +126,16 @@ public class ProgrammaVerwijderenUitBekeken {
             if(Combobox_WelkProfiel.getSelectionModel().isEmpty()||Combobox_WelkProgramma.getSelectionModel().isEmpty()){
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else{
-                //Als we hier zijn is er een account, profiel en programma geselecteerd dus maken we een methodcall.
+                //Hier zetten we de geselecteerde ID's om in Integers.
+                int ProfielID= Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
+                int ProgrammaID=Integer.parseInt((String)Combobox_WelkProgramma.getSelectionModel().getSelectedItem());
 
+                //Als we hier zijn is er een account, profiel en programma geselecteerd dus maken we een methodcall.
+                Verwijderen_Programma.Verwijderen(ProfielID,ProgrammaID);
 
                 //Hier gaan we terug naar het scherm AccountProfiel.
-                AccountProfiel Profiel=new AccountProfiel();
-                stage.setScene(Profiel.AccountProfiel(stage));
+                AccountGerichtAccount Account=new AccountGerichtAccount();
+                stage.setScene(Account.Account(stage));
                 stage.setFullScreen(true);
             }
         });
@@ -150,7 +153,7 @@ public class ProgrammaVerwijderenUitBekeken {
 
         //Hier wordt scene ProgrammaVerwijderen aangemaakt.
         Scene ProgrammaVerwijderen=new Scene(Borderpane_ProgrammaVerwijderen,1300,650);
-        stage.setTitle("Programma verwijderen uit bekeken programma's");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt de scene gereturned
         return ProgrammaVerwijderen;

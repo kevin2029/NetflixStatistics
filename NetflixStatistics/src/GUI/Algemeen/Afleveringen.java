@@ -71,7 +71,7 @@ public class Afleveringen {
 
         //Hier wordt Scene Afleveringen aangemaakt.
         Scene Afleveringen=new Scene(Borderpane_Afleveringen,1300,650);
-        stage.setTitle("Afleveringen van dit seizoen");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt de scene Afleveringen gereturned.
         return Afleveringen;

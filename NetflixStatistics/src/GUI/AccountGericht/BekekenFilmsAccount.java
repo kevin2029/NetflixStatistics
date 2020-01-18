@@ -70,7 +70,17 @@ public class BekekenFilmsAccount {
 
 
         //Hier krijgt Button_Print zijn functionaliteit.
+        Button_Print.setOnAction(actionEvent -> {
+            if(Combobox_Account.getSelectionModel().isEmpty()){
 
+            }else{
+                //Eerst zetten we het geselecteerde AccountID om in een Integer.
+                int AccountID= Integer.parseInt((String)Combobox_Account.getSelectionModel().getSelectedItem());
+
+                //Hier komt de methodcall voor het printen.
+
+            }
+        });
 
         //Hier krijgt Button_Terug zijn functionaliteit
         Button_Terug.setOnAction(actionEvent -> {
@@ -85,7 +95,7 @@ public class BekekenFilmsAccount {
 
         //Hier wordt scene BekekenFilmsAccount aangemaakt.
         Scene BekekenFilmsAccount=new Scene(Borderpane_BekekenFilmsAccount,1300,650);
-        stage.setTitle("Bekeken films voor dit account");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt de scene gereturned.
         return BekekenFilmsAccount;

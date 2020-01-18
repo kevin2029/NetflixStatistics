@@ -115,8 +115,11 @@ public class ProfielVerwijderen {
             if(Combobox_WelkProfiel.getSelectionModel().isEmpty()){
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else{
-                //Als we hier zijn is er een account en een profiel geselecteerd dus maken we een methodcall.
+                //Hier zetten we het geselecteerde ProfielID om in een Integer.
+                int ProfielID= Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
 
+                //Als we hier zijn is er een account en een profiel geselecteerd dus maken we een methodcall.
+                Verwijderen_Profiel.Verwijderen(ProfielID);
 
                 //Hier gaan we terug naar het scherm Account.
                 AccountGerichtAccount Account=new AccountGerichtAccount();
@@ -138,7 +141,7 @@ public class ProfielVerwijderen {
 
         //Hier wordt scene ProfielVerwijderen aangemaakt.
         Scene ProfielVerwijderen=new Scene(Borderpane_ProfielVerwijderen,1300,650);
-        stage.setTitle("Profiel verwijderen");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt de scene gereturned
         return ProfielVerwijderen;
