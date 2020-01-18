@@ -182,8 +182,11 @@ public class AccountWijzigen {
                 if (Textfield_Naam.getText().trim().isEmpty() || Textfield_Woonplaats.getText().trim().isEmpty() || Textfield_Adres.getText().trim().isEmpty()) {
                     Vbox_Gegevens.getChildren().add(Hbox_ErrorVakjes);
                 } else {
+                    //Hier gaan we het geselecteerde id in een int stoppen
+                    int AccountID= Integer.parseInt((String)Combobox_WelkAccount.getSelectionModel().getSelectedItem());
+
                     //Hier komt de methodcall
-                    //Opslaan_AccountWijzigen.Opslaan(AcountID, Textfield_Naam.getText().trim(), Textfield_Woonplaats.getText().trim(),Textfield_Adres.getText().trim());
+                    Opslaan_AccountWijzigen.Opslaan(AccountID, Textfield_Naam.getText().trim(), Textfield_Woonplaats.getText().trim(),Textfield_Adres.getText().trim());
 
                     //Hier gaat men terug naar het scherm AccountGericht.
                     AccountGericht Accounts=new AccountGericht();
@@ -206,7 +209,7 @@ public class AccountWijzigen {
 
         //Hier wordt de scene AccountWijzigen aangemaakt.
         Scene AccountWijzigen=new Scene(Borderpane_AccountWijzigen,1300,650);
-        stage.setTitle("Account aanmaken");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt de scene gereturned.
         return AccountWijzigen;

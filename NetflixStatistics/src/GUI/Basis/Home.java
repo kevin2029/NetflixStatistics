@@ -106,7 +106,7 @@ public class Home extends Application {
 
         //Hier wordt scene Home aangemaakt.
         Scene Home=new Scene(Borderpane_Home,1300,650);
-        stage.setTitle("Home");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt de scene Home gereturned.
         return Home;

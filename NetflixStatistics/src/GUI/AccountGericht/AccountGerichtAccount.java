@@ -1,7 +1,6 @@
 package GUI.AccountGericht;
 
 import GUI.Basis.AccountGericht;
-import GUI.Profiel.AccountProfiel;
 import GUI.Profiel.ProfielAanmaken;
 import GUI.Profiel.ProfielVerwijderen;
 import GUI.Profiel.ProfielWijzigen;
@@ -156,7 +155,7 @@ public class AccountGerichtAccount {
 
         //Hier wordt de scene Account aangemaakt
         Scene Account=new Scene(Borderpane_Account,1300,650);
-        stage.setTitle("Account"); //Dit veranderd in de naam van het account voor elk account.
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt de scene gereturned.
         return Account;

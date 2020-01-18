@@ -1,3 +1,4 @@
+/*
 package GUI.Profiel;
 
 import GUI.AccountGericht.AccountGerichtAccount;
@@ -126,3 +127,4 @@ public class AccountProfiel {
         return AccountProfiel;
     }
 }
+*/

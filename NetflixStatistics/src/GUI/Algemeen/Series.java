@@ -2,7 +2,6 @@ package GUI.Algemeen;
 
 import Functionaliteit.Printen.Series.Printen_Series;
 import GUI.Basis.HomeAlgemeen;
-import GUI.Profiel.AccountProfiel;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -91,7 +90,7 @@ public class Series {
 
         //Hier wordt scene Series aangemaakt.
         Scene Series=new Scene(Borderpane_Series,1300,650);
-        stage.setTitle("Series");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt de scene gereturned.
         return Series;

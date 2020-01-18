@@ -1,5 +1,6 @@
 package GUI.AccountGericht;
 
+import Functionaliteit.Verwijderen.Verwijderen_Account;
 import GUI.Basis.AccountGericht;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -88,7 +89,17 @@ public class BekekenAfleveringenAccount {
 
 
         //Hier krijgt Button_Print zijn functionaliteit.
+        Button_Print.setOnAction(actionEvent -> {
+            if (Combobox_Account.getSelectionModel().isEmpty()) {
 
+            }else{
+                //Eerst zetten we het geselecteerde accountID om in een int.
+                int AccountID= Integer.parseInt((String)Combobox_Account.getSelectionModel().getSelectedItem());
+
+                //Hier komt de methodcall om te printen.
+
+            }
+        });
 
         //Hier krijgt Button_Terug zijn functionaliteit
         Button_Terug.setOnAction(actionEvent -> {
@@ -103,7 +114,7 @@ public class BekekenAfleveringenAccount {
 
         //Hier wordt de scene BekekenAfleveringenAccount aangemaakt.
         Scene BekekenAfleveringenAccount=new Scene(Borderpane_BekekenAfleveringenAccount,1300,650);
-        stage.setTitle("Bekeken afleveringen voor dit account");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //hier wordt de scene gereturned.
         return BekekenAfleveringenAccount;

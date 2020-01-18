@@ -183,7 +183,7 @@ public class AccountGericht {
 
         //Hier wordt de Scene AccountGericht aangemaakt
         Scene AccountGericht= new Scene(Borderpane_Accounts,1300,650);
-        stage.setTitle("Accounts");
+        stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
         //Hier wordt scene AccountGericht gereturned.
         return AccountGericht;
