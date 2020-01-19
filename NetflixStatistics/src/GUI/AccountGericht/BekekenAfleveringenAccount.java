@@ -93,8 +93,13 @@ public class BekekenAfleveringenAccount {
             if (Combobox_Account.getSelectionModel().isEmpty()) {
 
             }else{
+<<<<<<< HEAD
                 //Daarna zetten we het geselecteerde accountID om in een Integer.
                 int AccountID= Integer.parseInt((String)Combobox_Account.getSelectionModel().getSelectedItem());
+=======
+                //Eerst zetten we het geselecteerde accountID om in een int.
+                int AccountID= (int)Combobox_Account.getSelectionModel().getSelectedItem();
+>>>>>>> 104ae8338d985cf22d4d318818c34486b8ef5a52
 
                 //Hier komt de methodcall om te printen.
                 Borderpane_BekekenAfleveringenAccount.setCenter(Printen_BekekenAfleveringenAccount.BekekenAfleveringenAccount(AccountID));

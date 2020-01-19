@@ -118,7 +118,7 @@ public class ProfielVerwijderen {
             }else{
 
                 //Hier zetten we het geselecteerde ProfielID om in een Integer.
-                int ProfielID= Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
+                int ProfielID= (int)Combobox_WelkProfiel.getSelectionModel().getSelectedItem();
 
                 //Als we hier zijn is er een account en een profiel geselecteerd dus maken we een methodcall.
                 Verwijderen_Profiel.Verwijderen(ProfielID);

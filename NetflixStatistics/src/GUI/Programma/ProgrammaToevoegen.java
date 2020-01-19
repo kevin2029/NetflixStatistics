@@ -205,10 +205,14 @@ public class ProgrammaToevoegen {
                             Vbox_Gegevens.getChildren().add(Hbox_ErrorPercentage);
                         } else {
                             //Hier zetten we de geselecteerde ID's om in Integers.
-                            int ProfielID=Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
-                            int ProgrammaID=Integer.parseInt((String)Combobox_WelkProgramma.getSelectionModel().getSelectedItem());
+                            int ProfielID=(int)Combobox_WelkProfiel.getSelectionModel().getSelectedItem();
+                            int ProgrammaID=(int)Combobox_WelkProgramma.getSelectionModel().getSelectedItem();
 
+<<<<<<< HEAD
                             //Hier komt de methodcall.
+=======
+                            //Hier komt de methodcall
+>>>>>>> 104ae8338d985cf22d4d318818c34486b8ef5a52
                             Opslaan_ProgrammaToevoegen.Opslaan(ProfielID, ProgrammaID, Percentage);
 
                             //Hier gaat men terug naar het scherm AccountProfiel.

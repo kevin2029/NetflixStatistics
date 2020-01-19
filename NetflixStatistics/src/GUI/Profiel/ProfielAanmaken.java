@@ -185,7 +185,7 @@ public class ProfielAanmaken {
                         int Leeftijd = Integer.parseInt(Textfield_Leeftijd.getText().trim());
 
                         //Hier wordt het geselecteerde AccountID omgezet in een Integer.
-                        int AccountID= Integer.parseInt((String)Combobox_WelkAccount.getSelectionModel().getSelectedItem());
+                        int AccountID= (int)Combobox_WelkAccount.getSelectionModel().getSelectedItem();
 
                         //Hier wordt de method call gedaan om het profiel toe te voegen.
                         Opslaan_NieuwProfielAanmaken.Opslaan(AccountID, Textfield_Naam.getText().trim(), Leeftijd);

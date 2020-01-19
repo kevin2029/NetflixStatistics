@@ -18,7 +18,7 @@ public class Printen_Afleveringen {
         AlleAfleveringen.setHgap(25);
         AlleAfleveringen.setVgap(25);
 
-        List<Map<String, Object>> result = Connection.executeQuery(
+        List<Map<String, Object>> result = Connection.RunQuery(
                 "SELECT Serie.Naam,Seizoen.Seizoensnummer,Aflevering.AfleveringNummer,Programma.Titel,Programma.TijdsduurInMinuten\n" +
                         "FROM Programma\n" +
                         "JOIN Aflevering\n" +

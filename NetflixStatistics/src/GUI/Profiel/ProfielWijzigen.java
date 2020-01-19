@@ -186,7 +186,7 @@ public class ProfielWijzigen {
                         int Leeftijd = Integer.parseInt(Textfield_Leeftijd.getText().trim());
 
                         //Hier zetten we het geselecteerde ProfielID om in een Integer.
-                        int ProfielID= Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
+                        int ProfielID= (int)Combobox_WelkProfiel.getSelectionModel().getSelectedItem();
 
                         //Hier komt de methodcall.
                         Opslaan_ProfielWijzigen.Opslaan(ProfielID, Textfield_Naam.getText().trim(), Leeftijd);

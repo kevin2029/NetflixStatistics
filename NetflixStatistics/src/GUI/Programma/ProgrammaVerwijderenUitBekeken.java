@@ -130,8 +130,8 @@ public class ProgrammaVerwijderenUitBekeken {
             }else{
 
                 //Hier zetten we de geselecteerde ID's om in Integers.
-                int ProfielID= Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
-                int ProgrammaID=Integer.parseInt((String)Combobox_WelkProgramma.getSelectionModel().getSelectedItem());
+                int ProfielID= (int)Combobox_WelkProfiel.getSelectionModel().getSelectedItem();
+                int ProgrammaID=(int)Combobox_WelkProgramma.getSelectionModel().getSelectedItem();
 
                 //Als we hier zijn is er een account, profiel en programma geselecteerd dus maken we een methodcall.
                 Verwijderen_Programma.Verwijderen(ProfielID,ProgrammaID);
