@@ -119,7 +119,7 @@ public class AccountVerwijderen {
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else{
                 //Hier gaat het geselecteerd ID omgezet worden in een int.
-                int AccountID=Integer.parseInt((String)Combobox_WelkAccount.getSelectionModel().getSelectedItem());
+                int AccountID=(int)Combobox_WelkAccount.getSelectionModel().getSelectedItem();
 
                 //Als we hier zijn is er een account geselecteerd dus maken we een methodcall.
                 Verwijderen_Account.Verwijderen(AccountID);

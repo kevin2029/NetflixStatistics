@@ -183,7 +183,7 @@ public class AccountWijzigen {
                     Vbox_Gegevens.getChildren().add(Hbox_ErrorVakjes);
                 } else {
                     //Hier gaan we het geselecteerde id in een int stoppen
-                    int AccountID= Integer.parseInt((String)Combobox_WelkAccount.getSelectionModel().getSelectedItem());
+                    int AccountID= (int)Combobox_WelkAccount.getSelectionModel().getSelectedItem();
 
                     //Hier komt de methodcall
                     Opslaan_AccountWijzigen.Opslaan(AccountID, Textfield_Naam.getText().trim(), Textfield_Woonplaats.getText().trim(),Textfield_Adres.getText().trim());

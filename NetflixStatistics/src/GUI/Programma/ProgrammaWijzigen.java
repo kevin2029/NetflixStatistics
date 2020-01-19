@@ -199,8 +199,8 @@ public class ProgrammaWijzigen {
                             Vbox_Gegevens.getChildren().add(Hbox_ErrorPercentage);
                         } else {
                             //Hier zetten we de geselecteerde ID's om in Integers.
-                            int ProfielID= Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
-                            int ProgrammaID=Integer.parseInt((String)Combobox_WelkProgramma.getSelectionModel().getSelectedItem());
+                            int ProfielID=(int)Combobox_WelkProfiel.getSelectionModel().getSelectedItem();
+                            int ProgrammaID=(int)Combobox_WelkProgramma.getSelectionModel().getSelectedItem();
 
                             //Hier komt de methodcall
                             Opslaan_ProgrammaWijzigen.Opslaan(ProfielID,ProgrammaID,Percentage);

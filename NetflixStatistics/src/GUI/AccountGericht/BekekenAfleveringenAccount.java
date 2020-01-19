@@ -96,7 +96,7 @@ public class BekekenAfleveringenAccount {
 
             }else{
                 //Eerst zetten we het geselecteerde accountID om in een int.
-                int AccountID= Integer.parseInt((String)Combobox_Account.getSelectionModel().getSelectedItem());
+                int AccountID= (int)Combobox_Account.getSelectionModel().getSelectedItem();
 
                 //Hier komt de methodcall om te printen.
                 Button_Print.setOnAction(actionEvent1 -> {

@@ -21,7 +21,7 @@ public class ObservableList_Programmas {
 
 
         for(Map<String, Object> resultaat :result){
-            id.add(resultaat);
+            id.add(resultaat.get("ProgrammaID"));
         }
 
         ObservableList<Integer>ObservableList_Programmas= FXCollections.observableArrayList(id);

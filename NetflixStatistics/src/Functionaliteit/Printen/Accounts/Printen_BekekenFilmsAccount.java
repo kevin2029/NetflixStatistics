@@ -17,7 +17,7 @@ public class Printen_BekekenFilmsAccount {
         List<Map<String, Object>> result = Connection.RunQuery(
                 "SELECT Programma.Titel, Profiel.Profielnaam FROM Programma\n" +
                         "JOIN Film\n" +
-                        "ON Programma.ProgrammaID = Film.ProgrammaID" +
+                        "ON Programma.ProgrammaID = Film.ProgrammaID\n" +
 
                         "JOIN ProgrammaBekekenDoor\n" +
                         "ON Programma.ProgrammaID = ProgrammaBekekenDoor.ProgrammaID\n" +
@@ -27,8 +27,7 @@ public class Printen_BekekenFilmsAccount {
 
                         "JOIN Account\n" +
                         "ON Profiel.AccountID = Account.AccountID\n" +
-
-                        "WHERE Account.AccountID = '"+ AccountID + "';");
+                        "WHERE Account.AccountID = "+ AccountID +";");
 
         for(Map<String, Object>  aflevering : result){
             VBox bekekenFilm = new VBox();

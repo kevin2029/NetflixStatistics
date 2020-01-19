@@ -19,7 +19,7 @@ public class ObservableList_Profielen {
 
 
         for(Map<String, Object> resultaat :result){
-            id.add(resultaat);
+            id.add(resultaat.get("ProfielID"));
         }
 
         ObservableList<Integer> ObservableList_Profielen= FXCollections.observableArrayList(id);

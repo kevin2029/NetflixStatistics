@@ -18,10 +18,12 @@ public class ObservableList_Accounts {
 
 
         for(Map<String, Object> resultaat :result){
-            id.add(resultaat);
+            id.add(resultaat.get("AccountID"));
         }
 
         ObservableList<Integer> ObservableList_Accounts= FXCollections.observableArrayList(id);
+
+
 
 
         return  ObservableList_Accounts;

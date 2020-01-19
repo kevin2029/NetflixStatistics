@@ -9,14 +9,15 @@ import java.util.Map;
 
 public class AanradingProgramma {
 
-    public static FlowPane ProgrammaAdvies(){
+    public static FlowPane ProgrammaAdvies(String name){
         FlowPane Aanrading=new FlowPane();
 
         List<Map<String, Object>> result = Connection.RunQuery(
                 "SELECT m.Naam, e.Naam as lijktOp\n" +
                         "FROM Serie m\n" +
                         "JOIN Serie e\n" +
-                        "ON m.LijktOp= e.SerieID;"
+                        "ON m.LijktOp= e.SerieID\n" +
+                        "WHERE m.Naam = '"+name+"';"
         );
 
         for(Map<String, Object> adviesVoorProgramma : result){

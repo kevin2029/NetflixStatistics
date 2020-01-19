@@ -77,7 +77,7 @@ public class BekekenFilmsAccount {
 
             }else{
                 //Eerst zetten we het geselecteerde AccountID om in een Integer.
-                int AccountID= Integer.parseInt((String)Combobox_Account.getSelectionModel().getSelectedItem());
+                int AccountID= (int)Combobox_Account.getSelectionModel().getSelectedItem();
 
                 //Hier komt de methodcall voor het printen.
                 Button_Print.setOnAction(actionEvent1 -> {
