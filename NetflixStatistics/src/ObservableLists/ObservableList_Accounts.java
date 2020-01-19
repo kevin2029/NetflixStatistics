@@ -3,7 +3,6 @@ package ObservableLists;
 import DatabaseConnectie.Connection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.Label;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +13,7 @@ public class ObservableList_Accounts {
     public static ObservableList ObservableList_Accounts(){
         ArrayList id = new ArrayList();
 
-        List<Map<String, Object>> result = Connection.executeQuery("SELECT AccountID\n" +
+        List<Map<String, Object>> result = Connection.RunQuery("SELECT AccountID\n" +
                 "FROM Account");
 
 

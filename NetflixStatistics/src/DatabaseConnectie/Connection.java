@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+//De connectie met de database wordt gemaakt.
 public class Connection {
      static private java.sql.Connection connection;
 
@@ -16,15 +16,14 @@ public class Connection {
             }
         }
 
-
-
-    static public List<Map<String, Object>> executeQuery(String sql){
+    static public List<Map<String, Object>> RunQuery(String sqlcode){
         Statement stmt = null;
         ResultSet rs = null;
         List<Map<String, Object>> result = null;
+
         try {
             stmt = connection.createStatement();
-            rs = stmt.executeQuery(sql);
+            rs = stmt.executeQuery(sqlcode);
             result = resultSetToList(rs);
         }
 

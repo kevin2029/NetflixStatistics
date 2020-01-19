@@ -18,7 +18,7 @@ public class Printen_Seizoenen {
         AlleSeizoenen.setHgap(50);
         AlleSeizoenen.setVgap(50);
 
-        List<Map<String, Object>> result = Connection.executeQuery(
+        List<Map<String, Object>> result = Connection.RunQuery(
                 "SELECT Serie.Naam,Seizoen.Seizoensnummer\n" +
                         "FROM Serie\n" +
                         "JOIN Seizoen\n" +

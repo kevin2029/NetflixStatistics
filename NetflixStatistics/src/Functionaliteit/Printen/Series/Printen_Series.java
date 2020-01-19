@@ -18,7 +18,7 @@ public class Printen_Series {
         AlleSeries.setHgap(50);
         AlleSeries.setVgap(50);
 
-        List<Map<String, Object>> result = Connection.executeQuery(
+        List<Map<String, Object>> result = Connection.RunQuery(
                 "SELECT Naam,Genre,Taal,Leeftijdsindicatie\n" +
                 "FROM Serie;");
 
