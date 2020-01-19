@@ -40,7 +40,7 @@ public class ProfielAanmaken {
         Label Label_ErrorInteger=new Label("leeftijd moet een getal zijn");
 
         //Hier wordt de combobox aangemaakt.
-        ComboBox Combobox_WelkAccount=new ComboBox(ObservableList_Accounts.ObservableList_Accounts());
+        ComboBox Combobox_WelkAccount=new ComboBox(ObservableList_Accounts.ObservableList_Accounts()); //Hier staan alle accountID's.
 
         //Hier worden de textfields aangemaakt.
         TextField Textfield_Naam=new TextField();
@@ -168,8 +168,10 @@ public class ProfielAanmaken {
             if(Combobox_WelkAccount.getSelectionModel().isEmpty()){
                 VBox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else {
+
                 //Als we hier zijn is er een account geselecteerd, dus nu kan de error weg.
                 VBox_Gegevens.getChildren().remove(Hbox_ErrorKies);
+
                 //Hier kijken we of alle vakjes ingevuld zijn.
                 if (Textfield_Naam.getText().trim().isEmpty() || Textfield_Leeftijd.getText().trim().isEmpty()) {
                     VBox_Gegevens.getChildren().add(Hbox_ErrorVakjes);
@@ -217,7 +219,7 @@ public class ProfielAanmaken {
         Scene ProfielAanmaken=new Scene(Borderpane_ProfielAanmaken,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene gereturned.
+        //Hier wordt de scene terug gegeven.
         return ProfielAanmaken;
 
     }

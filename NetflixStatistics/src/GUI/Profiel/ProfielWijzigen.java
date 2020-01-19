@@ -1,9 +1,7 @@
 package GUI.Profiel;
 
 import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProfielWijzigen;
-import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProgrammaWijzigen;
 import GUI.AccountGericht.AccountGerichtAccount;
-import GUI.Basis.AccountGericht;
 import ObservableLists.ObservableList_Profielen;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -19,6 +17,7 @@ import javafx.stage.Stage;
 public class ProfielWijzigen {
 
     public Scene ProfielWijzigen(Stage stage){
+
         //Hier worden de grids aangemaakt.
         BorderPane Borderpane_ProfielWijzigen=new BorderPane();
         HBox Hbox_Label=new HBox();
@@ -40,8 +39,8 @@ public class ProfielWijzigen {
         Label Label_ErrorVakjes=new Label("Vul alle vakjes in");
         Label Label_ErrorInteger=new Label("Leeftijd moet een getal zijn");
 
-        //Hier worden de comboboxen aangemaakt.
-        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen());
+        //Hier wordt de combobox aangemaakt.
+        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen()); //Hier staan alle profielID's.
 
         //Hier worden de textfields aangemaakt.
         TextField Textfield_Naam=new TextField();
@@ -74,11 +73,11 @@ public class ProfielWijzigen {
 
         //Hier wordt alles aan Hbox_Naam toegevoegd.
         Hbox_Naam.getChildren().add(Label_Naam);
-        Hbox_Naam.getChildren().add(Textfield_Naam); //Deze is al standaard ingevuld met de info van het profiel
+        Hbox_Naam.getChildren().add(Textfield_Naam);
 
         //Hier wordt alles aan Hbox_Leeftijd toegevoegd.
         Hbox_Leeftijd.getChildren().add(Label_Leeftijd);
-        Hbox_Leeftijd.getChildren().add(Textfield_Leeftijd);//Deze is al standaard ingevuld met de info van het profiel
+        Hbox_Leeftijd.getChildren().add(Textfield_Leeftijd);
 
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_Buttons.getChildren().add(Button_Opslaan);
@@ -164,10 +163,12 @@ public class ProfielWijzigen {
 
         //Hier krijgt Button_Opslaan zijn functionaliteit.
         Button_Opslaan.setOnAction(actionEvent -> {
+
             //Hier wordt gekeken of het account en een profiel geselecteerd zijn.
             if(Combobox_WelkProfiel.getSelectionModel().isEmpty()){
                 VBox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else {
+
                 //Als we hier zijn is alles geselecteerd dus kan de error weg.
                 VBox_Gegevens.getChildren().remove(Hbox_ErrorKies);
 
@@ -180,13 +181,14 @@ public class ProfielWijzigen {
                     VBox_Gegevens.getChildren().remove(Hbox_ErrorVakjes);
 
                     try {
+
                         //Hier wordt gekeken of de leeftijd ook daadwerkelijk een cijfer is.
                         int Leeftijd = Integer.parseInt(Textfield_Leeftijd.getText().trim());
 
                         //Hier zetten we het geselecteerde ProfielID om in een Integer.
                         int ProfielID= Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
 
-                        //Hier komt de methodcall
+                        //Hier komt de methodcall.
                         Opslaan_ProfielWijzigen.Opslaan(ProfielID, Textfield_Naam.getText().trim(), Leeftijd);
 
                         //Hier gaat men terug naar het scherm AccountGerichtAccount.
@@ -195,13 +197,13 @@ public class ProfielWijzigen {
                         stage.setFullScreen(true);
 
                     } catch (NumberFormatException NFE) {
+
                         //Als het geen nummer was dan wordt de volgende HBox toegevoegd aan de VBox.
                         VBox_Gegevens.getChildren().add(Hbox_ErrorInteger);
                     }
                 }
             }
         });
-
 
         //Hier krijgt Button_Annuleren zijn functionaliteit.
         Button_Annuleren.setOnAction(actionEvent -> {
@@ -218,7 +220,7 @@ public class ProfielWijzigen {
         Scene ProfielWijzigen=new Scene(Borderpane_ProfielWijzigen,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene gereturned.
+        //Hier wordt de scene terug gegeven.
         return ProfielWijzigen;
     }
 }

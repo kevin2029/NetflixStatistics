@@ -1,6 +1,5 @@
 package GUI.Basis;
 
-import Functionaliteit.Opslaan.Wijzigen.Opslaan_AccountWijzigen;
 import Functionaliteit.Printen.Accounts.Printen_AccountMet1Profiel;
 import Functionaliteit.Printen.Accounts.Printen_AccountMetMeerDan1Profiel;
 import Functionaliteit.Printen.Accounts.Printen_AlleAccounts;
@@ -11,7 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -32,7 +30,7 @@ public class AccountGericht {
 
         //Hier worden de buttons aangemaakt.
         Button Button_Profielen=new Button("Profielen");
-        Button Button_AcccountAanmaken=new Button("Account aanmaken");
+        Button Button_AccountAanmaken=new Button("Account aanmaken");
         Button Button_AccountWijzigen=new Button("Account wijzigen");
         Button Button_AccountVerwijderen=new Button("Account verwijderen");
         Button Button_AlleAccounts=new Button("Alle accounts");
@@ -61,7 +59,7 @@ public class AccountGericht {
 
         //Hier wordt alles aan Hbox_CRUD toegevoegd.
         Hbox_CRUD.getChildren().add(Button_Profielen);
-        Hbox_CRUD.getChildren().add(Button_AcccountAanmaken);
+        Hbox_CRUD.getChildren().add(Button_AccountAanmaken);
         Hbox_CRUD.getChildren().add(Button_AccountWijzigen);
         Hbox_CRUD.getChildren().add(Button_AccountVerwijderen);
 
@@ -82,15 +80,13 @@ public class AccountGericht {
         //Hier wordt Borderpane_Accounts netjes gemaakt.
         Borderpane_Accounts.setStyle("-fx-background-color: #0A0A0A");
 
-        //Hier wordt Vbox_LabelEnButtons netjes gemaakt.
-
         //Hier wordt Hbox_Label netjes gemaakt.
         Hbox_Label.setAlignment(Pos.CENTER);
         Label_Accounts.setStyle("-fx-background-color: Black; -fx-text-fill: Red; -fx-font-size: 40");
 
         //Hier wordt Hbox_CRUD netjes gemaakt.
         Button_Profielen.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-        Button_AcccountAanmaken.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
+        Button_AccountAanmaken.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_AccountWijzigen.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Button_AccountVerwijderen.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
         Hbox_CRUD.setAlignment(Pos.CENTER);
@@ -113,8 +109,9 @@ public class AccountGericht {
 
 
 
+
         //Hier krijgt Button_AccountAanmaken zijn functionaliteit.
-        Button_AcccountAanmaken.setOnAction(actionEvent -> {
+        Button_AccountAanmaken.setOnAction(actionEvent -> {
             AccountAanmaken AccountAanmaken=new AccountAanmaken();
             stage.setScene(AccountAanmaken.AccountAanmaken(stage));
             stage.setFullScreen(true);
@@ -181,11 +178,11 @@ public class AccountGericht {
 
 
 
-        //Hier wordt de Scene AccountGericht aangemaakt
+        //Hier wordt de Scene AccountGericht aangemaakt.
         Scene AccountGericht= new Scene(Borderpane_Accounts,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt scene AccountGericht gereturned.
+        //Hier wordt scene AccountGericht terug gegeven.
         return AccountGericht;
     }
 }

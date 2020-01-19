@@ -14,6 +14,7 @@ public class ObservableList_Accounts {
     public static ObservableList ObservableList_Accounts(){
         ArrayList id = new ArrayList();
 
+
         List<Map<String, Object>> result = Connection.executeQuery("SELECT AccountID\n" +
                 "FROM Account");
 

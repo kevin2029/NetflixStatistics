@@ -1,6 +1,5 @@
 package GUI.Basis;
 
-import GUI.Algemeen.Afleveringen;
 import GUI.Algemeen.Films;
 import GUI.Algemeen.Series;
 import javafx.geometry.Pos;
@@ -33,18 +32,18 @@ public class HomeAlgemeen {
 
 
 
-        // Hier wordt alles aan Borderpane_Algemeen toegevoegt.
+        //Hier wordt alles aan Borderpane_Algemeen toegevoegd.
         Borderpane_Algemeen.setTop(Hbox_Algemeen_Label);
         Borderpane_Algemeen.setRight(Hbox_Algemeen_Terug);
         Borderpane_Algemeen.setCenter(Hbox_Algemeen_Buttons);
 
-        //Hier wordt alles aan Hbox_Algemeen_Label toegevoegt.
+        //Hier wordt alles aan Hbox_Algemeen_Label toegevoegd.
         Hbox_Algemeen_Label.getChildren().add(FilmsOfSeries);
 
-        // Hier wordt alles aan Hbox_Algemeen_Terug toegevoegt.
+        //Hier wordt alles aan Hbox_Algemeen_Terug toegevoegd.
         Hbox_Algemeen_Terug.getChildren().add(Button_Terug);
 
-        //Hier wordt alles aan Hbox_Algemeen_Buttons toegevoegt.
+        //Hier wordt alles aan Hbox_Algemeen_Buttons toegevoegd.
         Hbox_Algemeen_Buttons.getChildren().add(Button_Films);
         Hbox_Algemeen_Buttons.getChildren().add(Button_Series);
 
@@ -104,17 +103,7 @@ public class HomeAlgemeen {
         Scene Algemeen=new Scene(Borderpane_Algemeen,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt scene Algemeen gereturned.
+        //Hier wordt scene Algemeen terug gegeven.
         return Algemeen;
     }
 }
-// Deze pagina behoort alleen nog een afbeelding te bevatten.
-
-//Deze gaat naar de aflevering pagina
-/*
-Button_Afleveringen.setOnAction(actionEvent -> {
-        Afleveringen Afleveringen=new Afleveringen();
-        stage.setScene(Afleveringen.HomeAlgemeenAfleveringen(stage));
-        stage.setFullScreen(true);
-        });
-*/

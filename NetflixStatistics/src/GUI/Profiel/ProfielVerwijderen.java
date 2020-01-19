@@ -1,9 +1,7 @@
 package GUI.Profiel;
 
 import Functionaliteit.Verwijderen.Verwijderen_Profiel;
-import Functionaliteit.Verwijderen.Verwijderen_Programma;
 import GUI.AccountGericht.AccountGerichtAccount;
-import GUI.Algemeen.Seizoenen;
 import ObservableLists.ObservableList_Profielen;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -17,6 +15,7 @@ import javafx.stage.Stage;
 
 public class ProfielVerwijderen {
     public Scene ProfielVerwijderen(Stage stage){
+
         //Hier worden de grids aangemaakt.
         BorderPane Borderpane_ProfielVerwijderen=new BorderPane();
         HBox Hbox_Label=new HBox();
@@ -31,8 +30,8 @@ public class ProfielVerwijderen {
         Label Label_WelkProfiel=new Label("Welk profiel wilt U verwijderen?");
         Label Label_ErrorKies=new Label("Kies eerst een account en een profiel");
 
-        //Hier worden de comboboxen aangemaakt.
-        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen());//Hier staan alle profielen van het account.
+        //Hier wordt de combobox aangemaakt.
+        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen());//Hier staan alle profielID's.
 
         //Hier worden de buttons aangemaakt.
         Button Button_Verwijderen=new Button("Verwijderen");
@@ -71,7 +70,7 @@ public class ProfielVerwijderen {
 
 
 
-        //Hier wordt Borderpane_SeizoenVerwijderen  netjes gemaakt.
+        //Hier wordt Borderpane_SeizoenVerwijderen netjes gemaakt.
         Borderpane_ProfielVerwijderen.setStyle("-fx-background-color: #0A0A0A");
 
         //Hier wordt Hbox_Label netjes gemaakt.
@@ -112,10 +111,12 @@ public class ProfielVerwijderen {
 
         //Hier krijgt Button_Verwijderen zijn functionaliteit.
         Button_Verwijderen.setOnAction(actionEvent -> {
+
             //Eerst kijken we of het account en een profiel geselecteerd zijn.
             if(Combobox_WelkProfiel.getSelectionModel().isEmpty()){
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else{
+
                 //Hier zetten we het geselecteerde ProfielID om in een Integer.
                 int ProfielID= Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
 
@@ -144,7 +145,7 @@ public class ProfielVerwijderen {
         Scene ProfielVerwijderen=new Scene(Borderpane_ProfielVerwijderen,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene gereturned
+        //Hier wordt de scene terug gegeven.
         return ProfielVerwijderen;
     }
 }

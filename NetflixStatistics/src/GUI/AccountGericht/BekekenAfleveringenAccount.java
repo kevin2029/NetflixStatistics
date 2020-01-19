@@ -1,7 +1,6 @@
 package GUI.AccountGericht;
 
 import Functionaliteit.Printen.Accounts.Printen_BekekenAfleveringenAccount;
-import Functionaliteit.Verwijderen.Verwijderen_Account;
 import GUI.Basis.AccountGericht;
 import ObservableLists.ObservableList_Accounts;
 import javafx.geometry.Pos;
@@ -25,7 +24,7 @@ public class BekekenAfleveringenAccount {
         HBox Hbox_Button=new HBox();
         HBox Hbox_Aanrading=new HBox();
 
-        //Hier wordt het label aangemaakt.
+        //Hier worden de labels aangemaakt.
         Label Label_BekekenAfleveringenAccount=new Label("Bekeken afleveringen voor dit account");
         Label Label_Aanrading=new Label("Omdat je ... hebt bekeken raden we je ... ook aan!"); //... wordt vervangen door programma namen.
 
@@ -35,7 +34,7 @@ public class BekekenAfleveringenAccount {
         Button Button_Terug=new Button("< Terug");
 
         //Hier wordt de combobox aangemaakt.
-        ComboBox Combobox_Account=new ComboBox(ObservableList_Accounts.ObservableList_Accounts());
+        ComboBox Combobox_Account=new ComboBox(ObservableList_Accounts.ObservableList_Accounts()); //Hier staan alle accountID's.
 
 
 
@@ -67,9 +66,6 @@ public class BekekenAfleveringenAccount {
         //Hier wordt Borderpane_BekekenAfleveringenAccount netjes gemaakt.
         Borderpane_BekekenAfleveringenAccount.setStyle("-fx-background-color: #0A0A0A");
 
-        //Hier wordt Vbox_Top netjes gemaakt.
-
-
         //Hier wordt Hbox_Label netjes gemaakt.
         Hbox_Label.setAlignment(Pos.CENTER);
         Label_BekekenAfleveringenAccount.setStyle("-fx-background-color: Black; -fx-text-fill: Red; -fx-font-size: 40");
@@ -92,20 +88,21 @@ public class BekekenAfleveringenAccount {
 
         //Hier krijgt Button_Print zijn functionaliteit.
         Button_Print.setOnAction(actionEvent -> {
+
+            //Eerst kijken we of de Combobox is ingevuld.
             if (Combobox_Account.getSelectionModel().isEmpty()) {
 
             }else{
-                //Eerst zetten we het geselecteerde accountID om in een int.
+                //Daarna zetten we het geselecteerde accountID om in een Integer.
                 int AccountID= Integer.parseInt((String)Combobox_Account.getSelectionModel().getSelectedItem());
 
                 //Hier komt de methodcall om te printen.
-                Button_Print.setOnAction(actionEvent1 -> {
-                    Borderpane_BekekenAfleveringenAccount.setCenter(Printen_BekekenAfleveringenAccount.BekekenAfleveringenAccount(AccountID));
-                });
+                Borderpane_BekekenAfleveringenAccount.setCenter(Printen_BekekenAfleveringenAccount.BekekenAfleveringenAccount(AccountID));
+
             }
         });
 
-        //Hier krijgt Button_Terug zijn functionaliteit
+        //Hier krijgt Button_Terug zijn functionaliteit.
         Button_Terug.setOnAction(actionEvent -> {
             AccountGericht AccountGericht=new AccountGericht();
             stage.setScene(AccountGericht.HomeAccountGericht(stage));
@@ -120,7 +117,7 @@ public class BekekenAfleveringenAccount {
         Scene BekekenAfleveringenAccount=new Scene(Borderpane_BekekenAfleveringenAccount,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //hier wordt de scene gereturned.
+        //hier wordt de scene terug gegeven.
         return BekekenAfleveringenAccount;
     }
 }

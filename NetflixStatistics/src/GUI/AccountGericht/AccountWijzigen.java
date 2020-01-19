@@ -1,10 +1,8 @@
 package GUI.AccountGericht;
 
 import Functionaliteit.Opslaan.Wijzigen.Opslaan_AccountWijzigen;
-import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProfielWijzigen;
 import GUI.Basis.AccountGericht;
 import ObservableLists.ObservableList_Accounts;
-import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -16,11 +14,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
-
 public class AccountWijzigen {
 
     public Scene AccountWijzigen(Stage stage){
+
         //Hier worden de grids aangemaakt.
         BorderPane Borderpane_AccountWijzigen= new BorderPane();
         HBox Hbox_Label=new HBox();
@@ -42,8 +39,8 @@ public class AccountWijzigen {
         Label Label_ErrorKies=new Label("Kies eerst een account");
         Label Label_ErrorVakjes=new Label("Vul alle vakjes in");
 
-        //Hier wordt de combobox aangemaakt.
-        ComboBox Combobox_WelkAccount=new ComboBox(ObservableList_Accounts.ObservableList_Accounts());//Hierin moeten alle accounts staan.
+        //Hier wordt de ComboBox aangemaakt.
+        ComboBox Combobox_WelkAccount=new ComboBox(ObservableList_Accounts.ObservableList_Accounts());//Hier staan alle accountID's.
 
         //Hier worden de textfields aangemaakt.
         TextField Textfield_Naam=new TextField();
@@ -78,15 +75,15 @@ public class AccountWijzigen {
 
         //Hier wordt alles aan Hbox_Naam toegevoegd.
         Hbox_Naam.getChildren().add(Label_Naam);
-        Hbox_Naam.getChildren().add(Textfield_Naam); //Deze is al standaard ingevuld met de info van het account
+        Hbox_Naam.getChildren().add(Textfield_Naam);
 
         //Hier wordt alles aan Hbox_Woonplaats toegevoegd.
         Hbox_Woonplaats.getChildren().add(Label_Woonplaats);
-        Hbox_Woonplaats.getChildren().add(Textfield_Woonplaats);//Deze is al standaard ingevuld met de info van het account
+        Hbox_Woonplaats.getChildren().add(Textfield_Woonplaats);
 
         //Hier wordt alles aan Hbox_Adres toegevoegd.
         Hbox_Adres.getChildren().add(Label_Adres);
-        Hbox_Adres.getChildren().add(Textfield_Adres); //Deze is al standaard ingevuld met de info van het account
+        Hbox_Adres.getChildren().add(Textfield_Adres);
 
         //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_buttons.getChildren().add(Button_Opslaan);
@@ -171,10 +168,12 @@ public class AccountWijzigen {
 
         //Hier krijgt Button_Opslaan zijn functionaliteit.
         Button_Opslaan.setOnAction(actionEvent -> {
+
             //Hier wordt gekeken of het account geselecteerd is.
             if(Combobox_WelkAccount.getSelectionModel().isEmpty()){
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else {
+
                 //Als we hier zijn is alles geselecteerd dus kan de error weg.
                 Vbox_Gegevens.getChildren().remove(Hbox_ErrorKies);
 
@@ -182,10 +181,10 @@ public class AccountWijzigen {
                 if (Textfield_Naam.getText().trim().isEmpty() || Textfield_Woonplaats.getText().trim().isEmpty() || Textfield_Adres.getText().trim().isEmpty()) {
                     Vbox_Gegevens.getChildren().add(Hbox_ErrorVakjes);
                 } else {
-                    //Hier gaan we het geselecteerde id in een int stoppen
+                    //Hier gaan we het geselecteerde id in een Integer stoppen.
                     int AccountID= Integer.parseInt((String)Combobox_WelkAccount.getSelectionModel().getSelectedItem());
 
-                    //Hier komt de methodcall
+                    //Hier komt de methodcall.
                     Opslaan_AccountWijzigen.Opslaan(AccountID, Textfield_Naam.getText().trim(), Textfield_Woonplaats.getText().trim(),Textfield_Adres.getText().trim());
 
                     //Hier gaat men terug naar het scherm AccountGericht.
@@ -211,7 +210,7 @@ public class AccountWijzigen {
         Scene AccountWijzigen=new Scene(Borderpane_AccountWijzigen,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene gereturned.
+        //Hier wordt de scene terug gegeven.
         return AccountWijzigen;
     }
 }

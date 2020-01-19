@@ -5,7 +5,6 @@ import Functionaliteit.Printen.Films.Printen_FilmLangsteTijdsduur;
 import Functionaliteit.Printen.Films.Printen_FilmsOnder16;
 import Functionaliteit.Printen.Films.Printen_LangsteTijdsduurOnder16;
 import GUI.Basis.HomeAlgemeen;
-import GUI.Programma.ProgrammaWijzigen;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -16,11 +15,13 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Films {
+
     //Hier worden de booleans aangemaakt.
     public boolean IsLangsteTijdsduurSelected;
     public boolean IsFilmsMetLeeftijdsindicatieOnder16Selected;
 
     public Scene HomeAlgemeenFilms(Stage stage){
+
         // Hier worden de grids aangemaakt.
         BorderPane Borderpane_Films=new BorderPane();
         VBox Vbox_LabelEnButtons=new VBox();
@@ -40,7 +41,7 @@ public class Films {
 
 
 
-        //Hier wordt alles aan Borderpane_Films toegevoegt.
+        //Hier wordt alles aan Borderpane_Films toegevoegd.
         Borderpane_Films.setTop(Vbox_LabelEnButtons);
         Borderpane_Films.setCenter(Printen_AlleFilms.AlleFilms());
 
@@ -48,10 +49,10 @@ public class Films {
         Vbox_LabelEnButtons.getChildren().add(Hbox_Label);
         Vbox_LabelEnButtons.getChildren().add(Hbox_Buttons);
 
-        //Hier wordt alles aan Hbox_Label toegevoegt.
+        //Hier wordt alles aan Hbox_Label toegevoegd.
         Hbox_Label.getChildren().add(Label_Films);
 
-        //Hier wordt alles aan Hbox_Buttons toegevoegt.
+        //Hier wordt alles aan Hbox_Buttons toegevoegd.
         Hbox_Buttons.getChildren().add(Button_AlleFilms);
         Hbox_Buttons.getChildren().add(Button_LangsteTijdsduur);
         Hbox_Buttons.getChildren().add(Button_FilmsMetLeeftijdsindicatieOnder16);
@@ -63,8 +64,6 @@ public class Films {
 
         //Hier wordt Borderpane_Films netjes gemaakt.
         Borderpane_Films.setStyle("-fx-background-color: #0A0A0A");
-
-        //Hier wordt Vbox_LabelEnButtons netjes gemaakt.
 
         //Hier wordt Hbox_Label netjes gemaakt.
         Hbox_Label.setAlignment(Pos.CENTER);
@@ -85,9 +84,11 @@ public class Films {
         //Hier krijgt Button_AlleFilms zijn functionaliteit.
         Button_AlleFilms.setOnAction(actionEvent -> {
             Borderpane_Films.setCenter(Printen_AlleFilms.AlleFilms());
+
             //Hier worden de booleans naar false gezet.
             SetIsLangsteTijdsduurSelectedFalse();
             SetIsFilmsMetLeeftijdsindicatieOnder16SelectedFalse();
+
             //Dan krijgen beide buttons hun standaard uiterlijk terug.
             Button_LangsteTijdsduur.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
             Button_FilmsMetLeeftijdsindicatieOnder16.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
@@ -95,22 +96,26 @@ public class Films {
 
         //Hier krijgt Button_LangsteTijdsduur zijn functionaliteit.
         Button_LangsteTijdsduur.setOnAction(actionEvent -> {
-            //als het volgende het geval is wordt boolean IsLangsteTijdsduurSelected false, worden de films onder 16 geprint en krijgt de button zijn normale kleur weer.
+
+            //Als het volgende het geval is wordt boolean IsLangsteTijdsduurSelected false, worden de films onder 16 geprint en krijgt de button zijn normale kleur weer.
             if(IsLangsteTijdsduurSelected==true&&IsFilmsMetLeeftijdsindicatieOnder16Selected==true){
                 IsLangsteTijdsduurSelected();
                 Borderpane_Films.setCenter(Printen_FilmsOnder16.FilmsOnder16());
                 Button_LangsteTijdsduur.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-                //als het volgende het geval is wordt boolean IsLangsteTijdsduurSelected true, wordt de film met de langste tijdsduur geprint en krijgt de knop de selectie kleur.
+
+                //Als het volgende het geval is wordt boolean IsLangsteTijdsduurSelected true, wordt de film met de langste tijdsduur geprint en krijgt de knop de selectie kleur.
             }else if(IsLangsteTijdsduurSelected==false&&IsFilmsMetLeeftijdsindicatieOnder16Selected==false){
                 IsLangsteTijdsduurSelected();
                 Borderpane_Films.setCenter(Printen_FilmLangsteTijdsduur.Langstetijdsduur());
                 Button_LangsteTijdsduur.setStyle("-fx-background-color: Gray; -fx-font-size:20; -fx-text-fill: Black; -fx-font-weight: bold");
-                //als het volgende het geval is wordt boolean IsLangsteTijdsduurSelected false, worden alle films geprint en krijgt de button zijn normale kleur weer
+
+                //Als het volgende het geval is wordt boolean IsLangsteTijdsduurSelected false, worden alle films geprint en krijgt de button zijn normale kleur weer.
             }else if(IsLangsteTijdsduurSelected==true&&IsFilmsMetLeeftijdsindicatieOnder16Selected==false){
                 IsLangsteTijdsduurSelected();
                 Borderpane_Films.setCenter(Printen_AlleFilms.AlleFilms());
                 Button_LangsteTijdsduur.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-                //als het volgende het geval is wordt boolean IsLangsteTijdsduurSelected true, wordt de film met de langste tijdsduur met leeftijdsindicatie onder 16 geprint en krijgt de knop de selectie kleur.
+
+                //Als het volgende het geval is wordt boolean IsLangsteTijdsduurSelected true, wordt de film met de langste tijdsduur met leeftijdsindicatie onder 16 geprint en krijgt de knop de selectie kleur.
             }else if(IsLangsteTijdsduurSelected==false&&IsFilmsMetLeeftijdsindicatieOnder16Selected==true){
                 IsLangsteTijdsduurSelected();
                 Borderpane_Films.setCenter(Printen_LangsteTijdsduurOnder16.LangsteTijdsduurOnder16());
@@ -120,22 +125,26 @@ public class Films {
 
         //Hier krijgt Button_FilmsMetLeeftijdsindicatieOnder16.
         Button_FilmsMetLeeftijdsindicatieOnder16.setOnAction(actionEvent -> {
-            //als het volgende het geval is wordt boolean IsFilmsMetLeeftijdsindicatieOnder16Selected false, wordt de film met de langste tijdsduur geprint en krijgt de knop de normale kleur weer.
+
+            //Als het volgende het geval is wordt boolean IsFilmsMetLeeftijdsindicatieOnder16Selected false, wordt de film met de langste tijdsduur geprint en krijgt de knop de normale kleur weer.
             if(IsFilmsMetLeeftijdsindicatieOnder16Selected==true&&IsLangsteTijdsduurSelected==true){
                 IsFilmsMetLeeftijdsindicatieOnder16Selected();
                 Borderpane_Films.setCenter(Printen_FilmLangsteTijdsduur.Langstetijdsduur());
                 Button_FilmsMetLeeftijdsindicatieOnder16.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-                //als het volgende het geval is wordt boolean IsFilmsMetLeeftijdsindicatieOnder16Selected true, worden de films met de leeftijdsindicatie onder 16 geprint en krijgt de knop de selectie kleur.
+
+                //Als het volgende het geval is wordt boolean IsFilmsMetLeeftijdsindicatieOnder16Selected true, worden de films met de leeftijdsindicatie onder 16 geprint en krijgt de knop de selectie kleur.
             }else if(IsFilmsMetLeeftijdsindicatieOnder16Selected==false&&IsLangsteTijdsduurSelected==false){
                 IsFilmsMetLeeftijdsindicatieOnder16Selected();
                 Borderpane_Films.setCenter(Printen_FilmsOnder16.FilmsOnder16());
                 Button_FilmsMetLeeftijdsindicatieOnder16.setStyle("-fx-background-color: Gray; -fx-font-size:20; -fx-text-fill: Black; -fx-font-weight: bold");
-                //als het volgende het geval is wordt boolean IsFilmsMetLeeftijdsindicatieOnder16Selected false, worden alle films  geprint en krijgt de knop de normale kleur weer.
+
+                //Als het volgende het geval is wordt boolean IsFilmsMetLeeftijdsindicatieOnder16Selected false, worden alle films  geprint en krijgt de knop de normale kleur weer.
             }else if(IsFilmsMetLeeftijdsindicatieOnder16Selected==true&&IsLangsteTijdsduurSelected==false){
                 IsFilmsMetLeeftijdsindicatieOnder16Selected();
                 Borderpane_Films.setCenter(Printen_AlleFilms.AlleFilms());
                 Button_FilmsMetLeeftijdsindicatieOnder16.setStyle("-fx-background-color: Black; -fx-border-color: Red; -fx-font-size:20; -fx-text-fill: Red; -fx-font-weight: bold");
-                //als het volgende het geval is wordt boolean IsFilmsMetLeeftijdsindicatieOnder16Selected true, wordt de film met de langste tijdsduur leeftijdsindicatie onder 16 geprint en krijgt de knop de selectie kleur.
+
+                //Als het volgende het geval is wordt boolean IsFilmsMetLeeftijdsindicatieOnder16Selected true, wordt de film met de langste tijdsduur leeftijdsindicatie onder 16 geprint en krijgt de knop de selectie kleur.
             }else if(IsFilmsMetLeeftijdsindicatieOnder16Selected==false&&IsLangsteTijdsduurSelected==true){
                 IsFilmsMetLeeftijdsindicatieOnder16Selected();
                 Borderpane_Films.setCenter(Printen_LangsteTijdsduurOnder16.LangsteTijdsduurOnder16());
@@ -158,7 +167,7 @@ public class Films {
         Scene Films=new Scene(Borderpane_Films,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt scene Films gereturned.
+        //Hier wordt scene Films terug gegeven.
         return Films;
     }
 

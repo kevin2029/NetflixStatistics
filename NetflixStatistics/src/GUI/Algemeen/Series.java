@@ -14,7 +14,9 @@ import javafx.stage.Stage;
 
 
 public class Series {
+
     public Scene Series (Stage stage){
+
         //Hier worden de grids aangemaakt.
         BorderPane Borderpane_Series=new BorderPane();
         VBox Vbox_LabelEnButtons=new VBox();
@@ -24,7 +26,7 @@ public class Series {
         //Hier wordt het label aangemaakt.
         Label Label_Series=new Label("Series");
 
-        //Hier wordt de button aangemaakt.
+        //Hier worden de buttons aangemaakt.
         Button Button_Seizoenen=new Button("Seizoenen");
         Button Button_Terug=new Button("< Terug");
 
@@ -54,8 +56,6 @@ public class Series {
         //Hier wordt Borderpane_Series netjes gemaakt.
         Borderpane_Series.setStyle("-fx-background-color: #0A0A0A");
 
-        //Hier wordt Vbox_LabelEnButtons netjes gemaakt.
-
         //Hier wordt Hbox_Label netjes gemaakt.
         Hbox_Label.setAlignment(Pos.CENTER);
         Label_Series.setStyle("-fx-background-color: Black; -fx-text-fill: Red; -fx-font-size: 40");
@@ -77,7 +77,7 @@ public class Series {
             stage.setFullScreen(true);
         });
 
-        //Hier krijgt Button_Terug zijn functionaliteit
+        //Hier krijgt Button_Terug zijn functionaliteit.
         Button_Terug.setOnAction(actionEvent -> {
             HomeAlgemeen HomeAlgemeen=new HomeAlgemeen();
             stage.setScene(HomeAlgemeen.HomeAlgemeen(stage));
@@ -92,7 +92,7 @@ public class Series {
         Scene Series=new Scene(Borderpane_Series,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene gereturned.
+        //Hier wordt de scene terug gegeven.
         return Series;
     }
 }

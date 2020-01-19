@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 public class Seizoenen {
 
     public Scene Seizoenen(Stage stage){
+
         //Hier worden de grids aangemaakt.
         BorderPane Borderpane_Seizoenen=new BorderPane();
         VBox Vbox_LabelEnButtons=new VBox();
@@ -52,8 +53,6 @@ public class Seizoenen {
         //Hier wordt Borderpane_Seizoenen netjes gemaakt.
         Borderpane_Seizoenen.setStyle("-fx-background-color: #0A0A0A");
 
-        //Hier wordt Vbox_LabelEnButtons netjes gemaakt.
-
         //Hier wordt Hbox_Label netjes gemaakt.
         Hbox_Label.setAlignment(Pos.CENTER);
         Label_Seizoenen.setStyle("-fx-background-color: Black; -fx-text-fill: Red; -fx-font-size: 40");
@@ -75,7 +74,7 @@ public class Seizoenen {
             stage.setFullScreen(true);
         });
 
-        //Hier krijgt Button_Terug zijn functionaliteit
+        //Hier krijgt Button_Terug zijn functionaliteit.
         Button_Terug.setOnAction(actionEvent -> {
             Series Series=new Series();
             stage.setScene(Series.Series(stage));
@@ -90,7 +89,7 @@ public class Seizoenen {
         Scene Seizoenen=new Scene(Borderpane_Seizoenen,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene gereturnd.
+        //Hier wordt de scene terug gegeven.
         return Seizoenen;
     }
 }

@@ -1,8 +1,6 @@
 package GUI.AccountGericht;
 
 import Functionaliteit.Verwijderen.Verwijderen_Account;
-import Functionaliteit.Verwijderen.Verwijderen_Profiel;
-import GUI.Algemeen.Series;
 import GUI.Basis.AccountGericht;
 import ObservableLists.ObservableList_Accounts;
 import javafx.geometry.Pos;
@@ -17,6 +15,7 @@ import javafx.stage.Stage;
 
 public class AccountVerwijderen {
     public Scene AccountVerwijderen(Stage stage){
+
         //Hier worden de grids aangemaakt.
         BorderPane Borderpane_AccountVerwijderen=new BorderPane();
         HBox Hbox_Label=new HBox();
@@ -29,10 +28,10 @@ public class AccountVerwijderen {
         //Hier worden de labels aangemaakt.
         Label Label_AccountVerwijderen=new Label("Account verwijderen");
         Label Label_WelkAccount=new Label("Welk account wilt U verwijderen?");
-        Label Label_ErrorKies=new Label("Kies eerst een account");
+        Label Label_ErrorKies=new Label("Kies eerst een account.");
 
         //Hier wordt de combobox aangemaakt.
-        ComboBox Combobox_WelkAccount=new ComboBox(ObservableList_Accounts.ObservableList_Accounts());//Hier staan alle accounts.
+        ComboBox Combobox_WelkAccount=new ComboBox(ObservableList_Accounts.ObservableList_Accounts());//Hier staan alle accountID's.
 
         //Hier worden de buttons aangemaakt.
         Button Button_Verwijderen=new Button("Verwijderen");
@@ -118,10 +117,10 @@ public class AccountVerwijderen {
             if(Combobox_WelkAccount.getSelectionModel().isEmpty()){
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else{
-                //Hier gaat het geselecteerd ID omgezet worden in een int.
+                //Hier gaat het geselecteerd ID omgezet worden in een Integer.
                 int AccountID=Integer.parseInt((String)Combobox_WelkAccount.getSelectionModel().getSelectedItem());
 
-                //Als we hier zijn is er een account geselecteerd dus maken we een methodcall.
+                //Als we hier zijn is er een accountID geselecteerd dus maken we een methodcall.
                 Verwijderen_Account.Verwijderen(AccountID);
 
                 //Hier gaan we terug naar het scherm AccountGericht.
@@ -146,7 +145,7 @@ public class AccountVerwijderen {
         Scene AccountVerwijderen=new Scene(Borderpane_AccountVerwijderen,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene gereturned
+        //Hier wordt de scene terug gegeven.
         return AccountVerwijderen;
     }
 }

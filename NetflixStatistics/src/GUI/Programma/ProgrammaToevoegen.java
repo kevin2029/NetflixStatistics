@@ -1,11 +1,9 @@
 package GUI.Programma;
 
-import Functionaliteit.Opslaan.Aanmaken.Opslaan_NieuwProfielAanmaken;
 import Functionaliteit.Opslaan.Aanmaken.Opslaan_ProgrammaToevoegen;
 import GUI.AccountGericht.AccountGerichtAccount;
 import ObservableLists.ObservableList_Profielen;
 import ObservableLists.ObservableList_Programmas;
-import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -21,6 +19,7 @@ import javafx.stage.Stage;
 
 public class ProgrammaToevoegen {
     public Scene ProgrammaToevoegen(Stage stage){
+
         //Hier worden de grids aangemaakt.
         BorderPane Borderpane_ProgrammaToevoegen=new BorderPane();
         HBox Hbox_Label=new HBox();
@@ -45,8 +44,8 @@ public class ProgrammaToevoegen {
         Label Label_ErrorPercentage=new Label("Het percentage mag niet groter dan 100 zijn");
 
         //Hier worden de comboboxen aangemaakt.
-        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen());//Hier staan alle profielen.
-        ComboBox Combobox_WelkProgramma=new ComboBox(ObservableList_Programmas.ObservableList_Programmas()); //Hier staan alle programmas.Maak een arraylist of andere lijst bijv observable list om de combobox opties te geven. Hier staan alle programmas
+        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen());//Hier staan alle profielID's.
+        ComboBox Combobox_WelkProgramma=new ComboBox(ObservableList_Programmas.ObservableList_Programmas()); //Hier staan alle programmasID's.
 
         //Hier wordt het textfield aangemaakt.
         TextField Textfield_Percentage=new TextField();
@@ -111,7 +110,7 @@ public class ProgrammaToevoegen {
         Hbox_Label.setAlignment(Pos.CENTER);
         Label_ProgrammaToevoegen.setStyle("-fx-background-color: Black; -fx-text-fill: Red; -fx-font-size: 40");
 
-        //Hier wordt Vbox_Gegevens netjes gemaakt
+        //Hier wordt Vbox_Gegevens netjes gemaakt.
         Vbox_Gegevens.setAlignment(Pos.CENTER);
         Vbox_Gegevens.setSpacing(40);
 
@@ -177,10 +176,12 @@ public class ProgrammaToevoegen {
 
         //Hier krijgt Button_Opslaan zijn functionaliteit.
         Button_Opslaan.setOnAction(actionEvent -> {
+
             //Hier wordt gekeken of het account, profiel en programma geselecteerd zijn.
             if(Combobox_WelkProfiel.getSelectionModel().isEmpty()||Combobox_WelkProgramma.getSelectionModel().isEmpty()){
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else {
+
                 //Als we hier zijn is alles geselecteerd dus kan de error weg.
                 Vbox_Gegevens.getChildren().remove(Hbox_ErrorKies);
 
@@ -193,10 +194,12 @@ public class ProgrammaToevoegen {
                     Vbox_Gegevens.getChildren().remove(Hbox_ErrorVakjes);
 
                     try {
+
                         //Hier wordt gekeken of het percentage ook daadwerkelijk een cijfer is.
                         int Percentage = Integer.parseInt(Textfield_Percentage.getText().trim());
 
                         if (Percentage > 100) {
+
                             //Als we hier zijn is het percentage een cijfer dus kan de error weg. Er komt nu een nieuwe error want het percentage kan niet hoger dan 100 zijn.
                             Vbox_Gegevens.getChildren().remove(Hbox_ErrorInteger);
                             Vbox_Gegevens.getChildren().add(Hbox_ErrorPercentage);
@@ -205,8 +208,7 @@ public class ProgrammaToevoegen {
                             int ProfielID=Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
                             int ProgrammaID=Integer.parseInt((String)Combobox_WelkProgramma.getSelectionModel().getSelectedItem());
 
-                            //Hier komt de methodcall
-                            //TODO: Get selected ProfielID and ProgrammaID use Combobox_WelkAccount.getSelectionModel().getSelectedItem() cast it to the right datatype and get the ids
+                            //Hier komt de methodcall.
                             Opslaan_ProgrammaToevoegen.Opslaan(ProfielID, ProgrammaID, Percentage);
 
                             //Hier gaat men terug naar het scherm AccountProfiel.
@@ -214,7 +216,9 @@ public class ProgrammaToevoegen {
                             stage.setScene(Account.Account(stage));
                             stage.setFullScreen(true);
                         }
+
                     } catch (NumberFormatException NFE) {
+
                         //Als het geen nummer was dan wordt de volgende HBox toegevoegd aan de VBox.
                         Vbox_Gegevens.getChildren().add(Hbox_ErrorInteger);
                     }
@@ -237,7 +241,7 @@ public class ProgrammaToevoegen {
         Scene ProgrammaToevoegen=new Scene(Borderpane_ProgrammaToevoegen,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene gereturned.
+        //Hier wordt de scene terug gegeven.
         return ProgrammaToevoegen;
     }
 }

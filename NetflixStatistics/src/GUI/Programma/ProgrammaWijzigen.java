@@ -1,6 +1,5 @@
 package GUI.Programma;
 
-import Functionaliteit.Opslaan.Aanmaken.Opslaan_ProgrammaToevoegen;
 import Functionaliteit.Opslaan.Wijzigen.Opslaan_ProgrammaWijzigen;
 import GUI.AccountGericht.AccountGerichtAccount;
 import ObservableLists.ObservableList_Profielen;
@@ -18,6 +17,7 @@ import javafx.stage.Stage;
 
 public class ProgrammaWijzigen {
     public Scene ProgrammaWijzigen(Stage stage){
+
         //Hier worden de grids aangemaakt.
         BorderPane Borderpane_ProgrammaWijzigen=new BorderPane();
         HBox Hbox_Label=new HBox();
@@ -42,8 +42,8 @@ public class ProgrammaWijzigen {
         Label Label_ErrorPercentage=new Label("Het nieuwe percentage mag niet groter dan 100 zijn");
 
         //Hier worden de comboboxen aangemaakt.
-        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen());//Hier staan alle profielen.
-        ComboBox Combobox_WelkProgramma=new ComboBox(ObservableList_Programmas.ObservableList_Programmas()); //Hier staan alle programmas.
+        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen());//Hier staan alle profielID's.
+        ComboBox Combobox_WelkProgramma=new ComboBox(ObservableList_Programmas.ObservableList_Programmas()); //Hier staan alle programmaID's.
 
         //Hier wordt het textfield aangemaakt.
         TextField Textfield_Percentage=new TextField();
@@ -108,7 +108,7 @@ public class ProgrammaWijzigen {
         Hbox_Label.setAlignment(Pos.CENTER);
         Label_ProgrammaWijzigen.setStyle("-fx-background-color: Black; -fx-text-fill: Red; -fx-font-size: 40");
 
-        //Hier wordt Vbox_Gegevens netjes gemaakt
+        //Hier wordt Vbox_Gegevens netjes gemaakt.
         Vbox_Gegevens.setAlignment(Pos.CENTER);
         Vbox_Gegevens.setSpacing(40);
 
@@ -174,10 +174,12 @@ public class ProgrammaWijzigen {
 
         //Hier krijgt Button_Opslaan zijn functionaliteit.
         Button_Opslaan.setOnAction(actionEvent -> {
+
             //Hier wordt gekeken of het account, profiel en programma geselecteerd zijn.
             if(Combobox_WelkProfiel.getSelectionModel().isEmpty()||Combobox_WelkProgramma.getSelectionModel().isEmpty()){
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else {
+
                 //Als we hier zijn is alles geselecteerd dus kan de error weg.
                 Vbox_Gegevens.getChildren().remove(Hbox_ErrorKies);
 
@@ -202,7 +204,7 @@ public class ProgrammaWijzigen {
                             int ProfielID= Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
                             int ProgrammaID=Integer.parseInt((String)Combobox_WelkProgramma.getSelectionModel().getSelectedItem());
 
-                            //Hier komt de methodcall
+                            //Hier komt de methodcall.
                             Opslaan_ProgrammaWijzigen.Opslaan(ProfielID,ProgrammaID,Percentage);
 
                             //Hier gaat men terug naar het scherm AccountProfiel.
@@ -233,7 +235,7 @@ public class ProgrammaWijzigen {
         Scene ProgrammaWijzigen=new Scene(Borderpane_ProgrammaWijzigen,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene gereturned.
+        //Hier wordt de scene terug gegeven.
         return ProgrammaWijzigen;
     }
 }

@@ -29,7 +29,7 @@ public class BekekenFilmsAccount {
         Button Button_Terug=new Button("< Terug");
 
         //Hier wordt de combobox aangemaakt.
-        ComboBox Combobox_Account=new ComboBox(ObservableList_Accounts.ObservableList_Accounts());
+        ComboBox Combobox_Account=new ComboBox(ObservableList_Accounts.ObservableList_Accounts()); //Hier staan alle accountID's.
 
 
 
@@ -42,7 +42,7 @@ public class BekekenFilmsAccount {
         //Hier wordt alles aan Hbox_Label toegevoegd.
         Hbox_Label.getChildren().add(Label_BekekenFilms);
 
-        //Hier wordt alles aan Hbox_Button toegevoegd
+        //Hier wordt alles aan Hbox_Button toegevoegd.
         Hbox_Button.getChildren().add(Button_Print);
         Hbox_Button.getChildren().add(Combobox_Account);
         Hbox_Button.getChildren().add(Button_Terug);
@@ -73,20 +73,20 @@ public class BekekenFilmsAccount {
 
         //Hier krijgt Button_Print zijn functionaliteit.
         Button_Print.setOnAction(actionEvent -> {
+
+            //Eerst wordt gekeken of de combobox is ingevuld.
             if(Combobox_Account.getSelectionModel().isEmpty()){
 
             }else{
-                //Eerst zetten we het geselecteerde AccountID om in een Integer.
+                //Daarna zetten we het geselecteerde AccountID om in een Integer.
                 int AccountID= Integer.parseInt((String)Combobox_Account.getSelectionModel().getSelectedItem());
 
                 //Hier komt de methodcall voor het printen.
-                Button_Print.setOnAction(actionEvent1 -> {
                     Borderpane_BekekenFilmsAccount.setCenter(Printen_BekekenFilmsAccount.BekekenFilmsAccount(AccountID));
-                });
             }
         });
 
-        //Hier krijgt Button_Terug zijn functionaliteit
+        //Hier krijgt Button_Terug zijn functionaliteit.
         Button_Terug.setOnAction(actionEvent -> {
             AccountGericht AccountGericht=new AccountGericht();
             stage.setScene(AccountGericht.HomeAccountGericht(stage));
@@ -101,7 +101,7 @@ public class BekekenFilmsAccount {
         Scene BekekenFilmsAccount=new Scene(Borderpane_BekekenFilmsAccount,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene gereturned.
+        //Hier wordt de scene terug gegeven.
         return BekekenFilmsAccount;
     }
 }

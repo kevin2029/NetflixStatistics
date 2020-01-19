@@ -11,7 +11,6 @@ import GUI.Programma.ProgrammaWijzigen;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -30,7 +29,7 @@ public class AccountGerichtAccount {
         HBox Hbox_Buttons=new HBox();
 
         //Hier wordt het label aangemaakt
-        Label Label_Accountnaam=new Label("Profielen"); //Wat er in het label staat wordt is anders voor elk account. Zo heeft account: Klaas de naam Klaas in het label
+        Label Label_Accountnaam=new Label("Profielen");
 
         //Hier worden de buttons aangemaakt
         Button Button_ProfielAanmaken=new Button("Profiel aanmaken");
@@ -40,8 +39,6 @@ public class AccountGerichtAccount {
         Button Button_ProgrammaWijzigen=new Button("Programma wijzigen");
         Button Button_ProgrammaVerwijderen=new Button("Programma verwijderen");
         Button Button_Terug=new Button("< Terug");
-
-
 
 
 
@@ -76,8 +73,6 @@ public class AccountGerichtAccount {
 
         //Hier wordt Borderpane_Account netjes gemaakt.
         Borderpane_Account.setStyle("-fx-background-color: #0A0A0A");
-
-        //Hier wordt Vbox_LabelEnButtons netjes gemaakt.
 
         //Hier wordt Hbox_Label netjes gemaakt.
         Hbox_Label.setAlignment(Pos.CENTER);
@@ -159,7 +154,7 @@ public class AccountGerichtAccount {
         Scene Account=new Scene(Borderpane_Account,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene gereturned.
+        //Hier wordt de scene terug gegeven.
         return Account;
     }
 }

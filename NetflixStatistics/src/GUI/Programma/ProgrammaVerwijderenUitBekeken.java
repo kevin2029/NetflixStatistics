@@ -3,8 +3,6 @@ package GUI.Programma;
 
 import Functionaliteit.Verwijderen.Verwijderen_Programma;
 import GUI.AccountGericht.AccountGerichtAccount;
-import GUI.Algemeen.Afleveringen;
-import GUI.Basis.AccountGericht;
 import ObservableLists.ObservableList_Profielen;
 import ObservableLists.ObservableList_Programmas;
 import javafx.geometry.Pos;
@@ -19,6 +17,7 @@ import javafx.stage.Stage;
 
 public class ProgrammaVerwijderenUitBekeken {
     public Scene ProgrammaVerwijderenUitBekeken(Stage stage){
+
         //Hier worden de grids aangemaakt.
         BorderPane Borderpane_ProgrammaVerwijderen=new BorderPane();
         HBox Hbox_Label=new HBox();
@@ -35,8 +34,8 @@ public class ProgrammaVerwijderenUitBekeken {
         Label Label_ErrorKies=new Label("Kies eerst een account, profiel en programma");
 
         //Hier wordt de combobox aangemaakt.
-        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen());//Hier staan alle profielen.
-        ComboBox Combobox_WelkProgramma=new ComboBox(ObservableList_Programmas.ObservableList_Programmas()); //Hier staan alle programmas.
+        ComboBox Combobox_WelkProfiel=new ComboBox(ObservableList_Profielen.ObservableList_Profielen());//Hier staan alle profielID's.
+        ComboBox Combobox_WelkProgramma=new ComboBox(ObservableList_Programmas.ObservableList_Programmas()); //Hier staan alle programmasID's.
 
         //Hier worden de buttons aangemaakt.
         Button Button_Verwijderen=new Button("Verwijderen");
@@ -124,10 +123,12 @@ public class ProgrammaVerwijderenUitBekeken {
 
         //Hier krijgt Button_Verwijderen zijn functionaliteit.
         Button_Verwijderen.setOnAction(actionEvent -> {
+
             //Eerst kijken we of het account, profiel en programma geselecteerd zijn.
             if(Combobox_WelkProfiel.getSelectionModel().isEmpty()||Combobox_WelkProgramma.getSelectionModel().isEmpty()){
                 Vbox_Gegevens.getChildren().add(Hbox_ErrorKies);
             }else{
+
                 //Hier zetten we de geselecteerde ID's om in Integers.
                 int ProfielID= Integer.parseInt((String)Combobox_WelkProfiel.getSelectionModel().getSelectedItem());
                 int ProgrammaID=Integer.parseInt((String)Combobox_WelkProgramma.getSelectionModel().getSelectedItem());
@@ -157,7 +158,7 @@ public class ProgrammaVerwijderenUitBekeken {
         Scene ProgrammaVerwijderen=new Scene(Borderpane_ProgrammaVerwijderen,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene gereturned
+        //Hier wordt de scene terug gegeven.
         return ProgrammaVerwijderen;
     }
 }

@@ -1,8 +1,6 @@
 package GUI.Algemeen;
 
 import Functionaliteit.Printen.Series.Printen_Afleveringen;
-import GUI.Basis.Home;
-import GUI.Basis.HomeAlgemeen;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,6 +12,7 @@ import javafx.stage.Stage;
 public class Afleveringen {
 
     public Scene HomeAlgemeenAfleveringen(Stage stage){
+
         // hier worden de grids aangemaakt.
         BorderPane Borderpane_Afleveringen=new BorderPane();
         HBox Hbox_Label=new HBox();
@@ -29,17 +28,16 @@ public class Afleveringen {
 
 
 
-        //Hier wordt alles aan Borderpane_Afleveringen toegevoegt.
+        //Hier wordt alles aan Borderpane_Afleveringen toegevoegd.
         Borderpane_Afleveringen.setTop(Hbox_Label);
         Borderpane_Afleveringen.setRight(Hbox_Button);
         Borderpane_Afleveringen.setCenter(Printen_Afleveringen.AlleAfleveringen());
 
-        //Hier wordt alles aan Hbox_Label toegevoegt.
+        //Hier wordt alles aan Hbox_Label toegevoegd.
         Hbox_Label.getChildren().add(Label_Afleveringen);
 
-        //Hier wordt alles aan Hbox_Button Toegevoegt
+        //Hier wordt alles aan Hbox_Button Toegevoegd.
         Hbox_Button.getChildren().add(Button_Terug);
-
 
 
 
@@ -70,11 +68,12 @@ public class Afleveringen {
 
 
 
+
         //Hier wordt Scene Afleveringen aangemaakt.
         Scene Afleveringen=new Scene(Borderpane_Afleveringen,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene Afleveringen gereturned.
+        //Hier wordt de scene Afleveringen terug gegeven.
         return Afleveringen;
     }
 }

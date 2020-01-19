@@ -11,11 +11,11 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.w3c.dom.Text;
 
 public class AccountAanmaken {
 
     public Scene AccountAanmaken(Stage stage){
+
         //Hier worden de grids aangemaakt.
         BorderPane Borderpane_AccountAanmaken= new BorderPane();
         HBox Hbox_Label=new HBox();
@@ -46,7 +46,7 @@ public class AccountAanmaken {
 
 
 
-        //Hier wordt alles aan Borderpane_Accountmaken toegevoegd.
+        //Hier wordt alles aan Borderpane_AccountAanmaken toegevoegd.
         Borderpane_AccountAanmaken.setTop(Hbox_Label);
         Borderpane_AccountAanmaken.setCenter(Vbox_Gegevens);
 
@@ -82,7 +82,7 @@ public class AccountAanmaken {
 
 
 
-        //Hier wordt Borderpane_Accountaanmaken netjes gemaakt.
+        //Hier wordt Borderpane_AccountAanmaken netjes gemaakt.
         Borderpane_AccountAanmaken.setStyle("-fx-background-color: #0A0A0A");
 
         //Hier wordt Hbox_Label netjes gemaakt.
@@ -166,7 +166,7 @@ public class AccountAanmaken {
         Scene AccountAanmaken=new Scene(Borderpane_AccountAanmaken,1300,650);
         stage.setTitle("Mike Jansen 2157030, Kevin Nguyen 2150956 en Yassin Diriye 2159506");
 
-        //Hier wordt de scene gereturned.
+        //Hier wordt de scene terug gegeven.
         return AccountAanmaken;
     }
 }
