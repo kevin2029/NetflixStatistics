@@ -10,29 +10,34 @@ import java.awt.*;
 import java.util.List;
 import java.util.Map;
 
-class Printen_AccountMet1ProfielTest {
+class Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat {
 
     @Test
     void accountsMet1Profiel() {
+
+        //Arrange
         List<Map<String, Object>> verwachtResultaat = Connection.RunQuery(
                 "SELECT Account.AccountID,Naam \n" +
                         "FROM Account \n" +
                         "JOIN Profiel \n" +
                         "ON Account.AccountID = Profiel.AccountID \n" +
                         "GROUP BY Account.AccountID,Naam \n" +
-                        "HAVING COUNT(Account.AccountID) = '1';")
-                ;
+                        "HAVING COUNT(Account.AccountID) =1; "
+        );
+
+        //Act
         com.sun.javafx.application.PlatformImpl.startup(()->{});
         FlowPane test = Printen_AccountMet1Profiel.AccountsMet1Profiel();
 
-        //For each VBox in the FlowPane
+        //Assert
+        //Voor elke VBox in de FlowPane
         for (int i = 0; i< test.getChildren().size(); i++){
-            //For each label in the VBox
+            //Voor elke Label in de Vbox
             for (int j = 0; j< ((VBox)test.getChildren().get(0)).getChildren().size(); j++) {
                 Assertions.assertEquals(
-                        //Compare the text value in the label
+                        //Vergelijkt de Value van de Label
                         ((Label)((VBox) test.getChildren().get(i)).getChildren().get(j)).getText(),
-                        //With the value in the database
+                        //Met de Value van de database.
                         verwachtResultaat.get(i).entrySet().toArray()[j].toString().replace("=", ": ")
                 );
             }

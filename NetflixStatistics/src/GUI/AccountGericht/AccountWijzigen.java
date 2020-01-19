@@ -181,13 +181,10 @@ public class AccountWijzigen {
                 if (Textfield_Naam.getText().trim().isEmpty() || Textfield_Woonplaats.getText().trim().isEmpty() || Textfield_Adres.getText().trim().isEmpty()) {
                     Vbox_Gegevens.getChildren().add(Hbox_ErrorVakjes);
                 } else {
-<<<<<<< HEAD
-                    //Hier gaan we het geselecteerde id in een Integer stoppen.
-                    int AccountID= Integer.parseInt((String)Combobox_WelkAccount.getSelectionModel().getSelectedItem());
-=======
+
                     //Hier gaan we het geselecteerde id in een int stoppen
                     int AccountID= (int)Combobox_WelkAccount.getSelectionModel().getSelectedItem();
->>>>>>> 104ae8338d985cf22d4d318818c34486b8ef5a52
+
 
                     //Hier komt de methodcall.
                     Opslaan_AccountWijzigen.Opslaan(AccountID, Textfield_Naam.getText().trim(), Textfield_Woonplaats.getText().trim(),Textfield_Adres.getText().trim());

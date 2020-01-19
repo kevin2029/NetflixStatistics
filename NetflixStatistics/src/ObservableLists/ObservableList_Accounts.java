@@ -13,12 +13,7 @@ public class ObservableList_Accounts {
     public static ObservableList ObservableList_Accounts(){
         ArrayList id = new ArrayList();
 
-<<<<<<< HEAD
-
-        List<Map<String, Object>> result = Connection.executeQuery("SELECT AccountID\n" +
-=======
         List<Map<String, Object>> result = Connection.RunQuery("SELECT AccountID\n" +
->>>>>>> 104ae8338d985cf22d4d318818c34486b8ef5a52
                 "FROM Account");
 
 
@@ -27,10 +22,7 @@ public class ObservableList_Accounts {
         }
 
         ObservableList<Integer> ObservableList_Accounts= FXCollections.observableArrayList(id);
-
-
-
-
+        
         return  ObservableList_Accounts;
     }
 
