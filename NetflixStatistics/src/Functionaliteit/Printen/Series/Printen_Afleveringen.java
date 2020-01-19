@@ -19,14 +19,17 @@ public class Printen_Afleveringen {
         AlleAfleveringen.setVgap(25);
 
         List<Map<String, Object>> result = Connection.RunQuery(
-                "SELECT Serie.Naam,Seizoen.Seizoensnummer,Aflevering.AfleveringNummer,Programma.Titel,Programma.TijdsduurInMinuten\n" +
+                "SELECT Serie.Naam,Seizoen.Seizoensnummer,Aflevering.AfleveringNummer,Programma.Titel,Programma.TijdsduurInMinuten,AVG(PercentageBekeken) AS 'Iedereen Gem tijdsduurbekeken. '\n" +
                         "FROM Programma\n" +
                         "JOIN Aflevering\n" +
                         "ON Programma.ProgrammaID = Aflevering.ProgrammaID\n" +
                         "JOIN Seizoen\n" +
                         "ON Aflevering.SeizoenID = Seizoen.SeizoenID\n" +
                         "JOIN Serie\n" +
-                        "ON Seizoen.SerieID = Serie.SerieID;");
+                        "ON Seizoen.SerieID = Serie.SerieID\n" +
+                        "JOIN ProgrammaBekekenDoor\n" +
+                        "ON Programma.ProgrammaID = ProgrammaBekekenDoor.ProgrammaID\n" +
+                        "group by Serie.Naam,Seizoen.Seizoensnummer,Aflevering.AfleveringNummer,Programma.Titel,Programma.TijdsduurInMinuten;");
 
 
         for(Map<String, Object>  aflevering : result){

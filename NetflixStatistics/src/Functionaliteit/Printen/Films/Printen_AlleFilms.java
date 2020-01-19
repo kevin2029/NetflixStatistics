@@ -18,10 +18,14 @@ public class Printen_AlleFilms {
         AlleFilms.setVgap(50);
 
         List<Map<String, Object>> result = Connection.RunQuery(
-                "SELECT Programma.Titel, Film.Genre, film.Taal,Programma.TijdsduurInMinuten,film.Leeftijdsindicatie\n" +
+                "SELECT Programma.Titel, Film.Genre, film.Taal,Programma.TijdsduurInMinuten,film.Leeftijdsindicatie,COUNT(ProfielID) AS 'Aantal keer bekeken.'\n" +
                 "FROM Programma\n" +
                 "JOIN film\n" +
-                "ON Programma.ProgrammaID = Film.ProgrammaID;");
+                "ON Programma.ProgrammaID = Film.ProgrammaID\n" +
+                "JOIN ProgrammaBekekenDoor\n" +
+                "ON Programma.ProgrammaID = ProgrammaBekekenDoor.ProgrammaID\n" +
+                "GROUP BY Programma.Titel, Film.Genre, film.Taal,Programma.TijdsduurInMinuten,film.Leeftijdsindicatie;"
+        );
 
         for(Map<String, Object>  films : result){
             VBox film=new VBox();

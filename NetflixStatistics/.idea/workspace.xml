@@ -2,22 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32e44ef5-2c8b-4860-b781-67c33273daa9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_AccountMetMeerDan1ProfielVboxEnFlowPaneKomenOverEenMetDeDataset.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Films/Printen_AlleFilmsVboxenFlowPaneKomtOvereenMetDataset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Films/Printen_FilmLangsteTijdsduurVBoxFlowPaneGelijkAanDataset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Films/Printen_FilmsOnder16VBoxFlowPaneGelijkAanDataset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Films/Printen_LangsteTijdsduurOnder16VboxenFlowPaneGelijkDataset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Profielen/Printen_AlleProfielenVboxFlowpanaGelijkDataSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Series/Printen_AfleveringenVboxflowpaneKomtgelijkdataset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Series/Printen_SeizoenenVboxflowpaneGelijkDataset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Series/Printen_SeriesVboxFlowpaneGelijkDataset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NetflixStatistics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NetflixStatistics.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mssql_jdbc_7_4_1_jre12.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_AccountMet1ProfielTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArrayLists/ArrayList_Afleveringen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArrayLists/ArrayList_Profielen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArrayLists/ArrayList_Seizoenen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArrayLists/ArrayList_Series.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArrayLists/ArrayLists_Accounts.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArrayLists/ArrayLists_Films.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AccountGericht/AccountVerwijderen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AccountGericht/AccountVerwijderen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AccountGericht/AccountWijzigen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AccountGericht/AccountWijzigen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AccountGericht/BekekenAfleveringenAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AccountGericht/BekekenAfleveringenAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AccountGericht/BekekenFilmsAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AccountGericht/BekekenFilmsAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Programma/ProgrammaToevoegen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Programma/ProgrammaToevoegen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ObservableLists/ObservableList_Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObservableLists/ObservableList_Accounts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functionaliteit/Printen/Films/Printen_AlleFilms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functionaliteit/Printen/Films/Printen_AlleFilms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functionaliteit/Printen/Series/Printen_Afleveringen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functionaliteit/Printen/Series/Printen_Afleveringen.java" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/output path/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,100 +26,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Accounts/Printen_BekekenAfleveringenAccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Profielen/Printen_AlleProfielen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Profielen/Printen_BekekenProgrammasProfiel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#753#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Series/Printen_Afleveringen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Series/Printen_Seizoenen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Series/Printen_Series.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Verwijderen/Verwijderen_Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Wijzigen/Opslaan_ProfielWijzigen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -147,19 +53,36 @@
         <option value="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_AccountMetMeerDan1ProfielVboxEnFlowPaneKomenOverEenMetDeDataset.java" />
         <option value="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset.java" />
         <option value="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_BekekenAfleveringenAccountTestVboxEnFlowPlaneKomtOvereenMetDataset.java" />
+        <option value="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Films/Printen_FilmLangsteTijdsduurVBoxFlowPaneGelijkAanDataset.java" />
+        <option value="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Films/Printen_FilmsOnder16VBoxFlowPaneGelijkAanDataset.java" />
+        <option value="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Films/Printen_LangsteTijdsduurOnder16VboxenFlowPaneGelijkDataset.java" />
+        <option value="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Profielen/Printen_AlleProfielenVboxFlowPaneGelijkDataset.java" />
+        <option value="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Profielen/Printen_AlleProfielenVboxFlowpanaGelijkDataSet.java" />
+        <option value="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Series/Printen_SeizoenenVboxflowpaneGelijkDataset.java" />
+        <option value="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Series/Printen_SeriesVboxFlowpaneGelijkDataset.java" />
+        <option value="$PROJECT_DIR$/src/Functionaliteit/Printen/Films/Printen_AlleFilms.java" />
+        <option value="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Films/Printen_AlleFilmsVboxenFlowPaneKomtOvereenMetDataset.java" />
+        <option value="$PROJECT_DIR$/src/Functionaliteit/Printen/Series/Printen_Afleveringen.java" />
+        <option value="$PROJECT_DIR$/Tests/Functionaliteit/Printen/Series/Printen_AfleveringenVboxflowpaneKomtgelijkdataset.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="807" />
+    <option name="y" value="206" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -196,47 +119,37 @@
               <item name="NetflixStatistics" type="b2602c69:ProjectViewProjectNode" />
               <item name="NetflixStatistics" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Functionaliteit" type="462c0819:PsiDirectoryNode" />
-              <item name="Printen" type="462c0819:PsiDirectoryNode" />
-              <item name="Films" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NetflixStatistics" type="b2602c69:ProjectViewProjectNode" />
               <item name="NetflixStatistics" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Functionaliteit" type="462c0819:PsiDirectoryNode" />
-              <item name="Printen" type="462c0819:PsiDirectoryNode" />
-              <item name="Profielen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NetflixStatistics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NetflixStatistics" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Functionaliteit" type="462c0819:PsiDirectoryNode" />
-              <item name="Printen" type="462c0819:PsiDirectoryNode" />
-              <item name="Series" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="Basis" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579462305366" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579469953346" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Functionaliteit.Printen.Series" />
+      <recent name="Functionaliteit.Printen.Profielen" />
+      <recent name="Functionaliteit.Printen.Films" />
       <recent name="Functionaliteit.Printen.Accounts" />
       <recent name="Functionaliteit.Opslaan.Aanmaken" />
     </key>
@@ -256,8 +169,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Printen_BekekenAfleveringenAccountTestVboxEnFlowPlaneKomtOvereenMetDataset">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Start">
+    <configuration name="Start" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="GUI.Basis.Home" />
       <module name="NetflixStatistics" />
       <option name="VM_PARAMETERS" value="-p &quot;C:\Users\kevin\Desktop\Avans\Periode 2\Programmeren 2\javafx-sdk-13.0.1\lib&quot; --add-modules javafx.controls " />
@@ -265,79 +178,96 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Printen_AfleveringenVboxflowpaneKomtgelijkdataset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NetflixStatistics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Functionaliteit.Printen.Accounts.*" />
+          <option name="PATTERN" value="Functionaliteit.Printen.Series.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Functionaliteit.Printen.Accounts" />
-      <option name="MAIN_CLASS_NAME" value="Functionaliteit.Printen.Accounts.Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat" />
+      <option name="PACKAGE_NAME" value="Functionaliteit.Printen.Series" />
+      <option name="MAIN_CLASS_NAME" value="Functionaliteit.Printen.Series.Printen_AfleveringenVboxflowpaneKomtgelijkdataset" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Printen_AccountMetMeerDan1ProfielVboxEnFlowPaneKomenOverEenMetDeDataset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Printen_AlleFilmsVboxenFlowPaneKomtOvereenMetDataset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NetflixStatistics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Functionaliteit.Printen.Accounts.*" />
+          <option name="PATTERN" value="Functionaliteit.Printen.Films.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Functionaliteit.Printen.Accounts" />
-      <option name="MAIN_CLASS_NAME" value="Functionaliteit.Printen.Accounts.Printen_AccountMetMeerDan1ProfielVboxEnFlowPaneKomenOverEenMetDeDataset" />
+      <option name="PACKAGE_NAME" value="Functionaliteit.Printen.Films" />
+      <option name="MAIN_CLASS_NAME" value="Functionaliteit.Printen.Films.Printen_AlleFilmsVboxenFlowPaneKomtOvereenMetDataset" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Printen_AlleProfielenVboxFlowpanaGelijkDataSet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NetflixStatistics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Functionaliteit.Printen.Accounts.*" />
+          <option name="PATTERN" value="Functionaliteit.Printen.Profielen.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Functionaliteit.Printen.Accounts" />
-      <option name="MAIN_CLASS_NAME" value="Functionaliteit.Printen.Accounts.Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset" />
+      <option name="PACKAGE_NAME" value="Functionaliteit.Printen.Profielen" />
+      <option name="MAIN_CLASS_NAME" value="Functionaliteit.Printen.Profielen.Printen_AlleProfielenVboxFlowpanaGelijkDataSet" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Printen_BekekenAfleveringenAccountTestVboxEnFlowPlaneKomtOvereenMetDataset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Printen_SeizoenenVboxflowpaneGelijkDataset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NetflixStatistics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Functionaliteit.Printen.Accounts.*" />
+          <option name="PATTERN" value="Functionaliteit.Printen.Series.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Functionaliteit.Printen.Accounts" />
-      <option name="MAIN_CLASS_NAME" value="Functionaliteit.Printen.Accounts.Printen_BekekenAfleveringenAccountTestVboxEnFlowPlaneKomtOvereenMetDataset" />
+      <option name="PACKAGE_NAME" value="Functionaliteit.Printen.Series" />
+      <option name="MAIN_CLASS_NAME" value="Functionaliteit.Printen.Series.Printen_SeizoenenVboxflowpaneGelijkDataset" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Printen_SeriesVboxFlowpaneGelijkDataset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NetflixStatistics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Functionaliteit.Printen.Series.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Functionaliteit.Printen.Series" />
+      <option name="MAIN_CLASS_NAME" value="Functionaliteit.Printen.Series.Printen_SeriesVboxFlowpaneGelijkDataset" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Unnamed" />
-      <item itemvalue="JUnit.Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat" />
-      <item itemvalue="JUnit.Printen_AccountMetMeerDan1ProfielVboxEnFlowPaneKomenOverEenMetDeDataset" />
-      <item itemvalue="JUnit.Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset" />
-      <item itemvalue="JUnit.Printen_BekekenAfleveringenAccountTestVboxEnFlowPlaneKomtOvereenMetDataset" />
+      <item itemvalue="Application.Start" />
+      <item itemvalue="JUnit.Printen_AlleProfielenVboxFlowpanaGelijkDataSet" />
+      <item itemvalue="JUnit.Printen_AfleveringenVboxflowpaneKomtgelijkdataset" />
+      <item itemvalue="JUnit.Printen_SeizoenenVboxflowpaneGelijkDataset" />
+      <item itemvalue="JUnit.Printen_SeriesVboxFlowpaneGelijkDataset" />
+      <item itemvalue="JUnit.Printen_AlleFilmsVboxenFlowPaneKomtOvereenMetDataset" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Printen_BekekenAfleveringenAccountTestVboxEnFlowPlaneKomtOvereenMetDataset" />
-        <item itemvalue="JUnit.Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset" />
-        <item itemvalue="JUnit.Printen_AccountMetMeerDan1ProfielVboxEnFlowPaneKomenOverEenMetDeDataset" />
-        <item itemvalue="JUnit.Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat" />
+        <item itemvalue="JUnit.Printen_AlleFilmsVboxenFlowPaneKomtOvereenMetDataset" />
+        <item itemvalue="JUnit.Printen_SeriesVboxFlowpaneGelijkDataset" />
+        <item itemvalue="JUnit.Printen_SeizoenenVboxflowpaneGelijkDataset" />
+        <item itemvalue="JUnit.Printen_AfleveringenVboxflowpaneKomtgelijkdataset" />
+        <item itemvalue="JUnit.Printen_AlleProfielenVboxFlowpanaGelijkDataSet" />
       </list>
     </recent_temporary>
   </component>
@@ -352,78 +282,80 @@
       <option name="presentableId" value="Default" />
       <updated>1579458253253</updated>
       <workItem from="1579458254604" duration="3872000" />
+      <workItem from="1579463062381" duration="2223000" />
+      <workItem from="1579466047054" duration="3678000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset - 2020.01.19 at 20h 02m 20s.xml">
-      <configuration name="Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset" configurationId="JUnit" />
+    <history-entry file="Printen_AlleFilmsVboxenFlowPaneKomtOvereenMetDataset - 2020.01.19 at 20h 57m 13s.xml">
+      <configuration name="Printen_AlleFilmsVboxenFlowPaneKomtOvereenMetDataset" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset - 2020.01.19 at 20h 04m 15s.xml">
-      <configuration name="Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset" configurationId="JUnit" />
+    <history-entry file="Printen_FilmLangsteTijdsduurVBoxFlowPaneGelijkAanDataset - 2020.01.19 at 20h 57m 19s.xml">
+      <configuration name="Printen_FilmLangsteTijdsduurVBoxFlowPaneGelijkAanDataset" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Printen_AccountMetMeerDan1ProfielVboxEnFlowPaneKomenOverEenMetDeDataset - 2020.01.19 at 20h 05m 53s.xml">
-      <configuration name="Printen_AccountMetMeerDan1ProfielVboxEnFlowPaneKomenOverEenMetDeDataset" configurationId="JUnit" />
+    <history-entry file="Printen_FilmsOnder16VBoxFlowPaneGelijkAanDataset - 2020.01.19 at 20h 59m 47s.xml">
+      <configuration name="Printen_FilmsOnder16VBoxFlowPaneGelijkAanDataset" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat - 2020.01.19 at 20h 06m 51s.xml">
-      <configuration name="Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat" configurationId="JUnit" />
+    <history-entry file="Printen_LangsteTijdsduurOnder16VboxenFlowPaneGelijkDataset - 2020.01.19 at 21h 02m 37s.xml">
+      <configuration name="Printen_LangsteTijdsduurOnder16VboxenFlowPaneGelijkDataset" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat - 2020.01.19 at 20h 07m 31s.xml">
-      <configuration name="Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat" configurationId="JUnit" />
+    <history-entry file="Printen_AlleProfielenVboxFlowpanaGelijkDataSet - 2020.01.19 at 21h 07m 34s.xml">
+      <configuration name="Printen_AlleProfielenVboxFlowpanaGelijkDataSet" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat - 2020.01.19 at 20h 07m 49s.xml">
-      <configuration name="Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat" configurationId="JUnit" />
+    <history-entry file="Printen_AfleveringenVboxflowpaneKomtgelijkdataset - 2020.01.19 at 21h 14m 00s.xml">
+      <configuration name="Printen_AfleveringenVboxflowpaneKomtgelijkdataset" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Printen_AccountMetMeerDan1ProfielVboxEnFlowPaneKomenOverEenMetDeDataset - 2020.01.19 at 20h 07m 57s.xml">
-      <configuration name="Printen_AccountMetMeerDan1ProfielVboxEnFlowPaneKomenOverEenMetDeDataset" configurationId="JUnit" />
+    <history-entry file="Printen_SeizoenenVboxflowpaneGelijkDataset - 2020.01.19 at 21h 15m 59s.xml">
+      <configuration name="Printen_SeizoenenVboxflowpaneGelijkDataset" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Printen_AccountMetMeerDan1ProfielVboxEnFlowPaneKomenOverEenMetDeDataset - 2020.01.19 at 20h 08m 29s.xml">
-      <configuration name="Printen_AccountMetMeerDan1ProfielVboxEnFlowPaneKomenOverEenMetDeDataset" configurationId="JUnit" />
+    <history-entry file="Printen_SeriesVboxFlowpaneGelijkDataset - 2020.01.19 at 21h 19m 41s.xml">
+      <configuration name="Printen_SeriesVboxFlowpaneGelijkDataset" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset - 2020.01.19 at 20h 08m 34s.xml">
-      <configuration name="Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset" configurationId="JUnit" />
+    <history-entry file="Printen_SeriesVboxFlowpaneGelijkDataset - 2020.01.19 at 21h 20m 47s.xml">
+      <configuration name="Printen_SeriesVboxFlowpaneGelijkDataset" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Printen_BekekenAfleveringenAccountTestVboxEnFlowPlaneKomtOvereenMetDataset - 2020.01.19 at 20h 31m 53s.xml">
-      <configuration name="Printen_BekekenAfleveringenAccountTestVboxEnFlowPlaneKomtOvereenMetDataset" configurationId="JUnit" />
+    <history-entry file="Printen_AlleFilmsVboxenFlowPaneKomtOvereenMetDataset - 2020.01.19 at 21h 57m 42s.xml">
+      <configuration name="Printen_AlleFilmsVboxenFlowPaneKomtOvereenMetDataset" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3872000" />
+    <option name="totallyTimeSpent" value="9773000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="TMC Test Results" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.3286119" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="TMC Project List" />
+      <window_info anchor="bottom" id="TMC Test Results" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="TMC Project List" order="9" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="0" />
@@ -522,48 +454,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArrayLists/ArrayList_Afleveringen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArrayLists/ArrayList_Profielen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArrayLists/ArrayList_Seizoenen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArrayLists/ArrayList_Series.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArrayLists/ArrayLists_Accounts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArrayLists/ArrayLists_Films.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArrayLists/ArrayList_Afleveringen.java" />
+    <entry file="file://$PROJECT_DIR$/src/ArrayLists/ArrayList_Profielen.java" />
+    <entry file="file://$PROJECT_DIR$/src/ArrayLists/ArrayList_Seizoenen.java" />
+    <entry file="file://$PROJECT_DIR$/src/ArrayLists/ArrayList_Series.java" />
+    <entry file="file://$PROJECT_DIR$/src/ArrayLists/ArrayLists_Accounts.java" />
+    <entry file="file://$PROJECT_DIR$/src/ArrayLists/ArrayLists_Films.java" />
     <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwAccountAanmaken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -571,13 +467,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwProfielAanmakenTestAccountIDIsDaadwerkelijkEenIntGeenString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwProfielAanmakenTestAccountIDIsDaadwerkelijkEenIntGeenString.java" />
     <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Aanmaken/Opslaan_NieuwProfielAanmaken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -599,20 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Accounts/Printen_AccountMetMeerDan1Profiel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -627,45 +503,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_BekekenAfleveringenAccountTestVboxEnFlowPlaneKomtOvereenMetDataset.java">
+    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_BekekenAfleveringenAccountTestVboxEnFlowPlaneKomtOvereenMetDataset.java" />
+    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_AlleAccountsTestVBoxEnFlowPaneKomtOvereenMetDataset.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="204">
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Accounts/Printen_BekekenAfleveringenAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="510">
           <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Profielen/Printen_AlleProfielen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Series/Printen_Afleveringen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Series/Printen_Seizoenen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Series/Printen_Series.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -679,7 +528,7 @@
     <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Opslaan/Wijzigen/Opslaan_ProfielWijzigen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -689,6 +538,133 @@
           <folding>
             <element signature="e#0#753#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Accounts/Printen_AccountMet1ProfielFlowpaneEnVBoxZijnHetzelfdeAlsHetGewensteResultaat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Films/Printen_FilmLangsteTijdsduur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="61" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="23" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Films/Printen_FilmLangsteTijdsduurVBoxFlowPaneGelijkAanDataset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Films/Printen_FilmsOnder16.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="61" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="24" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Films/Printen_FilmsOnder16VBoxFlowPaneGelijkAanDataset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Films/Printen_LangsteTijdsduurOnder16.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="61" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="23" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Profielen/Printen_AlleProfielenVboxFlowPaneGelijkDataset.java" />
+    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Profielen/Printen_AlleProfielenVboxFlowpanaGelijkDataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="40" column="9" selection-start-line="20" selection-start-column="8" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Basis/Home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Series/Printen_SeizoenenVboxflowpaneGelijkDataset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Series/Printen_Series.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="31" selection-start-line="20" selection-start-column="8" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Series/Printen_SeriesVboxFlowpaneGelijkDataset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Films/Printen_AlleFilms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="10" selection-start-line="19" selection-start-column="8" selection-end-line="27" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Series/Printen_AfleveringenVboxflowpaneKomtgelijkdataset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Series/Printen_Seizoenen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="24" column="62" selection-start-line="20" selection-start-column="8" selection-end-line="24" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Series/Printen_Afleveringen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="31" selection-end-column="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Functionaliteit/Printen/Profielen/Printen_AlleProfielen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="33" selection-start-line="19" selection-start-column="8" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Films/Printen_AlleFilmsVboxenFlowPaneKomtOvereenMetDataset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Functionaliteit/Printen/Films/Printen_LangsteTijdsduurOnder16VboxenFlowPaneGelijkDataset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="43" column="9" selection-start-line="18" selection-start-column="8" selection-end-line="43" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -756,7 +732,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>mssql-jdbc-7.4.1.jre121</last-edited>
+          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
